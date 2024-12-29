@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - THQ Cyber Division Unincorporated</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="favicon_96x96.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="favicon_96x96.png">
@@ -34,16 +33,23 @@
         nav {
             background-color: #007bff;
             padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
         nav a {
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
         }
+
         nav a:hover {
-            text-decoration: underline;
+			background-color: rgb(65,105,225);
+            color: #000;
+            text-decoration: None;
         }
         main {
             padding: 20px 15px;
@@ -69,6 +75,7 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
+            display: inline-block;
         }
         .cta a:hover {
             background-color: #0056b3;
@@ -87,13 +94,128 @@
         footer img:hover {
             opacity: 0.7;
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        .modal-header {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-header button {
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 1em;
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+        .book-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .book-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .book-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+        .book-item span {
+            flex-grow: 1;
+            font-size: 1.1em;
+        }
+        .icons {
+            display: flex;
+            gap: 10px;
+        }
+        .icon {
+            width: 30px;
+            height: 30px;
+            cursor: default; /* Disable clicking */
+            transition: all 0.3s ease;
+        }
+        .icon:hover {
+            opacity: 0.7;
+            transform: scale(1.2);
+			cursor: pointer;
+        }
+
+        /* Button to trigger modal */
+        .show-ebooks-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .show-ebooks-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 90%;
+                padding: 15px;
+            }
+            .modal-header {
+                flex-direction: column;
+            }
+            .book-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .book-item img {
+                width: 40px;
+                height: 40px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            .icons {
+                margin-top: 10px;
+            }
+            .show-ebooks-btn {
+                padding: 8px 16px;
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-         <a href="index.html">
         <img src="logo.png" alt="THQ Logo">
-         </a>
         <h1>Welcome to THQ Cyber Division</h1>
     </header>
     <nav>
@@ -104,10 +226,48 @@
     <main>
         <h1>Empowering Your Digital Transformation</h1>
         <p>At THQ Cyber Division Unincorporated, we specialize in delivering top-notch IT solutions tailored to your unique needs. From business analysis to web development, cybersecurity, and automation, our expertise ensures your organization thrives in today's fast-paced digital environment.</p>
+        
+        <!-- Button to show ebooks modal -->
+        <button class="show-ebooks-btn" onclick="openModal()">Browse Ebooks</button>
+
         <div class="cta">
             <a href="services.html">Explore Our Services</a>
         </div>
     </main>
+
+    <!-- Modal for displaying ebooks -->
+    <div class="modal" id="ebooksModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Available Ebooks</h2>
+                <button onclick="closeModal()">Close</button>
+            </div>
+            <ul class="book-list">
+                <li class="book-item">
+                    <img src="book1-icon.jpg" alt="Ebook Icon">
+                    <span>The IT Analyst’s Handbook: Essential Techniques for Business Success</span>
+                    <div class="icons">
+						<a href="https://ipfs.io/ipfs/QmU85Z4z3NWePkpC5QNa6ejYdjWCDZ3swFPPwaQdSGcSLE" target="_blank">
+                        <img src="pdf-icon.png" alt="PDF Icon" class="icon">
+						</a>
+						<a href="https://ipfs.io/ipfs/QmQp3rnWL6sydwF5L4WPrZh5nHX28mUbxUAB9Xmnk1srg3" target="_blank">
+                        <img src="epub-icon.png" alt="EPUB Icon" class="icon">
+						</a>
+                    </div>
+                </li>
+                <li class="book-item">
+                    <img src="book2-icon.png" alt="Ebook Icon">
+                    <span>Cryptography Unveiled: Privacy Techniques for the Virtual World</span>
+                    <div class="icons">
+                        <img src="pdf-icon.png" alt="PDF Icon" class="icon">
+                        <img src="epub-icon.png" alt="EPUB Icon" class="icon">
+                    </div>
+                </li>
+                <!-- More books can be added here -->
+            </ul>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 THQ Cyber Division Unincorporated. All rights reserved.</p>
         <a href="mailto:thqcs@protonmail.com">
@@ -117,5 +277,16 @@
             <img src="skype-icon.png" alt="Skype Icon" title="Chat with us on Skype">
         </a>
     </footer>
+
+    <script>
+        function openModal() {
+            document.getElementById('ebooksModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('ebooksModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
+
+
