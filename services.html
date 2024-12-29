@@ -6,6 +6,17 @@
     <meta name="description" content="THQ Cyber Division Unincorporated is a leading IT solutions provider offering innovative, secure, and efficient technology services for businesses of all sizes. Empower your business with our expertise.">
     <meta name="keywords" content="THQ Cyber Division, IT solutions, technology services, digital transformation, cybersecurity, innovative IT services">
     <meta name="author" content="THQ Cyber Division Unincorporated">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007bff">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(function(error) {
+                console.log('ServiceWorker registration failed: ', error);
+            });
+        }
+    </script>
     <title>Services - THQ Cyber Division Unincorporated</title>
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_32x32.png">
