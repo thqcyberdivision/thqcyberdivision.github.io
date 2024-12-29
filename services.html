@@ -9,7 +9,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="favicon_96x96.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="favicon_96x96.png">
     <style>
-        body {
+                body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -34,16 +34,23 @@
         nav {
             background-color: #007bff;
             padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
         }
         nav a {
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
         }
+
         nav a:hover {
-            text-decoration: underline;
+			background-color: rgb(65,105,225);
+            color: #000;
+            text-decoration: None;
         }
         main {
             padding: 20px 15px;
