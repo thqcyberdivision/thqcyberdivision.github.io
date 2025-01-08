@@ -284,6 +284,30 @@
             }
 	
         }
+	/* Change the cursor to a pointer when hovering over a project item */
+	.project-item {
+	    cursor: pointer;
+	    position: relative; /* Needed for positioning the thumbnail */
+	}
+	
+	/* Show project thumbnail on hover */
+	.project-item:hover .project-thumbnail {
+	    display: block; /* Display thumbnail when hovering */
+	}
+	
+	/* Style for the project thumbnail */
+	.project-thumbnail {
+	    display: none; /* Hidden by default */
+	    position: absolute;
+	    top: 0;
+	    left: 100%; /* Position it beside the text */
+	    margin-left: 10px;
+	    width: 100px; /* Adjust the size */
+	    height: 100px; /* Adjust the size */
+	    object-fit: cover;
+	    border-radius: 5px; /* Optional, to round the corners of the image */
+	}
+	
 	/* Style the progress bar container */
 	.progress-bar {
 	    width: 100%;
