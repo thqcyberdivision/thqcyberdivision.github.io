@@ -18,17 +18,15 @@ const urlsToCache = [
     '/manifest.json'
 ];
 
-// Install the service worker and cache static assets
+// Install event: Cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS);
-    })
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_ASSETS))
   );
   self.skipWaiting();
 });
 
-// Activate the service worker and clean old caches
+// Activate event: Remove old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -44,9 +42,10 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch handler for offline caching
+// Fetch event: Serve cached assets or fetch from network
 self.addEventListener('fetch', (event) => {
   if (event.request.url.includes('jsonplaceholder.typicode.com')) {
+    // Handle dynamic data (API responses)
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
         return (
@@ -61,6 +60,7 @@ self.addEventListener('fetch', (event) => {
       })
     );
   } else {
+    // Handle static assets (HTML, CSS, JS)
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
         return cachedResponse || fetch(event.request);
@@ -68,3 +68,21 @@ self.addEventListener('fetch', (event) => {
     );
   }
 });
+
+// Background Sync for new data when the user comes online
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'sync-new-data') {
+    event.waitUntil(fetchAndCacheNewData());
+  }
+});
+
+// Fetch new data and cache it
+function fetchAndCacheNewData() {
+  return fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then((response) => response.json())
+    .then((data) => {
+      return caches.open(CACHE_NAME).then((cache) => {
+        cache.put('/api/data', new Response(JSON.stringify(data)));
+      });
+    });
+}
