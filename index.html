@@ -286,6 +286,9 @@
         
         <!-- Button to show ebooks modal -->
         <button class="show-ebooks-btn" onclick="openModal()">Browse Ebooks</button>
+	<!-- Button to show support projects modal -->
+        <button class="show-projects-btn" onclick="openProjectsModal()">Support Our Projects</button>
+
 
         <div class="cta">
             <a href="services.html">Explore Our Services</a>
@@ -328,6 +331,39 @@
             </ul>
         </div>
     </div>
+    <!-- Modal for displaying support projects -->
+    <div class="modal" id="projectsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Support Our Projects</h2>
+                <button onclick="closeProjectsModal()">Close</button>
+            </div>
+            <ul class="project-list">
+                <li class="project-item" onclick="showProjectDetails('Project 1')">
+                    <img src="project1-thumbnail.jpg" alt="Project Thumbnail">
+                    <span>Project 1: Digital Education Initiative</span>
+                    <button class="donate-btn">Donate</button>
+                </li>
+                <li class="project-item" onclick="showProjectDetails('Project 2')">
+                    <img src="project2-thumbnail.jpg" alt="Project Thumbnail">
+                    <span>Project 2: Green Energy Research</span>
+                    <button class="donate-btn">Donate</button>
+                </li>
+                <!-- More projects can be added here -->
+            </ul>
+
+            <div id="projectDetails" style="display:none;">
+                <h3>Project Details</h3>
+                <p id="projectName"></p>
+                <p>Amount Raised: $<span id="raisedAmount">0</span></p>
+                <p>Details on how we plan to raise funds:</p>
+                <ul id="fundraisingDetails">
+                    <!-- Additional details to be added dynamically -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
 
     <footer>
         <p>&copy; 2024 - 2025 THQ Cyber Division Unincorporated. All rights reserved.</p>
@@ -345,6 +381,39 @@
         }
         function closeModal() {
             document.getElementById('ebooksModal').style.display = 'none';
+        }
+	function openProjectsModal() {
+            document.getElementById('projectsModal').style.display = 'flex';
+        }
+
+        function closeProjectsModal() {
+            document.getElementById('projectsModal').style.display = 'none';
+            document.getElementById('projectDetails').style.display = 'none';
+        }
+
+        function showProjectDetails(projectName) {
+            document.getElementById('projectName').textContent = projectName;
+            // Simulate fetching the fundraising details for the selected project
+            const fundraisingDetails = document.getElementById('fundraisingDetails');
+            fundraisingDetails.innerHTML = '';
+            if (projectName === 'Project 1') {
+                document.getElementById('raisedAmount').textContent = '500';
+                const details = ['We plan to host fundraising events, crowdfunding campaigns, and partner with organizations to drive donations.'];
+                details.forEach(detail => {
+                    const li = document.createElement('li');
+                    li.textContent = detail;
+                    fundraisingDetails.appendChild(li);
+                });
+            } else if (projectName === 'Project 2') {
+                document.getElementById('raisedAmount').textContent = '300';
+                const details = ['Research grants, donations from individuals, and support from green energy companies will fund this project.'];
+                details.forEach(detail => {
+                    const li = document.createElement('li');
+                    li.textContent = detail;
+                    fundraisingDetails.appendChild(li);
+                });
+            }
+            document.getElementById('projectDetails').style.display = 'block';
         }
     </script>
 </body>
