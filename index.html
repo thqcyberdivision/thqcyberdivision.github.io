@@ -356,7 +356,7 @@
             <ul class="project-list">
                 <li class="project-item" onclick="showProjectDetails('Project 1')">
                     <img src="project1-thumbnail.jpg" alt="Project Thumbnail">
-                    <span>Project 1: Digital Education Initiative</span>
+                    <span>Project 1: WebAid for NPOs</span>
                     <button class="donate-btn">Donate</button>
                 </li>
                 <li class="project-item" onclick="showProjectDetails('Project 2')">
@@ -365,6 +365,12 @@
                     <button class="donate-btn">Donate</button>
                 </li>
                 <!-- More projects can be added here -->
+		<!-- New Project -->
+                <li class="project-item" onclick="showProjectDetails('WebAid for NPOs')">
+                    <img src="project3-thumbnail.jpg" alt="Project Thumbnail">
+                    <span>WebAid for NPOs: Empowering Non-Profits with Technology</span>
+                    <button class="donate-btn">Donate</button>
+                </li>
             </ul>
 
             <div id="projectDetails" style="display:none;">
@@ -422,6 +428,17 @@
             } else if (projectName === 'Project 2') {
                 document.getElementById('raisedAmount').textContent = '300';
                 const details = ['Research grants, donations from individuals, and support from green energy companies will fund this project.'];
+                details.forEach(detail => {
+                    const li = document.createElement('li');
+                    li.textContent = detail;
+                    fundraisingDetails.appendChild(li);
+                });
+            } else if (projectName === 'WebAid for NPOs') {
+                document.getElementById('raisedAmount').textContent = '0';
+                const details = [
+                    'We aim to provide affordable, customizable, and easy-to-manage websites for NPOs.',
+                    'Our fundraising efforts will focus on donations, corporate sponsorships, and grants for web development.'
+                ];
                 details.forEach(detail => {
                     const li = document.createElement('li');
                     li.textContent = detail;
