@@ -9,13 +9,27 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#007bff">
     <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }).catch(function(error) {
-                console.log('ServiceWorker registration failed: ', error);
-            });
-        }
+        // Register the service worker
+	if ('serviceWorker' in navigator) {
+	  navigator.serviceWorker.register('/service-worker.js').then(() => {
+	    console.log('Service Worker registered');
+	  }).catch((error) => {
+	    console.error('Service Worker registration failed:', error);
+	  });
+	}
+	
+	// Fetch API data
+	const dataElement = document.getElementById('data');
+	fetch('https://jsonplaceholder.typicode.com/posts/1')
+	  .then((response) => response.json())
+	  .then((data) => {
+	    dataElement.textContent = `Title: ${data.title}`;
+	  })
+	  .catch((error) => {
+	    dataElement.textContent = 'Failed to fetch data.';
+	    console.error('Fetch error:', error);
+	  });
+
     </script>
     <title>Home - THQ Cyber Division Unincorporated</title>
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_16x16.png">
