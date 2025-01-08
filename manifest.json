@@ -3,6 +3,7 @@
     "short_name": "THQ Cyber Unincorporated",
     "description": "Empowering businesses through innovative IT solutions.",
     "start_url": "/index.html",
+    "scope": "/",
     "display": "standalone",
     "background_color": "#f5f5f5",
     "theme_color": "#007bff",
@@ -17,5 +18,25 @@
             "sizes": "512x512",
             "type": "image/png"
         }
+         {
+            "src": "/favicon.png",
+            "sizes": "16x16 32x32 96x96 192x192",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/logo-apple-touch.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+    "related_applications": [
+        {
+            "platform": "web",
+            "url": "/about.html"
+        },
+        {
+            "platform": "web",
+            "url": "/services.html"
+        },
     ]
 }
