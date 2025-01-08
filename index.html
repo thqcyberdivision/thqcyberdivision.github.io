@@ -282,7 +282,34 @@
                 padding: 8px 16px;
                 font-size: 1em;
             }
+	
         }
+	/* Style the progress bar container */
+	.progress-bar {
+	    width: 100%;
+	    height: 20px; /* Height of the progress bar */
+	    background-color: #e0e0e0; /* Light grey background */
+	    border-radius: 10px; /* Rounded corners */
+	    margin-top: 10px; /* Space above the progress bar */
+	}
+	
+	/* Style for the progress itself */
+	.progress {
+	    height: 100%; /* Full height of the progress bar */
+	    background-color: #4caf50; /* Green color for the progress */
+	    border-radius: 10px; /* Rounded corners for the progress bar */
+	    text-align: center;
+	    color: white;
+	    line-height: 20px; /* Center the text vertically */
+	    font-weight: bold;
+	    width: 0%; /* Default progress is 0% */
+	}
+	
+	/* Modal adjustments */
+	.project-details-modal .progress-bar {
+	    margin-bottom: 20px;
+	}
+
     </style>
 </head>
 <body>
@@ -347,6 +374,7 @@
         </div>
     </div>
         <!-- Modal for displaying support projects -->
+    <!-- Modal for displaying support projects -->
     <div class="modal" id="projectsModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -356,45 +384,33 @@
             <ul class="project-list">
                 <!-- Project 1 -->
                 <li class="project-item" onmouseover="showProjectInfo('Project 1')" onmouseout="hideProjectInfo()">
+                    <img src="project1-thumbnail.jpg" alt="Project 1 Thumbnail" class="project-thumbnail">
                     <span class="project-name" onclick="openProjectDetails('Project 1')">Project 1: Digital Education Initiative</span>
                 </li>
                 <!-- Project 2 -->
                 <li class="project-item" onmouseover="showProjectInfo('Project 2')" onmouseout="hideProjectInfo()">
+                    <img src="project2-thumbnail.jpg" alt="Project 2 Thumbnail" class="project-thumbnail">
                     <span class="project-name" onclick="openProjectDetails('Project 2')">Project 2: Green Energy Research</span>
                 </li>
                 <!-- Project 3 -->
                 <li class="project-item" onmouseover="showProjectInfo('WebAid for NPOs')" onmouseout="hideProjectInfo()">
+                    <img src="project3-thumbnail.jpg" alt="Project 3 Thumbnail" class="project-thumbnail">
                     <span class="project-name" onclick="openProjectDetails('WebAid for NPOs')">WebAid for NPOs: Empowering Non-Profits with Technology</span>
                 </li>
-                <!-- More projects can be added here -->
             </ul>
         </div>
     </div>
 
-    <!-- Project Details Modal -->
-    <div class="modal" id="projectDetailsModal">
+    <!-- Modal for Project Details -->
+    <div id="projectDetailsModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Project Details</h2>
+                <h3 id="projectDetailsTitle"></h3>
                 <button onclick="closeProjectDetailsModal()">Close</button>
             </div>
             <div id="projectDetailsContent"></div>
         </div>
     </div>
-
-    <!-- QR Code Modal -->
-    <div class="modal" id="qrCodeModal" style="display:none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Scan to Donate</h2>
-                <button onclick="closeQRCodeModal()">Close</button>
-            </div>
-            <div class="qr-code-container">
-                <img id="qrCodeImage" src="" alt="Ethereum QR Code">
-            </div>
-        </div>
-    </div>    
-
     <footer>
         <p>&copy; 2024 - 2025 THQ Cyber Division Unincorporated. All rights reserved.</p>
         <a href="mailto:thqcs@protonmail.com">
@@ -413,35 +429,33 @@
             document.getElementById('ebooksModal').style.display = 'none';
         }
                 // Open Project Details Modal
+        // Open Project Details Modal
         function openProjectDetails(projectId) {
             let projectDetails = '';
             if (projectId === 'Project 1') {
                 projectDetails = `
-                    <h3>Digital Education Initiative</h3>
                     <p>This project aims to provide digital education resources to underprivileged communities.</p>
                     <p>Target: $1000</p>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 50%;"></div>
+                        <div class="progress" style="width: 50%;">50%</div>
                     </div>
                     <button onclick="showQRCode('ETH_Address_1')">Donate</button>
                 `;
             } else if (projectId === 'Project 2') {
                 projectDetails = `
-                    <h3>Green Energy Research</h3>
                     <p>This project focuses on developing sustainable energy solutions.</p>
                     <p>Target: $1500</p>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 20%;"></div>
+                        <div class="progress" style="width: 20%;">20%</div>
                     </div>
                     <button onclick="showQRCode('ETH_Address_2')">Donate</button>
                 `;
             } else if (projectId === 'WebAid for NPOs') {
                 projectDetails = `
-                    <h3>WebAid for NPOs: Empowering Non-Profits</h3>
                     <p>This project supports NPOs by building customized websites to help them raise funds and engage with the community.</p>
                     <p>Target: $2000</p>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 0%;"></div>
+                        <div class="progress" style="width: 0%;">0%</div>
                     </div>
                     <button onclick="showQRCode('ETH_Address_3')">Donate</button>
                 `;
@@ -476,12 +490,12 @@
 
         // Show project info on hover
         function showProjectInfo(projectId) {
-            // Here, you could dynamically show information on hover or simply leave the details for the modal
+            // You can dynamically show project information here if needed
         }
 
         // Hide project info on hover out
         function hideProjectInfo() {
-            // Here, you could dynamically hide project info
+            // You can hide project info here if needed
         }
 
         // Open Projects Modal
