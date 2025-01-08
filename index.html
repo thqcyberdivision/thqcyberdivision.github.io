@@ -288,6 +288,11 @@
 	.project-item {
 	    cursor: pointer;
 	    position: relative; /* Needed for positioning the thumbnail */
+	    display: flex;
+	    align-items: center;
+	    margin-bottom: 15px;
+	    border-bottom: 1px solid #ccc;
+	    padding-bottom: 10px;
 	}
 	
 	/* Show project thumbnail on hover */
@@ -301,9 +306,9 @@
 	    position: absolute;
 	    top: 0;
 	    left: 100%; /* Position it beside the text */
-	    margin-left: 10px;
-	    width: 100px; /* Adjust the size */
-	    height: 100px; /* Adjust the size */
+	    margin-left: 15px;
+	    width: 50px; /* Adjust the size */
+	    height: 50px; /* Adjust the size */
 	    object-fit: cover;
 	    border-radius: 5px; /* Optional, to round the corners of the image */
 	}
@@ -316,7 +321,10 @@
 	    border-radius: 10px; /* Rounded corners */
 	    margin-top: 10px; /* Space above the progress bar */
 	}
-	
+	.project-item span {
+	    font-size: 1.1em;
+	    flex-grow: 1;
+	}
 	/* Style for the progress itself */
 	.progress {
 	    height: 100%; /* Full height of the progress bar */
