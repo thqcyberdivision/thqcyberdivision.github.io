@@ -346,7 +346,7 @@
             </ul>
         </div>
     </div>
-    <!-- Modal for displaying support projects -->
+        <!-- Modal for displaying support projects -->
     <div class="modal" id="projectsModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -354,58 +354,46 @@
                 <button onclick="closeProjectsModal()">Close</button>
             </div>
             <ul class="project-list">
+                <!-- Project 1 -->
                 <li class="project-item" onmouseover="showProjectInfo('Project 1')" onmouseout="hideProjectInfo()">
-                    <img src="project1-thumbnail.jpg" alt="Project Thumbnail">
-                    <span>Project 1: Digital Education Initiative</span>
-                    <button class="donate-btn" onclick="showQRCode('ETH_Address_1')">Donate</button>
-                    <div class="project-hover-info" id="Project 1" style="display:none;">
-                        <p>Target: $1000</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 50%;"></div>
-                        </div>
-                    </div>
+                    <span class="project-name" onclick="openProjectDetails('Project 1')">Project 1: Digital Education Initiative</span>
                 </li>
+                <!-- Project 2 -->
                 <li class="project-item" onmouseover="showProjectInfo('Project 2')" onmouseout="hideProjectInfo()">
-                    <img src="project2-thumbnail.jpg" alt="Project Thumbnail">
-                    <span>Project 2: Green Energy Research</span>
-                    <button class="donate-btn" onclick="showQRCode('ETH_Address_2')">Donate</button>
-                    <div class="project-hover-info" id="Project 2" style="display:none;">
-                        <p>Target: $1500</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 20%;"></div>
-                        </div>
-                    </div>
+                    <span class="project-name" onclick="openProjectDetails('Project 2')">Project 2: Green Energy Research</span>
                 </li>
-                <!-- New Project -->
+                <!-- Project 3 -->
                 <li class="project-item" onmouseover="showProjectInfo('WebAid for NPOs')" onmouseout="hideProjectInfo()">
-                    <img src="project3-thumbnail.jpg" alt="Project Thumbnail">
-                    <span>WebAid for NPOs: Empowering Non-Profits with Technology</span>
-                    <button class="donate-btn" onclick="showQRCode('ETH_Address_3')">Donate</button>
-                    <div class="project-hover-info" id="WebAid for NPOs" style="display:none;">
-                        <p>Target: $2000</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 0%;"></div>
-                        </div>
-                    </div>
+                    <span class="project-name" onclick="openProjectDetails('WebAid for NPOs')">WebAid for NPOs: Empowering Non-Profits with Technology</span>
                 </li>
-
-            <div id="projectDetails" style="display:none;">
-                <h3>Project Details</h3>
-                <p id="projectName"></p>
-                <p>Amount Raised: DAI/USDC/USDT <span id="raisedAmount">0.00000</span></p>
-                <p>Details on how we plan to raise funds:</p>
-                <ul id="fundraisingDetails">
-                    <!-- Additional details to be added dynamically -->
-                </ul>
-            </div>
-		  <div id="qrCodeModal" style="display:none;">
-                	<h3>Scan to Donate</h3>
-                	<img src="eth_qr_code.png" alt="Ethereum QR Code">
-                <button onclick="closeQRCode()">Close</button>
-            </div>
+                <!-- More projects can be added here -->
+            </ul>
         </div>
     </div>
-    
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="projectDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Project Details</h2>
+                <button onclick="closeProjectDetailsModal()">Close</button>
+            </div>
+            <div id="projectDetailsContent"></div>
+        </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div class="modal" id="qrCodeModal" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Scan to Donate</h2>
+                <button onclick="closeQRCodeModal()">Close</button>
+            </div>
+            <div class="qr-code-container">
+                <img id="qrCodeImage" src="" alt="Ethereum QR Code">
+            </div>
+        </div>
+    </div>    
 
     <footer>
         <p>&copy; 2024 - 2025 THQ Cyber Division Unincorporated. All rights reserved.</p>
@@ -424,32 +412,54 @@
         function closeModal() {
             document.getElementById('ebooksModal').style.display = 'none';
         }
-        function openProjectsModal() {
-            document.getElementById('projectsModal').style.display = 'flex';
+                // Open Project Details Modal
+        function openProjectDetails(projectId) {
+            let projectDetails = '';
+            if (projectId === 'Project 1') {
+                projectDetails = `
+                    <h3>Digital Education Initiative</h3>
+                    <p>This project aims to provide digital education resources to underprivileged communities.</p>
+                    <p>Target: $1000</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                    <button onclick="showQRCode('ETH_Address_1')">Donate</button>
+                `;
+            } else if (projectId === 'Project 2') {
+                projectDetails = `
+                    <h3>Green Energy Research</h3>
+                    <p>This project focuses on developing sustainable energy solutions.</p>
+                    <p>Target: $1500</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 20%;"></div>
+                    </div>
+                    <button onclick="showQRCode('ETH_Address_2')">Donate</button>
+                `;
+            } else if (projectId === 'WebAid for NPOs') {
+                projectDetails = `
+                    <h3>WebAid for NPOs: Empowering Non-Profits</h3>
+                    <p>This project supports NPOs by building customized websites to help them raise funds and engage with the community.</p>
+                    <p>Target: $2000</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%;"></div>
+                    </div>
+                    <button onclick="showQRCode('ETH_Address_3')">Donate</button>
+                `;
+            }
+            document.getElementById('projectDetailsContent').innerHTML = projectDetails;
+            document.getElementById('projectDetailsModal').style.display = 'flex';
         }
 
-        function closeProjectsModal() {
-            document.getElementById('projectsModal').style.display = 'none';
-            document.getElementById('qrCodeModal').style.display = 'none';
+        // Close Project Details Modal
+        function closeProjectDetailsModal() {
+            document.getElementById('projectDetailsModal').style.display = 'none';
         }
 
-        function showProjectInfo(projectId) {
-            document.getElementById(projectId).style.display = 'block';
-        }
-
-        function hideProjectInfo() {
-            const projectInfo = document.querySelectorAll('.project-hover-info');
-            projectInfo.forEach(info => {
-                info.style.display = 'none';
-            });
-        }
-
+        // Show QR Code Modal
         function showQRCode(address) {
-            // Logic to show the QR code for the selected ETH address
             const qrCodeModal = document.getElementById('qrCodeModal');
-            qrCodeModal.style.display = 'block';
-            // You can replace the QR code image based on the ETH address here
-            const qrCodeImage = document.querySelector('#qrCodeModal img');
+            qrCodeModal.style.display = 'flex';
+            const qrCodeImage = document.getElementById('qrCodeImage');
             if (address === 'ETH_Address_1') {
                 qrCodeImage.src = 'eth_qr_code_1.png';
             } else if (address === 'ETH_Address_2') {
@@ -459,8 +469,29 @@
             }
         }
 
-        function closeQRCode() {
+        // Close QR Code Modal
+        function closeQRCodeModal() {
             document.getElementById('qrCodeModal').style.display = 'none';
+        }
+
+        // Show project info on hover
+        function showProjectInfo(projectId) {
+            // Here, you could dynamically show information on hover or simply leave the details for the modal
+        }
+
+        // Hide project info on hover out
+        function hideProjectInfo() {
+            // Here, you could dynamically hide project info
+        }
+
+        // Open Projects Modal
+        function openProjectsModal() {
+            document.getElementById('projectsModal').style.display = 'flex';
+        }
+
+        // Close Projects Modal
+        function closeProjectsModal() {
+            document.getElementById('projectsModal').style.display = 'none';
         }
     </script>
 </body>
