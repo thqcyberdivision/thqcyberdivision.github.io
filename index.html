@@ -163,6 +163,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             align-items: center;
             justify-content: center;
+	    overflow-y: auto;
         }
         .modal-content {
             background-color: #fff;
@@ -172,6 +173,8 @@
             max-width: 600px;
             box-sizing: border-box;
             margin: 0 auto;
+	    max-height: 90vh; /* Limit modal height */
+            overflow-y: auto; /* Add scroll functionality */
         }
         .modal-header {
             font-size: 1.5em;
@@ -336,9 +339,6 @@
 	/* Modal adjustments */
 	.project-details-modal {
 	    margin-bottom: 20px;
-	    overflow-y: auto;
-	    max-height: 90vh; /* Limit modal height */
-            overflow-y: auto; /* Add scroll functionality */
 	}
 
     </style>
