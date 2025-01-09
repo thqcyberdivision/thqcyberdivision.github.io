@@ -255,6 +255,20 @@
         .show-projects-btn:hover {
             background-color: #0056b3;
         }
+	.show-donations-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        .show-donations-btn:hover {
+            background-color: #0056b3;
+        }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -450,22 +464,19 @@
                 projectDetails = `
                     <p>This project aims to provide digital education resources to underprivileged communities.</p>
                    
-                    <button onclick="showQRCode('ETH_Address_1')">Donate</button>
+                    <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_1')">Donate</button></center>
                 `;
             } else if (projectId === 'Project 2') {
                 projectDetails = `
                     <p>This project focuses on developing sustainable energy solutions.</p>
-                    <p>Target: $1500</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 20%;">20%</div>
-                    </div>
-                    <button onclick="showQRCode('ETH_Address_2')">Donate</button>
+                
+                    <button class="show-donations-btn" onclick="showQRCode('ETH_Address_2')">Donate</button>
                 `;
             } else if (projectId === 'WebAid for NPOs') {
                 projectDetails = `
                     <p>This project supports NPOs by building customized websites to help them raise funds and engage with the community.</p>
                    
-                    <button onclick="showQRCode('ETH_Address_3')">Donate</button>
+                    <button class="show-donations-btn" onclick="showQRCode('ETH_Address_3')">Donate</button>
                 `;
             }
             document.getElementById('projectDetailsContent').innerHTML = projectDetails;
