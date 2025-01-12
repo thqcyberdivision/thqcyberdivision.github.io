@@ -8,10 +8,12 @@
     <meta name="keywords" content="THQ Cyber Division, IT solutions, technology services, digital transformation, cybersecurity, innovative IT services">
     <meta name="author" content="THQ Cyber Division Unincorporated">
     <link rel="manifest" href="https://thqcyberdivision.github.io/manifest.json">
-    <meta name="theme-color" content="#007bff"><script>
+    <meta name="theme-color" content="#007bff">
+
+<script>
         // Register the service worker
 	if ('serviceWorker' in navigator) {
-	  navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+	  navigator.serviceWorker.register('https://thqcyberdivision.github.io/service-worker.js').then((registration) => {
 	    console.log('Service Worker registered');
 	    
 	    // Listen for updates to the service worker
