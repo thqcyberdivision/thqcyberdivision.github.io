@@ -460,6 +460,11 @@
                     <img src="WebAid.png" alt="Project 3 Thumbnail" class="project-thumbnail">
                     <span class="project-name" onclick="openProjectDetails('WebAid for NPOs')">WebAid for NPOs: Empowering Non-Profits with Technology</span>
                 </li>
+				<!-- Project 4 -->
+		<li class="project-item" onmouseover="showProjectInfo('CKS Collection')" onmouseout="hideProjectInfo()">
+		    <img src="cks-thumbnail.jpg" alt="CKS Collection Thumbnail" class="project-thumbnail">
+		    <span class="project-name" onclick="openProjectDetails('Jewelry Stores')">Jewelry Stores: Empowering Fashion with a Purpose</span>
+		</li>
             </ul>
         </div>
     </div>
@@ -538,7 +543,31 @@
                    
                     <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_3')">Donate</button></center>
                 `;
-            }
+            }else if (projectId === 'Jewelry Stores') {
+		    projectDetails = `
+		        <p><b>Project Name: CKS Fashion Collection</b></p><br/>
+		        <p><b>Objective:</b> To create and promote ethically inspired fashion items including apparel, accessories, and lifestyle goods through an accessible and user-friendly digital store.</p><br/>
+		
+		        <p><b>Key Highlights:</b></p><br/>
+		        <p>• Trendy and Affordable Fashion: A curated collection of stylish, modern outfits.<br/>
+		        • Online Store: Built on Sell.app for secure checkout and product management.<br/>
+		        • Brand Identity: Reflects culture, creativity, and community empowerment.<br/>
+		        • Social Enterprise: A percentage of profits goes to local community projects and youth empowerment.</p><br/>
+		
+		        <p><b>Target Audience:</b> Fashion lovers, online shoppers, and conscious consumers seeking meaningful purchases.</p><br/>
+		
+		        <p><b>Timeline:</b><br/>
+		        Launch: Complete (Live at <a href="https://cksfashioncollection.sell.app" target="_blank">cksfashioncollection.sell.app</a>)<br/>
+		        Expansion: Ongoing with new collections, promotions, and partnerships.</p><br/>
+		
+		        <p><b>Support Needed:</b> Social media shares, brand ambassadors, and donations to scale production and marketing reach.</p><br/>
+		
+		        <p><b>Impact:</b> Promotes local talent, supports social causes, and delivers value through fashion with purpose.</p><br/>
+		
+		        <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_4')">Donate</button></center>
+		    `;
+		}
+
             document.getElementById('projectDetailsContent').innerHTML = projectDetails;
             document.getElementById('projectDetailsModal').style.display = 'flex';
         }
