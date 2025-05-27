@@ -475,11 +475,11 @@ At THQ Cyber Division Unincorporated, we offer a range of virtual assistant serv
                     <img src="project2-thumbnail.jpg" alt="Project 2 Thumbnail" class="project-thumbnail">
                     <span class="project-name" onclick="openProjectDetails('Project 2')">Project 2: Green Energy Research</span>
                 </li>
-                <!-- Project 3 -->
-                <li class="project-item" onmouseover="showProjectInfo('WebAid for NPOs')" onmouseout="hideProjectInfo()">
-                    <img src="WebAid.png" alt="Project 3 Thumbnail" class="project-thumbnail">
-                    <span class="project-name" onclick="openProjectDetails('WebAid for NPOs')">WebAid for NPOs: Empowering Non-Profits with Technology</span>
-                </li>
+		<!-- Project 2 -->
+		<li class="project-item" onmouseover="showProjectInfo('Real Value Hub')" onmouseout="hideProjectInfo()">
+		    <img src="https://ipfs.io/ipfs/QmSmY2s33HTd72VQy68hcPjugTk52ryc7yZjQem68xc8sW" alt="THQ Temple Thumbnail" class="project-thumbnail">
+		    <span class="project-name" onclick="openProjectDetails('Real Value Hub')">Affiliate Marketing: Promoting Products, Platforms & Passive Income </span>
+		</li>
 				<!-- Project 1 -->
 		<li class="project-item" onmouseover="showProjectInfo('CKS Collection')" onmouseout="hideProjectInfo()">
 		    <img src="Logo.png" alt="CKS Collection Thumbnail" class="project-thumbnail">
@@ -535,39 +535,11 @@ At THQ Cyber Division Unincorporated, we offer a range of virtual assistant serv
                 
                     <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_2')">Donate</button></center>
                 `;
-            } else if (projectId === 'WebAid for NPOs') {
-                projectDetails = `
-                    <p><b>Project Name: WebAid</b></p><br/>
-		    <p><b>Objective:</b> To empower Non-Profit Organizations (NPOs), community centers, churches, and community clubs by providing affordable and professional websites to enhance their online presence, improve engagement, and facilitate their missions effectively.</p><br/>
-
-		    <p><b>Key Features:</b></p><br/>
-
-		<p>Customizable Templates: Tailored designs to suit specific needs and branding.<br />
-		Donation Pages: Secure and user-friendly platforms to receive contributions.<br />
-		Event Calendar: Tools for scheduling and promoting events.<br />
-		Volunteer Signups: Forms to recruit and manage volunteers efficiently.<br />
-		SEO Optimization: Boost online visibility to reach a wider audience.<br />
-		Analytics: Insights to measure website traffic, donations, and engagement.<br />
-		Target Audience: Non-profits, community-focused organizations, and clubs seeking to enhance their digital footprint with user-friendly, mobile-responsive, and easy-to-manage websites.</p><br />
-
-		<p><b>Timeline:</b></p><br />
-
-		<p>Planning: 1–2 months<br />
-		Development: 3–6 months<br />
-		Ongoing Support: Continuous assistance for maintenance and updates.<br />
-		Success Metrics: Increased engagement, funds raised, volunteer participation, and user satisfaction.</p><br />
-
-		<p><b>Resources Required:</b> Web designers, developers, CMS tools, and ongoing technical support.</p><br />
-
-		<p><b>Impact:</b> WebAid aims to empower communities by providing digital tools to connect with their audience, drive participation, and achieve their goals effectively</p><br />
-                   
-                    <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_3')">Donate</button></center>
-                `;
             }else if (projectId === 'CKS Collection') {
 		    projectDetails = `
 		        <p><b>Project Name:</b> CKS Collection Unincorporated</p><br/>
 		        <p><b>Objective:</b> To showcase and supply high-quality natural gemstones, including Sapphire, Spinel, Ruby, Emerald, Tourmaline, Morganite, and Garnet, through a trusted and accessible online platform: <a href="https://cksfashioncollection.sell.app" target="_blank">cksfashioncollection.sell.app</a>.</p><br/>
-		
+			
 		        <p><b>Key Features:</b></p><br/>
 		        <p>
 		            • Genuine Gemstones: Ethically sourced and professionally inspected.<br/>
@@ -586,8 +558,34 @@ At THQ Cyber Division Unincorporated, we offer a range of virtual assistant serv
 		        <p><b>Support Needed:</b> Marketing, partnerships, customer referrals, and donations to expand sourcing, packaging, and certification capabilities.</p><br/>
 		
 		        <p><b>Impact:</b> CKS Collection Unincorporated empowers micro-traders, educates consumers, and provides access to the natural beauty and investment value of gemstones.</p><br/>
-		
+			
 		        <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_4')">Donate</button></center>
+		    `;
+		}else if (projectId === 'Real Value Hub') {
+		    projectDetails = `
+		        <p><b>Project Name:</b> Real Value Hub</p><br/>
+		        <p><b>Objective:</b> To provide curated affiliate links and content that bridge tangible goods and crypto-earning opportunities, enabling individuals and small brands to monetize web traffic while exploring digital income streams.</p><br/>
+		
+		        <p><b>Key Features:</b></p><br/>
+		        <p>
+		            • Blog-Driven Affiliate Marketing: Articles designed to educate and promote services such as Filebase, Tiptrans, and Scalelup.<br/>
+		            • Tangible + Digital Integration: Features both physical product collections (e.g., CKS Collection) and online earning platforms.<br/>
+		            • Professional Layout: Clean HTML/CSS implementation for fast loading and mobile responsiveness.<br/>
+		            • Ethical Monetization: Discloses affiliate links and promotes products through valuable content rather than clickbait.<br/>
+		            • IPFS Assets: Uses Filebase for decentralized image storage.
+		        </p><br/>
+		
+		        <p><b>Target Audience:</b> Crypto enthusiasts, freelancers, micro-entrepreneurs, digital nomads, and value-conscious shoppers.</p><br/>
+		
+		        <p><b>Timeline:</b><br/>
+		        Launch: Complete (2025).<br/>
+		        Expansion: Ongoing blog updates, SEO efforts, and new partnerships.</p><br/>
+		
+		        <p><b>Support Needed:</b> Collaboration with affiliate platforms, traffic generation, and content writing support for growth and sustainability.</p><br/>
+		
+		        <p><b>Impact:</b> Real Value Hub showcases how personal blogs can ethically earn crypto and commissions while connecting users with trusted tools and services that solve real-world problems.</p><br/>
+		
+		        <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_5')">Donate</button></center>
 		    `;
 		}
 
