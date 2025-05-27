@@ -344,6 +344,26 @@
 	    object-fit: cover;
 	    border-radius: 5px; /* Optional, to round the corners of the image */
 	}
+	.modal-image {
+	  max-width: 100%;
+	  height: auto;
+	  display: block;
+	  margin: 0 auto 20px;
+	  border-radius: 8px;
+	}
+	
+	#projectModal {
+	  background: white;
+	  padding: 20px;
+	  border-radius: 8px;
+	  max-width: 600px;
+	  margin: 5% auto;
+	  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	  overflow-y: auto;
+	  max-height: 80vh;
+	}
+
+
 	
 	
 	.project-item span {
@@ -537,6 +557,7 @@ At THQ Cyber Division Unincorporated, we offer a range of virtual assistant serv
                 `;
             }else if (projectId === 'CKS Collection') {
 		    projectDetails = `
+      			<img src="Logo.png" alt="CKS Collection Thumbnail" class="project-thumbnail" class="modal-image">
 		        <p><b>Project Name:</b> CKS Collection Unincorporated</p><br/>
 		        <p><b>Objective:</b> To showcase and supply high-quality natural gemstones, including Sapphire, Spinel, Ruby, Emerald, Tourmaline, Morganite, and Garnet, through a trusted and accessible online platform: <a href="https://cksfashioncollection.sell.app" target="_blank">cksfashioncollection.sell.app</a>.</p><br/>
 			
@@ -563,8 +584,9 @@ At THQ Cyber Division Unincorporated, we offer a range of virtual assistant serv
 		    `;
 		}else if (projectId === 'Real Value Hub') {
 		    projectDetails = `
+      			<img src="https://ipfs.io/ipfs/QmSmY2s33HTd72VQy68hcPjugTk52ryc7yZjQem68xc8sW" alt="THQ Temple Thumbnail" class="modal-image">
 		        <p><b>Project Name:</b> Real Value Hub</p><br/>
-		        <p><b>Objective:</b> To provide curated affiliate links and content that bridge tangible goods and crypto-earning opportunities, enabling individuals and small brands to monetize web traffic while exploring digital income streams.</p><br/>
+		        <p><b>Objective:</b> To provide curated affiliate links and content that bridge tangible goods and crypto-earning opportunities, enabling individuals and small brands to monetize web traffic while exploring digital income streams. <a href="https://thq-temple.neocities.org/" target="_blank">Real Value Hub</a></p><br/>
 		
 		        <p><b>Key Features:</b></p><br/>
 		        <p>
