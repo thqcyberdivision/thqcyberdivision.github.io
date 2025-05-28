@@ -375,6 +375,17 @@
 	.project-details-modal {
 	    margin-bottom: 20px;
 	}
+	.overlay-tile {
+	    background-color: rgba(255, 255, 255, 0.8); /* white with 80% opacity */
+	    padding: 20px;
+	    border-radius: 10px;
+	    display: inline-block;
+	    margin-top: 20px;
+	    max-width: 800px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+
 
     </style>
 </head>
@@ -398,12 +409,13 @@
         <a href="https://thqcyberdivision.github.io/services.html">Services</a>
     </nav>
     <main>
+	<div class="overlay-tile">
         <h1>Empowering Your Productivity </h1>
         <p>Welcome to THQ Cyber Division Unincorporated
 At THQ Cyber Division Unincorporated, we offer a range of virtual assistant services designed to support your business and personal needs. Our team of skilled professionals is dedicated to providing top-notch support, allowing you to focus on what matters most.</p>
 <h1>Get Started</h1>
 <p>Whether you need help with document writing, proofreading, data entry, or research, we're here to support you. Contact us today to learn more about our virtual assistant services.</p>
-        
+	</div>
         <!-- Button to show ebooks modal -->
         <button class="show-ebooks-btn" onclick="openModal()">Browse Ebooks</button>
 	<!-- Button to show support projects modal -->
