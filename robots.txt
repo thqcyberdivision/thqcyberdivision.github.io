@@ -1,0 +1,6 @@
+# robots.txt for THQ Cyber Division Unincorporated
+
+User-agent: *
+Allow: /
+
+Sitemap: https://thqcyberdivision.github.io/sitemap.xml
