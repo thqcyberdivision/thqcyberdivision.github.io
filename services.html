@@ -6,125 +6,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    	<!-- Basic Meta Tags -->
-<title>Services | THQ Cyber Division Unincorporated</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="THQ Cyber Division Unincorporated offers premium virtual assistant services including document writing, proofreading, data entry, and remote IT support.">
-<meta name="keywords" content="virtual assistant, document writing, proofreading, data entry, research, IT support, THQ Cyber Division">
-<meta name="author" content="THQ Cyber Division Unincorporated">
-<meta name="google-site-verification" content="Nx8hQYvwpEVXpzDwblQT1xmLanPVBfI_JmBMlXvbBVQ" />
+    <!-- Basic Meta Tags -->
+    <title>Services | THQ Cyber Division Unincorporated</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="THQ Cyber Division Unincorporated offers premium virtual assistant services including document writing, proofreading, data entry, and remote IT support.">
+    <meta name="keywords" content="virtual assistant, document writing, proofreading, data entry, research, IT support, THQ Cyber Division">
+    <meta name="author" content="THQ Cyber Division Unincorporated">
+    <meta name="google-site-verification" content="Nx8hQYvwpEVXpzDwblQT1xmLanPVBfI_JmBMlXvbBVQ" />
 
-<!-- Open Graph Tags -->
-<meta property="og:title" content="Virtual Services | THQ Cyber Division Unincorporated">
-<meta property="og:description" content="Empowering your productivity with reliable virtual assistant and IT support services.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://thqcyberdivision.github.io/">
-<meta property="og:image" content="https://ipfs.io/ipfs/QmNeSC4iXfe5NiHhuFJ8jqLnEFxFTXRziQjEbwrbXJz5UC">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Virtual Services | THQ Cyber Division Unincorporated">
+    <meta property="og:description" content="Empowering your productivity with reliable virtual assistant and IT support services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thqcyberdivision.github.io/">
+    <meta property="og:image" content="https://ipfs.io/ipfs/QmNeSC4iXfe5NiHhuFJ8jqLnEFxFTXRziQjEbwrbXJz5UC">
 
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="THQ Cyber Division Unincorporated">
-<meta name="twitter:description" content="Explore expert virtual assistant and remote IT services.">
-<meta name="twitter:image" content="https://ipfs.io/ipfs/QmNeSC4iXfe5NiHhuFJ8jqLnEFxFTXRziQjEbwrbXJz5UC">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="THQ Cyber Division Unincorporated">
+    <meta name="twitter:description" content="Explore expert virtual assistant and remote IT services.">
+    <meta name="twitter:image" content="https://ipfs.io/ipfs/QmNeSC4iXfe5NiHhuFJ8jqLnEFxFTXRziQjEbwrbXJz5UC">
 
-<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Organization",
-	  "name": "THQ Cyber Division Unincorporated",
-	  "url": "https://thqcyberdivision.github.io/",
-	  "logo": "https://thqcyberdivision.github.io/logo.png",
-	  "description": "THQ Cyber Division Unincorporated provides virtual assistant and IT support services worldwide, helping individuals and businesses increase productivity with expert support.",
-	  "sameAs": [
-	    "https://github.com/thqcyberdivision"
-	  ],
-	  "contactPoint": {
-	    "@type": "ContactPoint",
-	    "contactType": "Customer Support",
-	    "email": "thqcs@protonmail.com",
-	    "areaServed": "Worldwide",
-	    "availableLanguage": ["English"]
-	  }
-	}
-</script>
-
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "THQ Cyber Division Unincorporated",
+          "url": "https://thqcyberdivision.github.io/",
+          "logo": "https://thqcyberdivision.github.io/logo.png",
+          "description": "THQ Cyber Division Unincorporated provides virtual assistant and IT support services worldwide, helping individuals and businesses increase productivity with expert support.",
+          "sameAs": [
+            "https://github.com/thqcyberdivision"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "email": "thqcs@protonmail.com",
+            "areaServed": "Worldwide",
+            "availableLanguage": ["English"]
+          }
+        }
+    </script>
 
     <link rel="manifest" href="https://thqcyberdivision.github.io/manifest.json">
     <meta name="theme-color" content="#007bff">
 
- 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T83TYG9SG6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T83TYG9SG6');
-</script>	
-<script>
-        // Register the service worker
-	if ('serviceWorker' in navigator) {
-	  navigator.serviceWorker.register('https://thqcyberdivision.github.io/service-worker.js').then((registration) => {
-	    console.log('Service Worker registered');
-	    
-	    // Listen for updates to the service worker
-	    registration.addEventListener('updatefound', () => {
-	      const newWorker = registration.installing;
-	      newWorker.addEventListener('statechange', () => {
-	        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-	          alert('A new version is available. Please refresh the page.');
-	        }
-	      });
-	    });
-	  }).catch((error) => {
-	    console.error('Service Worker registration failed:', error);
-	  });
-	}
-	
-	// Detect online/offline status and display notification
-	const statusElement = document.getElementById('status');
-	function updateOnlineStatus() {
-	  const isOnline = navigator.onLine;
-	  statusElement.textContent = isOnline ? 'You are online' : 'You are offline';
-	  if (!isOnline) {
-	    alert('You are offline. The app will continue to work with cached data.');
-	  }
-	}
-	window.addEventListener('online', updateOnlineStatus);
-	window.addEventListener('offline', updateOnlineStatus);
-	updateOnlineStatus();
-	
-	// Fetch data function
-	const dataElement = document.getElementById('data');
-	document.getElementById('refresh').addEventListener('click', fetchData);
-	
-	function fetchData() {
-	  fetch('https://jsonplaceholder.typicode.com/posts/1')
-	    .then((response) => response.json())
-	    .then((data) => {
-	      dataElement.textContent = `Title: ${data.title}`;
-	    })
-	    .catch((error) => {
-	      dataElement.textContent = 'Failed to fetch data. You are offline.';
-	      console.error('Fetch error:', error);
-	    });
-	}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T83TYG9SG6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T83TYG9SG6');
     </script>
-    <title>Services - THQ Cyber Division Unincorporated</title>
-	<link rel="icon" type="image/png" sizes="16x16" href="https://thqcyberdivision.github.io/favicon_16x16.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://thqcyberdivision.github.io/favicon_32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="https://thqcyberdivision.github.io/favicon_96x96.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="https://thqcyberdivision.github.io/favicon_192x192.png">
+
     <style>
-                body {
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
             color: #000;
-	    
             background-image: url('website_cover.jpg');
             background-size: cover;
             background-position: center;
@@ -150,6 +93,7 @@
             padding: 10px;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         nav a {
             color: #fff;
@@ -160,11 +104,9 @@
             border-radius: 5px;
             transition: all 0.3s ease-in-out;
         }
-
         nav a:hover {
-			background-color: rgb(65,105,225);
+            background-color: rgb(65,105,225);
             color: #000;
-            text-decoration: None;
         }
         main {
             padding: 20px 15px;
@@ -196,33 +138,60 @@
         footer img:hover {
             opacity: 0.7;
         }
-	
-	.overlay-tile {
-	    background-color: rgba(255, 255, 255, 0.8); /* white with 80% opacity */
-	    padding: 20px;
-	    border-radius: 10px;
-	    display: inline-block;
-	    margin-top: 20px;
-	    max-width: 800px;
-	    margin-left: auto;
-	    margin-right: auto;
-	}
+        .overlay-tile {
+            background-color: rgba(255, 255, 255, 0.88);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+        }
+        /* Responsive styles for mobile */
+        @media (max-width: 600px) {
+            .overlay-tile {
+                max-width: 98vw;
+                padding: 10px;
+            }
+            header h1, main h1 {
+                font-size: 1.1em;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 5px;
+            }
+            nav a {
+                margin: 4px 0;
+                font-size: 1em;
+                padding: 8px 10px;
+            }
+            body {
+                background-size: cover;
+                background-position: center;
+            }
+        }
     </style>
-
+    <link rel="icon" type="image/png" sizes="16x16" href="https://thqcyberdivision.github.io/favicon_16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://thqcyberdivision.github.io/favicon_32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://thqcyberdivision.github.io/favicon_96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://thqcyberdivision.github.io/favicon_192x192.png">
 </head>
 <body>
-	<div id="google_translate_element"></div>
-	<script type="text/javascript">
-	    function googleTranslateElementInit() {
-	        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-	    }
-	</script>
-	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <header>
-         <a href="https://thqcyberdivision.github.io/index.html">
-        <img src="https://thqcyberdivision.github.io/logo.png" alt="THQ Logo">
-	     </a>
+        <a href="https://thqcyberdivision.github.io/index.html">
+            <img src="https://thqcyberdivision.github.io/logo.png" alt="THQ Logo">
+        </a>
         <h1>Our Virtual Assistant Services</h1>
     </header>
     <nav>
@@ -231,30 +200,32 @@
         <a href="https://thqcyberdivision.github.io/services.html">Services</a>
     </nav>
     <main>
-	<div class="overlay-tile">
-        <h1>Explore Our Expertise</h1>
-        <p>At THQ Cyber Division Unincorporated, we offer a range of virtual assistant services designed to support your business and personal needs. Our services include:</p>
-        <ul>
-            <li><strong>Business Analysis:</strong> In-depth analysis of your business to help streamline processes and improve efficiency.</li>
-            <li><strong>Document Writing:</strong> Professional writing services for documents, reports, and articles.</li>
-            <li><strong>Proofreading:</strong> Meticulous proofreading to ensure error-free documents.</li>
-            <li><strong>Data Entry:</strong> Accurate and efficient data entry services to help you manage your data.</li>
-            <li><strong>Research:</strong> Research services to provide valuable insights and information.</li>
-            <li><strong>Calendar Organization:</strong> Calendar organization services to ensure you're always on schedule.</li>
-            <li><strong>Email Management:</strong> Effective email management to help you stay organized.</li>
-            <li><strong>Remote Support:</strong> Expert technical support at your convenience, wherever you are.</li>
-
-        </ul>
-<h1>Benefits of Our Services</h1><p>
--<strong>Increased Productivity</strong>: By outsourcing tasks to us, you can focus on high-priority projects and activities.
-- <strong>Improved Accuracy</strong>: Our attention to detail ensures high-quality work, reducing errors and stress.
-- <strong>Flexibility</strong>: Our virtual assistant services are available on-demand, allowing you to work at your own pace.</p><br/>
-	<p>Please support our ebooks by making a donation.</p>
-	    <ul>
-		    <li><i>DAI/USDT/USDC contracts</i>: 0x4e2d6B629dC5d5336Ab8C241860Ad4a189d3E0B1</li>
-	    </ul>
-	<p>Your contribution will be valuable.</p>
-    </div>
+        <div class="overlay-tile">
+            <h1>Explore Our Expertise</h1>
+            <p>At THQ Cyber Division Unincorporated, we offer a range of virtual assistant services designed to support your business and personal needs. Our services include:</p>
+            <ul>
+                <li><strong>Business Analysis:</strong> In-depth analysis of your business to help streamline processes and improve efficiency.</li>
+                <li><strong>Document Writing:</strong> Professional writing services for documents, reports, and articles.</li>
+                <li><strong>Proofreading:</strong> Meticulous proofreading to ensure error-free documents.</li>
+                <li><strong>Data Entry:</strong> Accurate and efficient data entry services to help you manage your data.</li>
+                <li><strong>Research:</strong> Research services to provide valuable insights and information.</li>
+                <li><strong>Calendar Organization:</strong> Calendar organization services to ensure you're always on schedule.</li>
+                <li><strong>Email Management:</strong> Effective email management to help you stay organized.</li>
+                <li><strong>Remote Support:</strong> Expert technical support at your convenience, wherever you are.</li>
+            </ul>
+            <h1>Benefits of Our Services</h1>
+            <p>
+                - <strong>Increased Productivity</strong>: By outsourcing tasks to us, you can focus on high-priority projects and activities.<br>
+                - <strong>Improved Accuracy</strong>: Our attention to detail ensures high-quality work, reducing errors and stress.<br>
+                - <strong>Flexibility</strong>: Our virtual assistant services are available on-demand, allowing you to work at your own pace.
+            </p>
+            <br/>
+            <p>Please support our ebooks by making a donation.</p>
+            <ul>
+                <li><i>DAI/USDT/USDC contracts</i>: 0x4e2d6B629dC5d5336Ab8C241860Ad4a189d3E0B1</li>
+            </ul>
+            <p>Your contribution will be valuable.</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 - 2025 THQ Cyber Division Unincorporated. All rights reserved.</p>
