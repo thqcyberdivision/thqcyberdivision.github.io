@@ -545,9 +545,9 @@
                     <span class="project-name" onclick="openProjectDetails('Project 1')">Project 1: Digital Education Initiative</span>
                 </li>
                 <!-- Project 2 -->
-                <li class="project-item" onmouseover="showProjectInfo('Project 2')" onmouseout="hideProjectInfo()">
-                    <img src="project2-thumbnail.jpg" alt="Project 2 Thumbnail" class="project-thumbnail">
-                    <span class="project-name" onclick="openProjectDetails('Project 2')">Project 2: Green Energy Research</span>
+                <li class="project-item" onmouseover="showProjectInfo('KVStore')" onmouseout="hideProjectInfo()">
+                    <img src="project2-thumbnail.jpg" alt="KVStore Thumbnail" class="project-thumbnail">
+                    <span class="project-name" onclick="openProjectDetails('KVStore')">Knowledge Vault</span>
                 </li>
 		<!-- Project 2 -->
 		<li class="project-item" onmouseover="showProjectInfo('THQ Value Hub')" onmouseout="hideProjectInfo()">
@@ -637,9 +637,32 @@
 			    <img id="qrCodeImage" src="" alt="QR Code">
 		    </div>
                 `;
-            } else if (projectId === 'Project 2') {
+            } else if (projectId === 'KVStore') {
                 projectDetails = `
-                    <p>This project focuses on developing sustainable energy solutions.</p>
+                    <img src="https://ipfs.io/ipfs/QmUz5httEH63hbbRU5tnK7m6ePK92UJBorGXNzJxr6J46x" alt="KVStore Thumbnail" class="modal-image">
+		        <p><b>Project Name:</b> Knowledge Vault Store</p><br/>
+		        <p><b>Objective:</b> To showcase ebooks for Businesses, family offices, Digital nomads and provide virtual services through a trusted and accessible online platform: <a href="https://kvstore.sell.app" target="_blank">kvstore.sell.app</a>.</p><br/>
+			
+		        <p><b>Key Features:</b></p><br/>
+		        <p>
+		            • EBooks: Useful for Business (small to enterprise level), family offices and digital nomads<br/>
+		            • Digital Storefront: Secure, user-friendly shopping experience.<br/>
+		            • Virtual Services: For maximizing your productivity.<br/>
+		            • Global Access: Serving businesses, family offices, institutions, digital nomads and enthusiasts worldwide.
+		        </p><br/>
+		
+		        <p><b>Target Audience:</b> Ebook lovers, Students, Businesses, and individuals looking for affordable, ebooks and virtual services.</p><br/>
+		
+		        <p><b>Timeline:</b><br/>
+		        Store Launch: Completed and live.<br/>
+		        Expansion: Adding new inventory, virtual services, and channel launching.</p><br/>
+		
+		        <p><b>Support Needed:</b> Marketing, partnerships, customer referrals, and donations to expand sourcing, packaging, and remote capabilities.</p><br/>
+		
+		        <p><b>Impact:</b> KVStore empowers Businesses, digital nomads, and family offices with value based information.</p><br/>
+			
+		        <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_3')">Donate</button></center>
+		    `;
                 
                     <center><button class="show-donations-btn" onclick="showQRCode('ETH_Address_2')">Donate</button></center>
                 `;
