@@ -51,6 +51,7 @@
 
     <link rel="manifest" href="https://thqcyberdivision.github.io/manifest.json">
     <meta name="theme-color" content="#007bff">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T83TYG9SG6"></script>
@@ -60,12 +61,6 @@
       gtag('js', new Date());
       gtag('config', 'G-T83TYG9SG6');
     </script>
-          <!-- Snipcart -->
-      <link rel="preconnect" href="https://app.snipcart.com" />
-      <link rel="preconnect" href="https://cdn.snipcart.com" />
-      <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
-      <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
-      <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
     <style>
     body {
       font-family: Arial, sans-serif;
@@ -99,6 +94,17 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+    }
+    .snipcart-checkout {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: #fff;
+      text-decoration: none;
+      background: #4169e1;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.9em;
     }
 
     nav a {
@@ -210,6 +216,14 @@
     <link rel="icon" type="image/png" sizes="192x192" href="https://thqcyberdivision.github.io/favicon_192x192.png">
 </head>
 <body>
+    <script>
+        window.SnipcartSettings = {
+          publicApiKey: "YOUR_PUBLIC_API_KEY",
+          loadStrategy: "on-user-interaction"
+        };
+  </script>
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  <div hidden id="snipcart"></div>
     <div id="google_translate_element"></div>
     <script type="text/javascript">
         function googleTranslateElementInit() {
