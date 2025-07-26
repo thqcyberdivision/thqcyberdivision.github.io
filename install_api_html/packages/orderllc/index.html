@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Your Company Name</title>
+
+
+    <link href="https://api.bizstarter.us/company/css/style.css" rel="stylesheet" />
+    <link href="https://api.bizstarter.us/company/css/responsive.css" rel="stylesheet" />
+
+    <link href="https://api.bizstarter.us/company/css/steps.css" rel="stylesheet" />
+    <link href="https://api.bizstarter.us/company/css/steps-responsive.css" rel="stylesheet" />
+
+
+    <link href="/bs-css/demo.css" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <section class="top-panel_1">
+        <div class="content">
+            <div class="top-panel-container_1">
+                <a href="/"><img src="/bs-image/Logo.svg" height="50" alt=""></a>
+                <nav>
+                    <div>
+                        <a href="/" class="menu-item">HOME</a>
+                    </div>
+                    <div class="menu-item-active">
+                        <a href="/packages/" class="menu-item">BUSINESS FORMATION</a>
+                        <span class="menu-underline"></span>
+                    </div>
+                    <div>
+                        <a href="/additional-services/" class="menu-item">
+                            ADDITIONAL SERVICES
+                            <img src="/bs-image/svg/arrow-down-w.svg" class="menu-chevron" alt="">
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul id="dropdown_menu"></ul>
+                        </div>
+                        <span class="menu-underline"></span>
+                    </div>
+                </nav>
+                <div class="burger">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu_close">
+            <img src="/bs-image/close-btn.svg" alt="" />
+        </div>
+        <div class="mobile-menu-content">
+            <ul>
+                <li>
+                    <a href="/">HOME</a>
+                </li>
+                <li>
+                    <a href="/existing-business/">BUSINESS FORMATION</a>
+                </li>
+                <li>
+                    <a href="/additional-services/">ADDITIONAL SERVICES</a>
+                    <ul id="mobile_menu"></ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bizstarter_order_container"></div>
+
+    <script src="/bs-js/jquery.min.js"></script>
+    <script src="/bs-js/mask.js"></script>
+    <script src="https://api.bizstarter.us/company/js/company.js"></script>
+
+</body>
+</html>
