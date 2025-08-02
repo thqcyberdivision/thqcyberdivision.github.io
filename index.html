@@ -119,6 +119,12 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="https://thqcyberdivision.github.io/favicon_96x96.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="https://thqcyberdivision.github.io/favicon_192x192.png">
     <style>
+        html {
+            box-sizing: border-box;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -129,7 +135,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-}
+        }
         header {
             background-color: #000;
             color: #fff;
@@ -138,8 +144,10 @@
         }
         header img {
             width: 100px;
+            height: auto;
             display: block;
             margin: 0 auto;
+            max-width: 90vw;
         }
         header h1 {
             font-size: 1.5em;
@@ -150,24 +158,25 @@
             padding: 10px;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         nav a {
             color: #fff;
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border-radius: 5px;
             transition: all 0.3s ease-in-out;
+            font-size: 1em;
         }
-
         nav a:hover {
-			background-color: rgb(65,105,225);
+            background-color: rgb(65,105,225);
             color: #000;
-            text-decoration: None;
+            text-decoration: none;
         }
         main {
-            padding: 20px 15px;
+            padding: 20px 10px;
             text-align: center;
         }
         main h1 {
@@ -175,7 +184,7 @@
             margin-bottom: 20px;
         }
         main p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
@@ -186,20 +195,75 @@
         .cta a {
             background-color: #000;
             color: #fff;
-            padding: 10px 20px;
+            padding: 16px 20px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             display: inline-block;
+            font-size: 1.1em;
+            min-width: 180px;
+            min-height: 48px;
+            box-sizing: border-box;
         }
         .cta a:hover {
             background-color: #0056b3;
+            color: #fff;
+        }
+        .overlay-tile {
+            background-color: rgba(255, 255, 255, 0.88);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        section#newsletter {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        section#newsletter form {
+            max-width: 400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        section#newsletter input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        section#newsletter button[type="submit"] {
+            padding: 14px 0;
+            width: 100%;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            min-height: 48px;
+        }
+        section#newsletter p {
+            font-size: 1em;
         }
         footer {
             background-color: #000;
             color: #fff;
             text-align: center;
             padding: 15px 10px;
+            font-size: 1em;
         }
         footer img {
             width: 30px;
@@ -209,20 +273,78 @@
         footer img:hover {
             opacity: 0.7;
         }
-
-        
-	.overlay-tile {
-	    background-color: rgba(255, 255, 255, 0.8); /* white with 80% opacity */
-	    padding: 20px;
-	    border-radius: 10px;
-	    display: inline-block;
-	    margin-top: 20px;
-	    max-width: 800px;
-	    margin-left: auto;
-	    margin-right: auto;
-	}
-
-
+        footer nav a {
+            color: #fff;
+            margin: 0 8px;
+            text-decoration: underline;
+            font-size: 1em;
+            display: inline-block;
+            padding: 4px 0;
+        }
+        @media (max-width: 900px) {
+            .overlay-tile, main p {
+                max-width: 98vw;
+            }
+            section#newsletter form {
+                max-width: 95vw;
+            }
+        }
+        @media (max-width: 600px) {
+            header img {
+                width: 70px;
+            }
+            header h1 {
+                font-size: 1.1em;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+            }
+            nav a {
+                margin: 7px 0;
+                font-size: 1em;
+                min-width: 120px;
+                width: 90vw;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            .overlay-tile, main, section#newsletter {
+                padding: 10px 4px;
+                margin: 10px 0;
+            }
+            .cta a, section#newsletter button[type="submit"] {
+                font-size: 1em;
+                min-width: 100px;
+            }
+            main h1, section#newsletter h2 {
+                font-size: 1.2em;
+            }
+            main p, section#newsletter p {
+                font-size: 1em;
+            }
+            footer {
+                padding: 10px 5px;
+            }
+            footer nav a {
+                margin: 5px 0;
+                font-size: 1em;
+                display: block;
+            }
+        }
+        @media (max-width: 420px) {
+            header img {
+                width: 50px;
+            }
+            .cta a, section#newsletter button[type="submit"] {
+                font-size: 0.9em;
+                min-width: 90px;
+            }
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
