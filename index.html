@@ -53,66 +53,13 @@
 	}
 </script>
 
-<script>
-        // Register the service worker
-	if ('serviceWorker' in navigator) {
-	  navigator.serviceWorker.register('/service-worker.js').then((registration) => {
-	    console.log('Service Worker registered');
-	    
-	    // Listen for updates to the service worker
-	    registration.addEventListener('updatefound', () => {
-	      const newWorker = registration.installing;
-	      newWorker.addEventListener('statechange', () => {
-	        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-	          alert('A new version is available. Please refresh the page.');
-	        }
-	      });
-	    });
-	  }).catch((error) => {
-	    console.error('Service Worker registration failed:', error);
-	  });
-	}
-	
-	// Detect online/offline status and display notification
-	const statusElement = document.getElementById('status');
-	function updateOnlineStatus() {
-	  const isOnline = navigator.onLine;
-	  statusElement.textContent = isOnline ? 'You are online' : 'You are offline';
-	  if (!isOnline) {
-	    alert('You are offline. The app will continue to work with cached data.');
-	  }
-	}
-	window.addEventListener('online', updateOnlineStatus);
-	window.addEventListener('offline', updateOnlineStatus);
-	updateOnlineStatus();
-	
-	// Fetch data function
-	const dataElement = document.getElementById('data');
-	document.getElementById('refresh').addEventListener('click', fetchData);
-	
-	function fetchData() {
-	  fetch('https://jsonplaceholder.typicode.com/posts/1')
-	    .then((response) => response.json())
-	    .then((data) => {
-	      dataElement.textContent = `Title: ${data.title}`;
-	    })
-	    .catch((error) => {
-	      dataElement.textContent = 'Failed to fetch data. You are offline.';
-	      console.error('Fetch error:', error);
-	    });
-	}
+
 	
 
     </script>
 	    <!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T83TYG9SG6"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-T83TYG9SG6');
-	</script>
+
     <title>Home - THQ Cyber Division Unincorporated</title>
 	<link rel="icon" type="image/png" sizes="16x16" href="https://thqcyberdivision.github.io/favicon_16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="https://thqcyberdivision.github.io/favicon_32x32.png">
@@ -424,7 +371,7 @@
 	    <a href="mailto:thqcs@protonmail.com">Email Us</a>
 	  </nav>
     </footer>
-
+<script src="main.js"></script>
 </body>
 </html>
 
