@@ -10,7 +10,7 @@
     body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #000; }
     header, footer { background: #000; color: #fff; text-align: center; padding: 15px 0; }
     header img { height: 50px; }
-    nav { background: #222; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
+    nav { background: #222; display: flex; justify-content: center; gap: 20px; padding: 10px 0; flex-wrap: wrap; }
     nav a { color: #fff; text-decoration: none; font-weight: bold; padding: 8px 15px; border-radius: 5px; }
     nav a.active, nav a:hover { background: #4169e1; color: #fff; }
     main { display: flex; flex-wrap: wrap; max-width: 1200px; margin: 30px auto; gap: 30px; padding: 0 10px; }
@@ -43,6 +43,13 @@
       .blog-sidebar { max-width: 100%; }
       .blog-preview { flex-direction: column; align-items: flex-start; }
       .blog-preview img { width: 100%; height: 160px; }
+      nav { gap: 8px; }
+      header img { height: 38px; }
+    }
+    @media (max-width: 600px) {
+      main { padding: 10px 4vw; }
+      nav { flex-direction: column; align-items: center; }
+      nav a { margin: 4px 0; min-width: 120px; text-align: center; }
     }
     footer nav a { color: #fff; margin: 0 5px; text-decoration: underline; }
   </style>
@@ -74,17 +81,56 @@
         <a href="#">Business Formation</a>
       </section>
       <section class="blog-list">
-        <!-- Example Blog Post Preview -->
+        <!-- Cybersecurity -->
         <article class="blog-preview">
-          <img src="assets/images/sample-post.jpg" alt="Post thumbnail">
+          <img src="https://images.unsplash.com/photo-1510511233900-192d6d7a6a48?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Checklist for Small Businesses">
           <div>
-            <h2><a href="blog-post-1.html">How to Improve Your Cybersecurity in 2025</a></h2>
-            <p class="meta">Posted by Jane Doe on September 23, 2025 | <span class="category">Cybersecurity</span></p>
-            <p class="summary">Discover simple, effective strategies every business and individual can use to stay secure in the digital age. Learn about password management, phishing awareness, and more.</p>
-            <a href="blog-post-1.html" class="read-more">Read More</a>
+            <h2><a href="blog-cybersecurity-checklist.html">10-Step Cybersecurity Checklist for Small Businesses</a></h2>
+            <p class="meta">Posted by THQ Cyber Division Team on September 10, 2025 | <span class="category">Cybersecurity</span></p>
+            <p class="summary">Is your business protected from the latest threats? Follow our actionable 10-step checklist to secure your email, devices, cloud accounts, and more. Download a printable version for your office!</p>
+            <a href="blog-cybersecurity-checklist.html" class="read-more">Read More</a>
           </div>
         </article>
-        <!-- Add more <article> blocks for additional posts -->
+        <!-- Productivity -->
+        <article class="blog-preview">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Virtual Assistant Productivity">
+          <div>
+            <h2><a href="blog-boost-productivity.html">How a Virtual Assistant Can Boost Your Team's Productivity</a></h2>
+            <p class="meta">Posted by Jane Doe on August 28, 2025 | <span class="category">Productivity</span></p>
+            <p class="summary">Discover how delegating tasks to a skilled virtual assistant helped one of our clients reclaim 10+ hours per week, streamline document workflows, and focus on core business growth.</p>
+            <a href="blog-boost-productivity.html" class="read-more">Read More</a>
+          </div>
+        </article>
+        <!-- News -->
+        <article class="blog-preview">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Company News">
+          <div>
+            <h2><a href="blog-news-announcement.html">THQ Cyber Division Launches New Client Portal</a></h2>
+            <p class="meta">Posted by THQ Cyber Division Team on July 30, 2025 | <span class="category">News</span></p>
+            <p class="summary">We’re excited to announce our new secure client portal—making it easier than ever to request support, manage your information, and access exclusive resources.</p>
+            <a href="blog-news-announcement.html" class="read-more">Read More</a>
+          </div>
+        </article>
+        <!-- IT Support -->
+        <article class="blog-preview">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="IT Support Solutions">
+          <div>
+            <h2><a href="blog-it-support-tips.html">5 IT Support Tips Every Remote Worker Should Know</a></h2>
+            <p class="meta">Posted by Support Specialist on July 20, 2025 | <span class="category">IT Support</span></p>
+            <p class="summary">Remote work is here to stay. Learn five essential IT support practices—from device updates to secure backups—to keep your workflow smooth and your data safe.</p>
+            <a href="blog-it-support-tips.html" class="read-more">Read More</a>
+          </div>
+        </article>
+        <!-- Business Formation -->
+        <article class="blog-preview">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=400&q=80" alt="Business Incorporation Success">
+          <div>
+            <h2><a href="blog-incorporation-success.html">Case Study: Launching a US LLC with THQ Cyber Division</a></h2>
+            <p class="meta">Posted by THQ Cyber Division Team on July 15, 2025 | <span class="category">Business Formation</span></p>
+            <p class="summary">Discover how we guide our clients step-by-step through the US LLC formation process, from legal paperwork and compliance to remote support and official address setup. See what sets our business support apart.</p>
+            <a href="blog-incorporation-success.html" class="read-more">Read More</a>
+          </div>
+        </article>
       </section>
     </section>
     <aside class="blog-sidebar">
@@ -102,8 +148,8 @@
       <section>
         <h3>Popular Posts</h3>
         <ul>
-          <li><a href="blog-post-2.html">5 Ways Virtual Assistants Boost Productivity</a></li>
-          <li><a href="blog-post-3.html">Why Secure Cloud Backups Matter</a></li>
+          <li><a href="blog-boost-productivity.html">How a Virtual Assistant Can Boost Your Team's Productivity</a></li>
+          <li><a href="blog-cybersecurity-checklist.html">10-Step Cybersecurity Checklist for Small Businesses</a></li>
         </ul>
       </section>
     </aside>
