@@ -75,20 +75,25 @@
       <p>Insights, updates, and tips from THQ Cyber Division Unincorporated.</p>
       <input type="search" id="blogSearch" placeholder="Search blog posts..." class="blog-search" onkeyup="filterPostsBySearch()">
     </section>
-    <section class="blog-categories" id="blogCategories">
+<!-- Categories -->
+<section class="blog-categories" id="blogCategories">
   <button class="active" data-category="all" onclick="setCategory('all', this)">All</button>
   <button data-category="cybersecurity" onclick="setCategory('cybersecurity', this)">Cybersecurity</button>
   <button data-category="productivity" onclick="setCategory('productivity', this)">Productivity</button>
   <button data-category="news" onclick="setCategory('news', this)">News</button>
   <button data-category="it-support" onclick="setCategory('it-support', this)">IT Support</button>
-  <button data-category="business-formation" onclick="setCategory('business-formation', this)">List</button>
+  <button data-category="business-formation" onclick="setCategory('business-formation', this)">Business Formation</button>
+</section>
+
+<!-- Blog Posts (with correct checklist image) -->
+<section class="blog-list" id="blogList">
   <!-- Cybersecurity -->
   <article class="blog-preview" data-category="cybersecurity">
     <img src="https://images.unsplash.com/photo-1510511233900-192d6d7a6a48?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Checklist for Small Businesses">
     <div>
       <h2>10-Step Cybersecurity Checklist for Small Businesses</h2>
-      <p class="meta">Posted by THQ Cyber Division Team on September 26th, 2025 | <span class="category">Cybersecurity</span></p>
-      printable version for your office!</p>
+      <p class="meta">Posted by THQ Cyber Division Team on September 10, 2025 | <span class="category">Cybersecurity</span></p>
+      <p class="summary">Is your business protected from the latest threats? Follow our actionable 10-step checklist to secure your email, devices, cloud accounts, and more. Download a printable version for your office!</p>
       <button class="read-more" onclick="expandArticle(this)">Read More</button>
       <div class="blog-full-content">
         <h3>10 Steps to Protect Your Small Business</h3>
@@ -98,7 +103,9 @@
           <li>Regularly update all software and operating systems.</li>
           <li>Train employees to recognize phishing attempts.</li>
           <li>Back up your data regularly to secure, offsite locations.</li>
->
+          <li>Install and maintain antivirus software.</li>
+          <li>Restrict admin rights to essential personnel only.</li>
+          <li>Secure your Wi-Fi networks with strong encryption.</li>
           <li>Monitor account activity for suspicious behavior.</li>
           <li>Have an incident response plan (know who to call and what to do).</li>
         </ol>
@@ -106,7 +113,6 @@
       </div>
     </div>
   </article>
-      
       <!-- Productivity -->
       <article class="blog-preview" data-category="productivity">
         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Virtual Assistant Productivity">
