@@ -76,46 +76,43 @@
       <input type="search" id="blogSearch" placeholder="Search blog posts..." class="blog-search" onkeyup="filterPostsBySearch()">
     </section>
     <section class="blog-categories" id="blogCategories">
-      <button class="active" data-category="all" onclick="filterPosts('all', this)">All</button>
-      <button data-category="cybersecurity" onclick="filterPosts('cybersecurity', this)">Cybersecurity</button>
-      <button data-category="productivity" onclick="filterPosts('productivity', this)">Productivity</button>
-      <button data-category="news" onclick="filterPosts('news', this)">News</button>
-      <button data-category="it-support" onclick="filterPosts('it-support', this)">IT Support</button>
-      <button data-category="business-formation" onclick="filterPosts('business-formation', this)">Business Formation</button>
-    </section>
-    <section class="blog-list" id="blogList">
-      <!-- Cybersecurity -->
-      <article class="blog-preview" data-category="cybersecurity">
-        <img src="https://images.unsplash.com/photo-1510511233900-192d6d7a6a48?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Checklist for Small Businesses">
-        <div>
-          <h2>10-Step Cybersecurity Checklist for Small Businesses</h2>
-          <p class="meta">Posted by THQ Cyber Division Team on September 10, 2025 | <span class="category">Cybersecurity</span></p>
-          <p class="summary">Is your business protected from the latest threats? Follow our actionable 10-step checklist to secure your email, devices, cloud accounts, and more. Download a printable version for your office!</p>
-          <button class="read-more" onclick="expandArticle(this)">Read More</button>
-          <div class="blog-full-content">
-            <h3>10 Steps to Protect Your Small Business</h3>
-            <ol>
-              <li>Use strong, unique passwords for all accounts.</li>
-              <li>Enable two-factor authentication wherever possible.</li>
-              <li>Regularly update all software and operating systems.</li>
-              <li>Train employees to recognize phishing attempts.</li>
-              <li>Back up your data regularly to secure, offsite locations.</li>
-              <li>Install and maintain antivirus software.</li>
-              <li>Restrict admin rights to essential personnel only.</li>
-              <li>Secure your Wi-Fi networks with strong encryption.</li>
-              <li>Monitor account activity for suspicious behavior.</li>
-              <li>Have an incident response plan (know who to call and what to do).</li>
-            </ol>
-            <p>Download a printable checklist for your team, and reach out to THQ Cyber Division for a custom security audit!</p>
-          </div>
-        </div>
-      </article>
+  <button class="active" data-category="all" onclick="setCategory('all', this)">All</button>
+  <button data-category="cybersecurity" onclick="setCategory('cybersecurity', this)">Cybersecurity</button>
+  <button data-category="productivity" onclick="setCategory('productivity', this)">Productivity</button>
+  <button data-category="news" onclick="setCategory('news', this)">News</button>
+  <button data-category="it-support" onclick="setCategory('it-support', this)">IT Support</button>
+  <button data-category="business-formation" onclick="setCategory('business-formation', this)">List">
+  <!-- Cybersecurity -->
+  <article class="blog-preview" data-category="cybersecurity">
+    <img src="https://images.unsplash.com/photo-1510511233900-192d6d7a6a48?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Checklist for Small Businesses">
+    <div>
+      <h2>10-Step Cybersecurity Checklist for Small Businesses</h2>
+      <p class="meta">Posted by THQ Cyber Division Team on September 26th, 2025 | <span class="category">Cybersecurity</span></p>
+      printable version for your office!</p>
+      <button class="read-more" onclick="expandArticle(this)">Read More</button>
+      <div class="blog-full-content">
+        <h3>10 Steps to Protect Your Small Business</h3>
+        <ol>
+          <li>Use strong, unique passwords for all accounts.</li>
+          <li>Enable two-factor authentication wherever possible.</li>
+          <li>Regularly update all software and operating systems.</li>
+          <li>Train employees to recognize phishing attempts.</li>
+          <li>Back up your data regularly to secure, offsite locations.</li>
+>
+          <li>Monitor account activity for suspicious behavior.</li>
+          <li>Have an incident response plan (know who to call and what to do).</li>
+        </ol>
+        <p>Download a printable checklist for your team, and reach out to THQ Cyber Division for a custom security audit!</p>
+      </div>
+    </div>
+  </article>
+      
       <!-- Productivity -->
       <article class="blog-preview" data-category="productivity">
         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Virtual Assistant Productivity">
         <div>
           <h2>How a Virtual Assistant Can Boost Your Team's Productivity</h2>
-          <p class="meta">Posted by Jane Doe on August 28, 2025 | <span class="category">Productivity</span></p>
+          <p class="meta">Posted by Jane Doe on September 26th, 2025 | <span class="category">Productivity</span></p>
           <p class="summary">Discover how delegating tasks to a skilled virtual assistant helped one of our clients reclaim 10+ hours per week, streamline document workflows, and focus on core business growth.</p>
           <button class="read-more" onclick="expandArticle(this)">Read More</button>
           <div class="blog-full-content">
@@ -136,7 +133,7 @@
         <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Company News">
         <div>
           <h2>THQ Cyber Division Launches New Client Portal</h2>
-          <p class="meta">Posted by THQ Cyber Division Team on July 30, 2025 | <span class="category">News</span></p>
+          <p class="meta">Posted by THQ Cyber Division Team on September 26th, 2025 | <span class="category">News</span></p>
           <p class="summary">We’re excited to announce our new secure client portal—making it easier than ever to request support, manage your information, and access exclusive resources.</p>
           <button class="read-more" onclick="expandArticle(this)">Read More</button>
           <div class="blog-full-content">
@@ -157,7 +154,7 @@
         <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q= alt="IT Support Solutions">
         <div>
           <h2>5 IT Support Tips Every Remote Worker Should Know</h2>
-          <p class="meta">Posted by Support Specialist on July 20, 2025 | <span class="category">IT Support</span></p>
+          <p class="meta">Posted by Support Specialist on September 26th, 2025 | <span class="category">IT Support</span></p>
           <p class="summary">Remote work is here to stay. Learn five essential IT support practices—from device updates to secure backups—to keep your workflow smooth and your data safe.</p>
           <button class="read-more" onclick="expandArticle(this)">Read More</button>
           <div class="blog-full-content">
@@ -178,7 +175,7 @@
         <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=400&q=80" alt="Business Incorporation Success">
         <div>
           <h2>Case Study: Launching a US LLC with THQ Cyber Division</h2>
-          <p class="meta">Posted by THQ Cyber Division Team on July 15, 2025 | <span class="category">Business Formation</span></p>
+          <p class="meta">Posted by THQ Cyber Division Team on September 26th, 2025 | <span class="category">Business Formation</span></p>
           <p class="summary">Discover how we guide our clients step-by-step through the US LLC formation process, from legal paperwork and compliance to remote support and official address setup. See what sets our business support apart.</p>
           <button class="read-more" onclick="expandArticle(this)">Read More</button>
           <div class="blog-full-content">
@@ -221,24 +218,36 @@
     <a href="terms.html">Terms</a> |
     <a href="privacy.html">Privacy</a> |
     <a href="mailto:thqcs@protonmail.com">Contact</a>
-    <a href="rss.xml" style="margin-left:10px;">RSS</a>
-  </nav 'flex' : 'none';
-  });
-  filterPostsBySearch(); // Ensure search filter is still applied after filtering by category
+    <script>
+let currentCategory = 'all';
+
+function setCategory(category, btn) {
+  currentCategory = category;
+  document.querySelectorAll('.blog-categories button').forEach(b => b.class applyBlogFilters();
 }
+
 function expandArticle(btn) {
   const preview = btn.closest('.blog-preview');
   preview.classList.add('expanded');
 }
-function filterPostsBySearch() {
+
+function applyBlogFilters() {
   const search = document.getElementById('blogSearch').value.toLowerCase();
   document.querySelectorAll('.blog-preview').forEach(post => {
-    // Only filter visible posts (by category)
-    if (post.style.display === "none") return;
+    // Category filter
+    const matchesCategory = (currentCategory === "all" || post.dataset.category === currentCategory);
+    // Search filter
     const text = post.innerText.toLowerCase();
-    post.style.display = text.includes(search) ? 'flex' : 'none';
+    const matchesSearch = !search || text.includes(search);
+    post.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
   });
 }
+
+// On search input
+document.getElementById('blogSearch').addEventListener('input', applyBlogFilters);
+
+// On page load, show all posts
+window.onload = applyBlogFilters;
 </script>
 </body>
 </html>
