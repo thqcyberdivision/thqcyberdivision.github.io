@@ -16,6 +16,7 @@ const urlsToCache = [
   '/favicon_192x192.png',
   '/manifest.json',
   '/website_cover.jpg',
+  '/bookings.html',
   '/terms.html',
   '/privacy.html',
 ];
