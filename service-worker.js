@@ -1,27 +1,29 @@
-// Define the cache name and files to cache
-const CACHE_NAME = 'thq-cache-v1';
+const CACHE_NAME = 'thq-cache-v3';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/about.html',
-    '/services.html',
-    '/logo.png',
-    '/email-icon.png',
-    'book1-icon.png',
-    'book2-icon.png',
-    'favicon_16x16.png',
-    'favicon_192x192.png',
-    'favicon_32x32.png',
-    'favicon_96x966.png',
-    '/skype-icon.png',
-    'pdf-icon.png',
-    '/manifest.json'
+  '/',
+  '/index.html',
+  '/about.html',
+  '/services.html',
+  '/blog.html',
+  '/contact.html',
+  '/main.css',
+  '/main.js',
+  '/logo.png',
+  '/email-icon.png',
+  '/favicon_16x16.png',
+  '/favicon_32x32.png',
+  '/favicon_96x96.png',
+  '/favicon_192x192.png',
+  '/manifest.json',
+  '/website_cover.jpg',
+  '/terms.html',
+  '/privacy.html',
 ];
 
-// Install event: Cache static assets
+// Install event: Pre-cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_ASSETS))
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
   );
   self.skipWaiting();
 });
@@ -29,60 +31,43 @@ self.addEventListener('install', (event) => {
 // Activate event: Remove old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
-            return caches.delete(cache);
-          }
-        })
-      );
-    })
+    caches.keys().then((cacheNames) =>
+      Promise.all(
+        cacheNames
+          .filter((cache) => cache !== CACHE_NAME)
+          .map((cache) => caches.delete(cache))
+      )
+    )
   );
   self.clients.claim();
 });
 
-// Fetch event: Serve cached assets or fetch from network
+// Fetch event: Cache-first for pre-cached, network-fallback & dynamic caching for all GET
 self.addEventListener('fetch', (event) => {
-  if (event.request.url.includes('jsonplaceholder.typicode.com')) {
-    // Handle dynamic data (API responses)
-    event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        return (
-          cachedResponse ||
-          fetch(event.request).then((response) => {
-            return caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, response.clone());
-              return response;
+  if (event.request.method !== 'GET') return;
+
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) return cachedResponse;
+      return fetch(event.request)
+        .then((response) => {
+          // Only cache successful, basic requests (not third-party)
+          if (
+            response &&
+            response.status === 200 &&
+            response.type === 'basic'
+          ) {
+            const responseClone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, responseClone);
             });
-          })
-        );
-      })
-    );
-  } else {
-    // Handle static assets (HTML, CSS, JS)
-    event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        return cachedResponse || fetch(event.request);
-      })
-    );
-  }
+          }
+          return response;
+        })
+        .catch(() => {
+          // Optional: You can return a fallback page/image here if offline
+          // return caches.match('/offline.html');
+        });
+    })
+  );
 });
-
-// Background Sync for new data when the user comes online
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'sync-new-data') {
-    event.waitUntil(fetchAndCacheNewData());
-  }
-});
-
-// Fetch new data and cache it
-function fetchAndCacheNewData() {
-  return fetch('https://jsonplaceholder.typicode.com/posts/1')
-    .then((response) => response.json())
-    .then((data) => {
-      return caches.open(CACHE_NAME).then((cache) => {
-        cache.put('/api/data', new Response(JSON.stringify(data)));
-      });
-    });
-}
