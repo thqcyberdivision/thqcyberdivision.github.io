@@ -38,5 +38,26 @@
             "platform": "web",
             "url": "/services.html"
         },
+        {
+            "platform": "web",
+            "url": "/terms.html"
+        },
+        {
+            "platform": "web",
+            "url": "/privacy.html"
+        },
+        {
+            "platform": "web",
+            "url": "/contact.html"
+        },
+        {
+            "platform": "web",
+            "url": "/blog.html"
+        },
+        {
+            "platform": "web",
+            "url": "/booking.html"
+        },
+
     ]
 }
