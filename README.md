@@ -26,7 +26,7 @@ We offer a diverse suite of digital and in-person services for individuals, busi
 
 - **Combined Transfers:**  
   Seamless car + boat or car + ferry combinations for smooth island trips.  
-  [Book a transfer](https://thqcyberdivision.github.io/bookings.html)
+  [Book a transfer](https://thq-travel.vercel.app/)
 
 - **Business Incorporation Services:**  
   Launch or manage your business in any of the 50 U.S. jurisdictions with full administrative support and expert guidance.  
