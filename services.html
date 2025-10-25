@@ -463,31 +463,32 @@
   </footer>
 	
   <!-- Snipcart Cart Button -->
-<div class="floating-cart">
-  <a href="#" class="btn snipcart-checkout">View Cart</a>
-</div>
+  <!-- Snipcart Cart Button -->
+  <div class="floating-cart">
+    <a href="#" class="btn snipcart-checkout">View Cart</a>
+  </div>
 
-<!-- Snipcart container (with side modal enabled) -->
-<div 
-  hidden 
-  id="snipcart"
-  data-api-key="ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1"
-  data-config-modal-style="side">
-</div>
+  <!-- Snipcart container (with side modal enabled) -->
+  <div 
+    hidden 
+    id="snipcart"
+    data-api-key="ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1"
+    data-config-modal-style="side">
+  </div>
 
-    // IntersectionObserver to animate catalog items into view
-    (function(){
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('in-view');
-            // optional: unobserve to keep animations performant
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {threshold: 0.14});
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    })();
+  <!-- Animate cards into view -->
+  <script>
+  (function(){
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.14});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  })();
   </script>
 </body>
 </html>
