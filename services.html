@@ -7,16 +7,16 @@
 <html lang="en">
 <head>
   <!-- Basic Meta Tags -->
-  <title>Cyber Threat Intelligence, Secure VPS & Custom Software | THQ Cyber Division</title>
+  <title>Cyber Threat Intelligence, Secure Hosts & Custom Software | THQ Cyber Division</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="THQ Cyber Division provides professional Cyber Threat Intelligence, incident response advisory, secure VPS rentals and bespoke custom software for security teams an[...]
-  <meta name="keywords" content="cyber threat intelligence, threat feeds, malware analysis, incident response, VPS rentals, virtual private server, custom software, secure infrastructure" />
+  <meta name="description" content="THQ Cyber Division provides professional Cyber Threat Intelligence, incident response advisory, secure Dedicated Hosts and Dedicated Instances rentals and bespoke custom software for security teams." />
+  <meta name="keywords" content="cyber threat intelligence, threat feeds, malware analysis, incident response, dedicated hosts, dedicated instances, custom software, secure infrastructure" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Cyber Threat Intelligence & Secure Services | THQ Cyber Division">
-  <meta property="og:description" content="Threat intelligence subscriptions, incident response advisory, malware analysis, secure VPS rentals and custom security software." />
+  <meta property="og:description" content="Threat intelligence subscriptions, incident response advisory, malware analysis, secure dedicated hosts & instances and custom security software." />
   <meta property="og:url" content="https://thqcyberdivision.github.io/services.html">
   <meta property="og:image" content="https://thqcyberdivision.github.io/logo.png">
   <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="THQ Cyber Division - Threat Intelligence & Secure Services">
-  <meta name="twitter:description" content="Professional CTI, rapid IR advisory, malware analysis, secure VPS rentals and custom software development.">
+  <meta name="twitter:description" content="Professional CTI, rapid IR advisory, malware analysis, secure dedicated hosts & instances and custom software development.">
   <meta name="twitter:image" content="https://thqcyberdivision.github.io/logo.png">
 
   <script type="application/ld+json">
@@ -34,7 +34,7 @@
     "name": "THQ Cyber Division Unincorporated",
     "url": "https://thqcyberdivision.github.io/",
     "logo": "https://thqcyberdivision.github.io/logo.png",
-    "description": "Professional cyber threat intelligence services, secure VPS rentals and custom software development for security operations and research.",
+    "description": "Professional cyber threat intelligence services, secure Dedicated Hosts & Dedicated Instances rentals and custom software development for security operations and research.",
     "sameAs": ["https://github.com/thqcyberdivision"],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -58,7 +58,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T83TYG9SG6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
     gtag('config', 'G-T83TYG9SG6');
   </script>
@@ -227,6 +227,9 @@
       100%{transform:scale(1)}
     }
 
+    /* Floating cart */
+    .floating-cart{position:fixed; right:18px; bottom:18px; z-index:9999}
+
   </style>
 </head>
 <body>
@@ -255,7 +258,7 @@
     <section class="panel intro reveal">
       <div class="left">
         <h2>Focused Cyber Threat Intelligence, Secure Infrastructure & Custom Software</h2>
-        <p>We deliver high-quality, actionable cyber threat intelligence and secure Virtual Private Server (VPS) rentals designed for researchers and security teams. We also build custom software and [...]
+        <p>We deliver high-quality, actionable cyber threat intelligence and secure Dedicated Hosts and Dedicated Instances designed for researchers and security teams. We also build custom software and tooling to support your operational workflows.</p>
       </div>
       <div class="right" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
         <span class="badge">Professional / Confidential</span>
@@ -330,19 +333,90 @@
           </div>
         </article>
 
-        <!-- Secure VPS Rentals -->
-        <article class="card reveal" aria-labelledby="vps-title">
-          <div class="icon" aria-hidden="true">VPS</div>
-          <h3 id="vps-title">Secure VPS Rentals</h3>
-          <p>Private VPS instances configured for security research and tooling: isolated networking, encrypted storage, snapshot backups and optional pre-hardened images.</p>
+        <!-- Dedicated Hosts (replaces Secure VPS Rentals) -->
+        <article class="card reveal" aria-labelledby="dh-title">
+          <div class="icon" aria-hidden="true">DH</div>
+          <h3 id="dh-title">Dedicated Hosts</h3>
+          <p>Single-tenant physical or reserved hosts for customers who need isolated hardware and predictable performance for security tooling and research.</p>
           <ul>
-            <li>Basic — 1 vCPU / 1GB / 25GB SSD — €5/mo</li>
-            <li>Standard — 2 vCPU / 4GB / 80GB SSD — €15/mo</li>
-            <li>Pro — 4 vCPU / 8GB / 160GB SSD — €35/mo</li>
+            <li>Small Host — 4 vCPU / 16GB RAM / 500GB NVMe — €149/mo</li>
+            <li>Medium Host — 8 vCPU / 32GB RAM / 1TB NVMe — €279/mo</li>
+            <li>Large Host — 16 vCPU / 64GB RAM / 2TB NVMe — €539/mo</li>
           </ul>
           <div class="meta">
-            <span style="margin-right:10px;color:var(--muted)">Short-term and custom builds</span>
-            <a class="btn" href="mailto:thqcs@protonmail.com?subject=VPS Rental Inquiry">Rent a VPS</a>
+            <span style="margin-right:10px;color:var(--muted)">Monthly and term contracts available</span>
+            <!-- Snipcart add-to-cart examples: replace data-api-key in the snipcart div below with your public key -->
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
+              <a class="btn snipcart-add-item" href="#"
+                 data-item-id="dh-small"
+                 data-item-name="Dedicated Host - Small"
+                 data-item-price="149.00"
+                 data-item-url="https://thqcyberdivision.github.io/services.html"
+                 data-item-description="Small single-tenant host, 4 vCPU, 16GB RAM, 500GB NVMe">
+                Rent Small Host
+              </a>
+
+              <a class="btn snipcart-add-item" href="#"
+                 data-item-id="dh-medium"
+                 data-item-name="Dedicated Host - Medium"
+                 data-item-price="279.00"
+                 data-item-url="https://thqcyberdivision.github.io/services.html"
+                 data-item-description="Medium single-tenant host, 8 vCPU, 32GB RAM, 1TB NVMe">
+                Rent Medium Host
+              </a>
+
+              <a class="btn snipcart-add-item" href="#"
+                 data-item-id="dh-large"
+                 data-item-name="Dedicated Host - Large"
+                 data-item-price="539.00"
+                 data-item-url="https://thqcyberdivision.github.io/services.html"
+                 data-item-description="Large single-tenant host, 16 vCPU, 64GB RAM, 2TB NVMe">
+                Rent Large Host
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dedicated Instances (replaces Backup & Disaster Recovery) -->
+        <article class="card reveal" aria-labelledby="di-title">
+          <div class="icon" aria-hidden="true">DI</div>
+          <h3 id="di-title">Dedicated Instances</h3>
+          <p>Isolated virtualized instances on reserved hosts for short-term projects, red-team/capture-the-flag exercises, or tooling that requires dedicated compute without shared noisy neighbors.</p>
+          <ul>
+            <li>Instance — 2 vCPU / 4GB / 80GB SSD — €29/mo</li>
+            <li>Instance — 4 vCPU / 8GB / 160GB SSD — €59/mo</li>
+            <li>High-CPU Instance — 8 vCPU / 16GB / 320GB SSD — €119/mo</li>
+          </ul>
+          <div class="meta">
+            <span class="badge" style="background:#effaf6;color:#0b8a5f">From €29/mo</span>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
+              <a class="btn snipcart-add-item" href="#"
+                 data-item-id="di-2v"
+                 data-item-name="Dedicated Instance - 2 vCPU"
+                 data-item-price="29.00"
+                 data-item-url="https://thqcyberdivision.github.io/services.html"
+                 data-item-description="2 vCPU, 4GB RAM, 80GB SSD — isolated instance on reserved host">
+                Rent 2 vCPU Instance
+              </a>
+
+              <a class="btn snipcart-add-item" href="#"
+                 data-item-id="di-4v"
+                 data-item-name="Dedicated Instance - 4 vCPU"
+                 data-item-price="59.00"
+                 data-item-url="https://thqcyberdivision.github.io/services.html"
+                 data-item-description="4 vCPU, 8GB RAM, 160GB SSD — isolated instance on reserved host">
+                Rent 4 vCPU Instance
+              </a>
+
+              <a class="btn snipcart-add-item" href="#"
+                 data-item-id="di-8v"
+                 data-item-name="Dedicated Instance - 8 vCPU"
+                 data-item-price="119.00"
+                 data-item-url="https://thqcyberdivision.github.io/services.html"
+                 data-item-description="8 vCPU, 16GB RAM, 320GB SSD — isolated instance on reserved host">
+                Rent 8 vCPU Instance
+              </a>
+            </div>
           </div>
         </article>
 
@@ -350,7 +424,7 @@
         <article class="card reveal" aria-labelledby="cs-title">
           <div class="icon" aria-hidden="true">SW</div>
           <h3 id="cs-title">Custom Software & Tooling</h3>
-          <p>Design and build bespoke software that complements CTI and operational workflows — analyst dashboards, automated enrichment pipelines, data ingestion connectors and automation playbooks[...]
+          <p>Design and build bespoke software that complements CTI and operational workflows — analyst dashboards, automated enrichment pipelines, data ingestion connectors and automation playbooks.</p>
           <ul>
             <li>Secure-by-design development lifecycle</li>
             <li>Integration with existing SIEM/SOAR & feeds</li>
@@ -359,25 +433,6 @@
           <div class="meta">
             <span style="margin-right:10px;color:var(--muted)">Scoping & prototypes available</span>
             <a class="btn" href="mailto:thqcs@protonmail.com?subject=Custom Software Inquiry">Request Proposal</a>
-          </div>
-        </article>
-
-        <!-- Backup & Disaster Recovery Solutions (NEW) -->
-        <article class="card reveal" aria-labelledby="bdr-title">
-          <div class="icon" aria-hidden="true">BDR</div>
-          <h3 id="bdr-title">Backup & Disaster Recovery Solutions</h3>
-          <p>Robust backup and disaster recovery planning and execution designed to minimize downtime and data loss. We implement encrypted, tested backups and operational runbooks tailored to your infrastructure.</p>
-          <ul>
-            <li>Automated, encrypted backups (on-site & off-site)</li>
-            <li>RTO/RPO planning and custom recovery SLAs</li>
-            <li>Replication, snapshotting and hybrid-cloud recovery</li>
-            <li>Disaster recovery runbooks, tabletop exercises & testing</li>
-            <li>Compliance-aligned retention policies and audits</li>
-            <li>Emergency restore support and post-recovery hardening</li>
-          </ul>
-          <div class="meta">
-            <span class="badge" style="background:#effaf6;color:#0b8a5f">From €29/mo</span>
-            <a class="btn" href="mailto:thqcs@protonmail.com?subject=Backup%20and%20Disaster%20Recovery%20Inquiry">Get Coverage</a>
           </div>
         </article>
 
@@ -397,6 +452,13 @@
       <small>Accepted payment methods and trade options available — contact us for details.</small>
     </div>
   </footer>
+
+  <!-- Snipcart: replace "YOUR_PUBLIC_API_KEY" with your Snipcart public API key -->
+  <div class="floating-cart">
+    <a href="#" class="btn snipcart-checkout">View Cart</a>
+  </div>
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
 
   <script>
     // IntersectionObserver to animate catalog items into view
