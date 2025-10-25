@@ -236,7 +236,7 @@
 	  <script>
     window.SnipcartSettings = {
         publicApiKey: 'ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1',
-        loadStrategy: 'immediate',
+        loadStrategy: 'on-user-interaction',
 		modalStyle: "side",
     };
 
@@ -310,93 +310,84 @@
           </div>
         </article>
 
-       <!-- Malware Analysis & IR -->
-<!-- Malware Analysis & IR -->
-<article class="card reveal" aria-labelledby="ma-title">
-  <div class="icon" aria-hidden="true">MA</div>
-  <h3 id="ma-title">Malware Analysis & Incident Response Advisory</h3>
-  <p>Static and dynamic analysis, rapid triage and advisory support to contain and remediate compromises while preserving evidence and improving resilience.</p>
-  <ul>
-    <li>Sandboxing & behavioral reports</li>
-    <li>Containment and remediation guidance</li>
-    <li>Post-incident lessons-learned & hardening</li>
-  </ul>
-  <div class="meta">
-    <span style="margin-right:10px;color:var(--muted)">Rapid-response retainers available</span>
+<button class="btn snipcart-add-item"
+    data-item-id="malware-ir-retainer"
+    data-item-name="Malware Analysis & IR Retainer"
+    data-item-url="https://thqcyberdivision.github.io/services.html"
+    data-item-description="Incident Response Retainer Subscription"
+    data-item-selected-plan="weekly-plan"
 
-    <button class="btn snipcart-add-item"
-        data-item-id="malware-ir-retainer"
-        data-item-name="Malware Analysis & IR Retainer"
-        data-item-url="https://thqcyberdivision.github.io/services.html"
-        data-item-description="Incident Response Retainer Subscription"
-        data-item-selected-plan="weekly-plan"
+    data-plan1-id="weekly-plan"
+    data-plan1-name="Weekly Retainer"
+    data-plan1-frequency="month"
+    data-plan1-interval="1"
+    data-plan1-count="1"
+    data-item-plan1-price="250"
 
-        data-plan1-id="weekly-plan"
-        data-plan1-name="Weekly Retainer"
-        data-plan1-frequency="month"
-        data-plan1-interval="1"
-        data-plan1-count="1"
-        data-item-plan1-price="250"
+    data-plan2-id="biweekly-plan"
+    data-plan2-name="Biweekly Retainer"
+    data-plan2-frequency="month"
+    data-plan2-interval="2"
+    data-plan2-count="1"
+    data-item-plan2-price="450"
+>
+    Subscribe
+</button>
 
-        data-plan2-id="biweekly-plan"
-        data-plan2-name="Biweekly Retainer"
-        data-plan2-frequency="month"
-        data-plan2-interval="2"
-        data-plan2-count="1"
-        data-item-plan2-price="450"
-    >
-      Subscribe
-    </button>
-  </div>
-</article>
+<script>
+document.querySelectorAll('.snipcart-add-item').forEach(btn => {
+    btn.addEventListener('click', function(e){
+        if(!window.Snipcart || !window.Snipcart.ready){
+            e.preventDefault();
+            document.addEventListener('snipcart.ready', () => btn.click(), {once:true});
+        }
+    });
+});
+</script>
 
 
-<!-- Threat Feeds -->
-<article class="card reveal" aria-labelledby="tf-title">
-  <div class="icon" aria-hidden="true">TF</div>
-  <h3 id="tf-title">Threat Feeds & Alerts</h3>
-  <p>Machine-readable, production-ready feeds and webhook alerts for automated defenses. Delivered in formats compatible with common SIEM and SOAR platforms.</p>
-  <ul>
-    <li>STIX, CSV, JSON outputs</li>
-    <li>Tiered subscriptions (alerts, enriched context, raw data)</li>
-    <li>Integration & onboarding support</li>
-  </ul>
-  <div class="meta">
-    <span class="badge" style="background:#fff6e6;color:#b56d00">From €49/mo</span>
 
-    <button class="btn snipcart-add-item"
-        data-item-id="threat-feeds"
-        data-item-name="Threat Feeds & Alerts Subscription"
-        data-item-url="https://thqcyberdivision.github.io/services.html"
-        data-item-description="Tiered threat feed subscription with automated updates"
-        data-item-selected-plan="alerts-plan"
+<button class="btn snipcart-add-item"
+    data-item-id="threat-feeds"
+    data-item-name="Threat Feeds & Alerts Subscription"
+    data-item-url="https://thqcyberdivision.github.io/services.html"
+    data-item-description="Tiered threat feed subscription with automated updates"
+    data-item-selected-plan="alerts-plan"
 
-        data-plan1-id="alerts-plan"
-        data-plan1-name="Alerts Only"
-        data-plan1-frequency="month"
-        data-plan1-interval="1"
-        data-plan1-count="1"
-        data-item-plan1-price="49"
+    data-plan1-id="alerts-plan"
+    data-plan1-name="Alerts Only"
+    data-plan1-frequency="month"
+    data-plan1-interval="1"
+    data-plan1-count="1"
+    data-item-plan1-price="49"
 
-        data-plan2-id="enriched-plan"
-        data-plan2-name="Enriched Context"
-        data-plan2-frequency="month"
-        data-plan2-interval="1"
-        data-plan2-count="1"
-        data-item-plan2-price="79"
+    data-plan2-id="enriched-plan"
+    data-plan2-name="Enriched Context"
+    data-plan2-frequency="month"
+    data-plan2-interval="1"
+    data-plan2-count="1"
+    data-item-plan2-price="79"
 
-        data-plan3-id="raw-plan"
-        data-plan3-name="Raw Data + Alerts"
-        data-plan3-frequency="month"
-        data-plan3-interval="1"
-        data-plan3-count="1"
-        data-item-plan3-price="129"
-    >
-      Subscribe
-    </button>
+    data-plan3-id="raw-plan"
+    data-plan3-name="Raw Data + Alerts"
+    data-plan3-frequency="month"
+    data-plan3-interval="1"
+    data-plan3-count="1"
+    data-item-plan3-price="129"
+>
+    Subscribe
+</button>
 
-  </div>
-</article>
+<script>
+document.querySelectorAll('.snipcart-add-item').forEach(btn => {
+    btn.addEventListener('click', function(e){
+        if(!window.Snipcart || !window.Snipcart.ready){
+            e.preventDefault();
+            document.addEventListener('snipcart.ready', () => btn.click(), {once:true});
+        }
+    });
+});
+</script>
 
         <!-- Dedicated Hosts (replaces Secure VPS Rentals) -->
         <article class="card reveal" aria-labelledby="dh-title">
