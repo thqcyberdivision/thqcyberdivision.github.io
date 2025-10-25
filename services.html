@@ -462,15 +462,19 @@
     </div>
   </footer>
 	
+  <!-- Snipcart Cart Button -->
+<div class="floating-cart">
+  <a href="#" class="btn snipcart-checkout">View Cart</a>
+</div>
 
-  <!-- Snipcart: replace "YOUR_PUBLIC_API_KEY" with your Snipcart public API key -->
-  <div class="floating-cart">
-    <a href="#" class="btn snipcart-checkout">View Cart</a>
-  </div>
-  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
-  <div hidden id="snipcart" data-api-key="ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1"></div>
+<!-- Snipcart container (with side modal enabled) -->
+<div 
+  hidden 
+  id="snipcart"
+  data-api-key="ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1"
+  data-config-modal-style="side">
+</div>
 
-  <script>
     // IntersectionObserver to animate catalog items into view
     (function(){
       const observer = new IntersectionObserver((entries) => {
