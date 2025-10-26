@@ -80,95 +80,45 @@
     }
 
     /* ======= ECOMMERCE PRODUCT GRID ======= */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+    .catalog{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:18px;
+      margin-top:24px;
     }
-
-    .product-card {
-      background: #fff;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .card{
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      min-height:200px;
     }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    .card h3{margin:6px 0 8px;}
+    .card p, .card ul{margin:0 0 12px; color:var(--muted);}
+    .card .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:9px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      margin-top:auto;
     }
-
-    .product-image {
-      background: #f0f2f8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 180px;
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      background:#eef2ff;
+      color:var(--accent);
+      border-radius:999px;
+      font-weight:700;
+      font-size:.82rem;
+      margin-bottom:8px;
     }
-
-    .product-image img {
-      max-width: 100%;
-      max-height: 160px;
-      object-fit: contain;
-    }
-
-    .product-info {
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .product-info h3 {
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-    }
-
-    .product-info p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-      flex: 1;
-    }
-
-    .product-info ul {
-      padding-left: 18px;
-      margin: 0 0 10px 0;
-      color: var(--muted);
-    }
-
-    .price {
-      font-weight: 700;
-      color: var(--accent);
-      font-size: 1.05rem;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      text-align: center;
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background: var(--accent-dark);
-    }
-
-    footer {
-      text-align: center;
-      background: #000;
-      color: #fff;
-      padding: 24px;
-      margin-top: 50px;
-    }
-
+    footer{background:#000; color:#fff; text-align:center; padding:18px 12px; margin-top:28px;}
+    .floating-cart{position:fixed; right:18px; bottom:18px; z-index:9999}
     .floating-cart {
       position: fixed;
       bottom: 20px;
