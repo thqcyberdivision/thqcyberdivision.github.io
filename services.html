@@ -6,428 +6,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta Tags -->
   <title>Cyber Threat Intelligence, Secure Hosts & Custom Software | THQ Cyber Division</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <meta name="description" content="THQ Cyber Division provides professional Cyber Threat Intelligence, incident response advisory, secure Dedicated Hosts and Dedicated Instances rentals and bespoke custom software for security teams." />
   <meta name="keywords" content="cyber threat intelligence, threat feeds, malware analysis, incident response, dedicated hosts, dedicated instances, custom software, secure infrastructure" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Cyber Threat Intelligence & Secure Services | THQ Cyber Division">
-  <meta property="og:description" content="Threat intelligence subscriptions, incident response advisory, malware analysis, secure dedicated hosts & instances and custom security software." />
-  <meta property="og:url" content="https://thqcyberdivision.github.io/services.html">
-  <meta property="og:image" content="https://thqcyberdivision.github.io/logo.png">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="THQ Cyber Division - Threat Intelligence & Secure Services">
-  <meta name="twitter:description" content="Professional CTI, rapid IR advisory, malware analysis, secure dedicated hosts & instances and custom software development.">
-  <meta name="twitter:image" content="https://thqcyberdivision.github.io/logo.png">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "THQ Cyber Division Unincorporated",
-    "url": "https://thqcyberdivision.github.io/",
-    "logo": "https://thqcyberdivision.github.io/logo.png",
-    "description": "Professional cyber threat intelligence services, secure Dedicated Hosts & Dedicated Instances rentals and custom software development for security operations and research.",
-    "sameAs": ["https://github.com/thqcyberdivision"],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Support",
-      "email": "thqcs@protonmail.com",
-      "areaServed": "Worldwide",
-      "availableLanguage": ["English"]
-    }
-  }
-  </script>
-
-  <link rel="manifest" href="https://thqcyberdivision.github.io/manifest.json">
-  <meta name="theme-color" content="#007bff">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://thqcyberdivision.github.io/favicon_16x16.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="https://thqcyberdivision.github.io/favicon_32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="https://thqcyberdivision.github.io/favicon_96x96.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="https://thqcyberdivision.github.io/favicon_192x192.png">
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
 
-  <!-- Analytics (kept as original) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T83TYG9SG6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('js', new Date());
-    gtag('config', 'G-T83TYG9SG6');
-  </script>
-
   <style>
-    /* Base & layout (keeps site look & feel) */
-    :root{
-      --accent:#4169e1;
-      --accent-dark:#365ac0;
-      --bg: #f6f7fb;
-      --card-bg: #ffffff;
-      --muted:#6b7280;
-      --radius:12px;
-      --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-      --glass: rgba(255,255,255,0.92);
-    }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: var(--bg) url('website_cover.jpg') no-repeat center center / cover;
-      color: #0b1220;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    :root {
+      --accent: #4169e1;
+      --accent-dark: #2f55c0;
+      --bg: #f5f7fb;
+      --text: #0b1220;
+      --muted: #6b7280;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    header{
-      background:#000;
-      color:#fff;
-      text-align:center;
-      padding:18px 12px;
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
     }
-    header img{width:96px; display:block; margin:0 auto;}
-    header h1{margin:.4rem 0 0; font-size:1.3rem; font-weight:600;}
 
-    nav{
-      background:#222;
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      padding:10px 12px;
-      flex-wrap:wrap;
+    header {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
     }
-    nav a{
-      color:#fff;
-      text-decoration:none;
-      padding:8px 14px;
-      border-radius:8px;
-      font-weight:600;
-    }
-    nav a.active, nav a:hover{background:var(--accent); color:#fff;}
+    header img { width: 90px; display: block; margin: 0 auto; }
+    header h1 { margin-top: 8px; font-size: 1.3rem; }
 
-    main{padding:28px 18px; max-width:1200px; margin:0 auto;}
-    .panel{
-      background: var(--glass);
+    nav {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      padding: 12px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    nav a:hover, nav a.active { background: var(--accent); }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      color: var(--muted);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ======= ECOMMERCE PRODUCT GRID ======= */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .product-card {
+      background: #fff;
       border-radius: var(--radius);
-      padding:26px;
-      box-shadow:var(--shadow);
-      backdrop-filter: blur(6px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .intro{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      flex-direction:column;
-      text-align:center;
-    }
-    .intro h2{margin:0; font-size:1.25rem;}
-    .intro p{color:var(--muted); margin:8px 0 0; max-width:900px;}
-
-    /* Catalog grid */
-    .catalog{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-      gap:18px;
-      margin-top:24px;
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     }
 
-    .card{
-      background:var(--card-bg);
-      border-radius:12px;
-      padding:18px;
-      box-shadow:0 8px 20px rgba(9,30,66,0.04);
-      transition:transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
-      overflow:hidden;
-      position:relative;
-      transform-origin:center;
-      min-height:200px;
-      display:flex;
-      flex-direction:column;
-    }
-    .card:hover{
-      transform:translateY(-8px) scale(1.01);
-      box-shadow: 0 18px 40px rgba(9,30,66,0.08);
+    .product-image {
+      background: #f0f2f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
     }
 
-    .card .icon{
-      width:64px; height:64px;
-      border-radius:10px;
-      display:inline-flex;
-      align-items:center; justify-content:center;
-      background:linear-gradient(135deg,var(--accent),var(--accent-dark));
-      color:#fff; font-size:26px; margin-bottom:12px;
-      box-shadow: 0 6px 18px rgba(65,105,225,0.18);
-    }
-    .card h3{margin:6px 0 8px; font-size:1.05rem;}
-    .card p{color:var(--muted); margin:0 0 12px; flex:0 0 auto;}
-    .card ul{margin:0 0 12px 18px; color:var(--muted); padding:0;}
-    .card .meta{font-weight:600; color:#0b1220; margin-top:auto;}
-    .btn{
-      display:inline-block;
-      background:var(--accent);
-      color:#fff;
-      padding:9px 14px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:700;
-      transition:background .18s;
-    }
-    .btn:hover{background:var(--accent-dark);}
-
-    /* Badges & price */
-    .badge{
-      display:inline-block;
-      padding:6px 10px;
-      background:#eef2ff;
-      color:var(--accent);
-      border-radius:999px;
-      font-weight:700;
-      font-size:.82rem;
-      margin-bottom:8px;
+    .product-image img {
+      max-width: 100%;
+      max-height: 160px;
+      object-fit: contain;
     }
 
-    /* Animations: subtle fade-up on scroll */
-    .reveal{
-      opacity:0;
-      transform:translateY(18px) scale(.995);
-      transition:opacity .6s ease, transform .6s cubic-bezier(.2,.9,.3,1);
-      will-change:opacity, transform;
-    }
-    .reveal.in-view{
-      opacity:1;
-      transform:translateY(0) scale(1);
+    .product-info {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
-    /* small responsive tweaks */
-    @media (min-width:980px){
-      .intro{flex-direction:row; text-align:left; justify-content:space-between;}
-      .intro .left{max-width:650px;}
+    .product-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
     }
 
-    footer{
-      background:#000;
-      color:#fff;
-      text-align:center;
-      padding:18px 12px;
-      margin-top:28px;
+    .product-info p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      flex: 1;
     }
 
-    /* micro animation on icons (pulse) */
-    .icon.pulse{animation:iconPulse 3s infinite;}
-    @keyframes iconPulse{
-      0%{transform:scale(1)}
-      50%{transform:scale(1.04)}
-      100%{transform:scale(1)}
+    .product-info ul {
+      padding-left: 18px;
+      margin: 0 0 10px 0;
+      color: var(--muted);
     }
 
-    /* Floating cart */
-    .floating-cart{position:fixed; right:18px; bottom:18px; z-index:9999}
+    .price {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
 
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: var(--accent-dark);
+    }
+
+    footer {
+      text-align: center;
+      background: #000;
+      color: #fff;
+      padding: 24px;
+      margin-top: 50px;
+    }
+
+    .floating-cart {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
   </style>
 </head>
 <body>
-	  <script>
-    window.SnipcartSettings = {
-        publicApiKey: 'ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1',
-        loadStrategy: 'on-user-interaction',
-		modalStyle: "side",
-    };
-
-    (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
-</script>
-  <div id="google_translate_element"></div>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <header>
-    <a href="index.html"><img src="https://thqcyberdivision.github.io/logo.png" alt="THQ Logo" /></a>
+    <img src="https://thqcyberdivision.github.io/logo.png" alt="THQ Logo" />
     <h1>THQ Cyber Division — Services</h1>
-	   <button class="snipcart-customer-signin">My account</button>
+    <button class="snipcart-customer-signin">My Account</button>
   </header>
 
   <nav>
-    <a href="https://thqcyberdivision.github.io/index.html">Home</a>
-    <a href="https://thqcyberdivision.github.io/about.html">About Us</a>
-    <a href="https://thqcyberdivision.github.io/services.html" class="active">Services</a>
-    <a href="https://thqcyberdivision.github.io/blog.html">Blog</a>
-    <a href="https://thqcyberdivision.github.io/contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <main>
-    <section class="panel intro reveal">
-      <div class="left">
-        <h2>Focused Cyber Threat Intelligence, Secure Infrastructure & Custom Software</h2>
-        <p>We deliver high-quality, actionable cyber threat intelligence and secure Dedicated Hosts and Dedicated Instances designed for researchers and security teams. We also build custom software and tooling to support your operational workflows.</p>
-      </div>
-      <div class="right" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;">
-        <span class="badge">Professional / Confidential</span>
-        <a class="btn" href="mailto:thqcs@protonmail.com?subject=Service Inquiry">Contact Sales</a>
-      </div>
+    <section class="intro">
+      <h2>Professional Cyber Threat Intelligence & Secure Infrastructure</h2>
+      <p>Shop our dedicated hosts, isolated instances, and software licensing services built for researchers, red teams, and security organizations.</p>
     </section>
 
-    <section class="panel" style="margin-top:18px;">
-      <div class="catalog">
-
-        <!-- Dedicated Hosts (replaces Secure VPS Rentals) -->
-        <article class="card reveal" aria-labelledby="dh-title">
-  <div class="icon" aria-hidden="true">DH</div>
-  <h3 id="dh-title">Dedicated Hosts</h3>
-  <p>Single-tenant physical or reserved hosts for customers who need isolated hardware and predictable performance for security tooling and research.</p>
-  <ul>
-    <li>Small Host — 4 vCPU / 16GB RAM / 500GB NVMe — $179/mo</li>
-    <li>Medium Host — 8 vCPU / 32GB RAM / 1TB NVMe — $335/mo</li>
-    <li>Large Host — 16 vCPU / 64GB RAM / 2TB NVMe — $647/mo</li>
-  </ul>
-  <div class="meta">
-    <span class="badge" style="background:#effaf6;color:#0b8a5f">From €179/mo</span>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
-      <a class="btn snipcart-add-item"
-         href="#"
-         data-item-id="dh-small"
-         data-item-name="Dedicated Host - Small"
-         data-item-price="179"
-         data-item-url="https://thqcyberdivision.github.io/services.html"
-         data-item-description="Small single-tenant host, 4 vCPU, 16GB RAM, 500GB NVMe">
-        Rent Small Host
-      </a>
-      <a class="btn snipcart-add-item"
-         href="#"
-         data-item-id="dh-medium"
-         data-item-name="Dedicated Host - Medium"
-         data-item-price="335"
-         data-item-url="https://thqcyberdivision.github.io/services.html"
-         data-item-description="Medium single-tenant host, 8 vCPU, 32GB RAM, 1TB NVMe">
-        Rent Medium Host
-      </a>
-      <a class="btn snipcart-add-item"
-         href="#"
-         data-item-id="dh-large"
-         data-item-name="Dedicated Host - Large"
-         data-item-price="647"
-         data-item-url="https://thqcyberdivision.github.io/services.html"
-         data-item-description="Large single-tenant host, 16 vCPU, 64GB RAM, 2TB NVMe">
-        Rent Large Host
-      </a>
-    </div>
-  </div>
-</article>
-
-
-        <!-- Dedicated Instances (replaces Backup & Disaster Recovery) -->
-        <article class="card reveal" aria-labelledby="di-title">
-          <div class="icon" aria-hidden="true">DI</div>
-          <h3 id="di-title">Dedicated Instances</h3>
-          <p>Isolated virtualized instances on reserved hosts for short-term projects, red-team/capture-the-flag exercises, or tooling that requires dedicated compute without shared noisy neighbors.</p>
+    <section class="product-grid">
+      <!-- Dedicated Hosts -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/6404/6404209.png" alt="Dedicated Host">
+        </div>
+        <div class="product-info">
+          <h3>Dedicated Hosts</h3>
+          <p>Single-tenant physical or reserved hosts for security tooling, labs, or research environments.</p>
           <ul>
-            <li>Instance — 2 vCPU / 4GB / 80GB SSD — $145/mo</li>
-            <li>Instance — 4 vCPU / 8GB / 160GB SSD — $290/mo</li>
-            <li>High-CPU Instance — 8 vCPU / 16GB / 320GB SSD — $637.73/mo</li>
+            <li>Small: 4 vCPU / 16GB RAM / 500GB NVMe — $179/mo</li>
+            <li>Medium: 8 vCPU / 32GB RAM / 1TB NVMe — $335/mo</li>
+            <li>Large: 16 vCPU / 64GB RAM / 2TB NVMe — $647/mo</li>
           </ul>
-          <div class="meta">
-            <span class="badge" style="background:#effaf6;color:#0b8a5f">From $145/mo</span>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">
-              <a class="btn snipcart-add-item" href="#"
-                 data-item-id="di-2v"
-                 data-item-name="Dedicated Instance - 4 vCPU"
-                 data-item-price="145"
-                 data-item-url="https://thqcyberdivision.github.io/services.html"
-                 data-item-description="4 vCPU, 16 GiB RAM, 1 x 150 NVMe SSD — isolated instance on reserved host">
-                Rent 4 vCPU Instance
-              </a>
+          <span class="price">From $179/mo</span>
+          <a href="#" class="btn snipcart-add-item"
+             data-item-id="dh-small"
+             data-item-name="Dedicated Host - Small"
+             data-item-price="179"
+             data-item-url="https://thqcyberdivision.github.io/services.html"
+             data-item-description="Small single-tenant host for research or tooling.">
+             Rent Small Host
+          </a>
+        </div>
+      </article>
 
-              <a class="btn snipcart-add-item" href="#"
-                 data-item-id="di-4v"
-                 data-item-name="Dedicated Instance - 8 vCPU"
-                 data-item-price="290"
-                 data-item-url="https://thqcyberdivision.github.io/services.html"
-                 data-item-description="8 vCPU, 32 GiB RAM, 1 x 300 NVMe SSD — isolated instance on reserved host">
-                Rent 8 vCPU Instance
-              </a>
+      <!-- Dedicated Instances -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/5049/5049793.png" alt="Dedicated Instances">
+        </div>
+        <div class="product-info">
+          <h3>Dedicated Instances</h3>
+          <p>Virtualized isolated instances ideal for short-term projects or secure compute environments.</p>
+          <ul>
+            <li>2 vCPU / 4GB / 80GB SSD — $145/mo</li>
+            <li>4 vCPU / 8GB / 160GB SSD — $290/mo</li>
+            <li>8 vCPU / 16GB / 320GB SSD — $637.73/mo</li>
+          </ul>
+          <span class="price">From $145/mo</span>
+          <a href="#" class="btn snipcart-add-item"
+             data-item-id="di-2v"
+             data-item-name="Dedicated Instance - 2 vCPU"
+             data-item-price="145"
+             data-item-url="https://thqcyberdivision.github.io/services.html"
+             data-item-description="Isolated 2 vCPU instance for research workloads.">
+             Rent Instance
+          </a>
+        </div>
+      </article>
 
-              <a class="btn snipcart-add-item" href="#"
-                 data-item-id="di-8v"
-                 data-item-name="Dedicated Instance -16 vCPU"
-                 data-item-price="637.73"
-                 data-item-url="https://thqcyberdivision.github.io/services.html"
-                 data-item-description="16 vCPU, 64 GiB RAM, 2 x 300 NVMe SSD — isolated instance on reserved host">
-                Rent 16 vCPU Instance
-              </a>
-            </div>
-          </div>
-        </article>
-
-       <!-- Software License Key Requests -->
-<article class="card reveal" aria-labelledby="slk-title">
-  <div class="icon" aria-hidden="true">SW</div>
-  <h3 id="slk-title">Software License Key Requests</h3>
-  <p>Submit a request for a software license key you need. Our team will locate the license and provide it securely — delivery may take some time.</p>
-  <ul>
-    <li>Request for specific software licenses</li>
-    <li>Secure verification and delivery</li>
-    <li>Flexible options depending on availability</li>
-  </ul>
-  <div class="meta">
-    <span style="margin-right:10px;color:var(--muted)">Delivery times vary depending on software</span>
-    <a class="btn" href="mailto:thqcs@protonmail.com?subject=Software License Key Request">Request License</a>
-  </div>
-</article>
-
-
-      </div>
+      <!-- Software License Key Requests -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="License Key Request">
+        </div>
+        <div class="product-info">
+          <h3>Software License Key Requests</h3>
+          <p>Request a specific software license key. Delivery depends on availability and verification.</p>
+          <ul>
+            <li>Custom software keys</li>
+            <li>Secure verified delivery</li>
+            <li>Flexible based on product</li>
+          </ul>
+          <span class="price">Custom Quote</span>
+          <a href="mailto:thqcs@protonmail.com?subject=Software License Key Request" class="btn">Request License</a>
+        </div>
+      </article>
     </section>
-
   </main>
 
   <footer>
-    <p>&copy; 2024 - 2025 THQ Cyber Division Unincorporated</p>
-    <nav style="margin:8px 0;">
-      <a href="https://thqcyberdivision.github.io/terms.html">Terms</a> |
-      <a href="https://thqcyberdivision.github.io/privacy.html">Privacy</a> |
-      <a href="mailto:thqcs@protonmail.com">Contact</a>
+    <p>&copy; 2024–2025 THQ Cyber Division Unincorporated</p>
+    <nav>
+      <a href="terms.html" style="color:#fff">Terms</a> |
+      <a href="privacy.html" style="color:#fff">Privacy</a> |
+      <a href="mailto:thqcs@protonmail.com" style="color:#fff">Contact</a>
     </nav>
-    <div style="margin-top:12px; color:#cbd5e1;">
-      <small>Accepted payment methods and trade options available — contact us for details.</small>
-    </div>
   </footer>
-	
-  <!-- Snipcart Cart Button -->
-  <!-- Snipcart Cart Button -->
+
   <div class="floating-cart">
-    <a href="#" class="btn snipcart-checkout">View Cart</a>
+    <a href="#" class="btn snipcart-checkout">🛒 View Cart</a>
   </div>
 
-  <!-- Snipcart container (with side modal enabled) -->
-  <div 
-    hidden 
-    id="snipcart"
-    data-api-key="ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1"
-    data-config-modal-style="side">
-  </div>
-
-  <!-- Animate cards into view -->
-  <script>
-  (function(){
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold: 0.14});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  })();
-  </script>
+  <div hidden id="snipcart" data-api-key="ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1" data-config-modal-style="side"></div>
 </body>
 </html>
