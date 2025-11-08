@@ -12,24 +12,55 @@
   <link rel="icon" type="image/png" sizes="192x192" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn">
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #000; }
-    header, footer { background: #000; color: #fff; text-align: center; padding: 15px 0; }
-    header img { height: 50px; }
-        nav {
-      background: #222;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 5px;
-      transition: background 0.2s;
-    }
+    footer { background: #000; color: #fff; text-align: center; padding: 15px 0; }
+    header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 12px 10px;
+}
+
+header img {
+  max-width: 70px;
+  height: auto;
+  margin-bottom: 6px;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+}
+
+nav {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 8px 5px;
+}
+
+nav a {
+  font-size: 0.95rem;
+  padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+  header img { max-width: 50px; }
+  header h1 { font-size: 1rem; }
+  nav a { font-size: 0.85rem; padding: 4px 8px; }
+}
+
+@media (max-width: 480px) {
+  header img { max-width: 45px; }
+  header h1 { font-size: 0.95rem; }
+  nav a { font-size: 0.8rem; padding: 3px 6px; }
+}
+
     nav a.active, nav a:hover {
       background: #4169e1;
       color: #fff;
