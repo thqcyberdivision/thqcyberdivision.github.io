@@ -458,23 +458,36 @@
 <!-- Snipcart container -->
 <div hidden id="snipcart" data-api-key="ZDA4ZjAzN2MtNGJkMS00NThjLWI0NjQtYzU2MWM0MGYxMjNjNjM4ODc3Njk2MjU1Mzg3MzU1" data-config-modal-style="side"></div>
 
-<!-- Snipcart JS -->
 <script>
-	const osSelect = document.getElementById('os-select');
-  const paymentDiv = document.getElementById('payment-button');
+function setupPayment(selectId, buttonId, linuxId, windowsId, badgeSelector, linuxPrice, windowsPrice, currency) {
+  const osSelect = document.getElementById(selectId);
+  const paymentDiv = document.getElementById(buttonId);
+  const badge = paymentDiv.closest('.card').querySelector(badgeSelector);
 
   osSelect.addEventListener('change', function() {
     if (this.value === 'windows') {
-      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=6025163369&source=button" target="_blank" rel="noreferrer noopener">
+      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${windowsId}&source=button" target="_blank" rel="noreferrer noopener">
         <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
       </a>`;
+      badge.textContent = `From ${currency}${windowsPrice}/mo`;
     } else {
-      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=4617309514&source=button" target="_blank" rel="noreferrer noopener">
+      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${linuxId}&source=button" target="_blank" rel="noreferrer noopener">
         <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
       </a>`;
+      badge.textContent = `From ${currency}${linuxPrice}/mo`;
     }
   });
+}
+
+// Initialize all products
+setupPayment('os-select-small', 'payment-button-small', '4617309514', '6025163369', 'span.badge', 179, 179 + 95, '€');
+setupPayment('os-select-medium', 'payment-button-medium', 'MEDIUM-LINUX-ID', 'MEDIUM-WINDOWS-ID', 'span.badge', 335, 335 + 95, '€');
+setupPayment('os-select-large', 'payment-button-large', 'LARGE-LINUX-ID', 'LARGE-WINDOWS-ID', 'span.badge', 647, 647 + 95, '€');
+setupPayment('os-select-4v', 'payment-button-4v', 'DI4V-LINUX-ID', 'DI4V-WINDOWS-ID', 'span.badge', 145, 145 + 95, '$');
+setupPayment('os-select-8v', 'payment-button-8v', 'DI8V-LINUX-ID', 'DI8V-WINDOWS-ID', 'span.badge', 290, 290 + 95, '$');
+setupPayment('os-select-16v', 'payment-button-16v', 'DI16V-LINUX-ID', 'DI16V-WINDOWS-ID', 'span.badge', 637.73, 637.73 + 95, '$');
 </script>
+
 
 </body>
 </html>
