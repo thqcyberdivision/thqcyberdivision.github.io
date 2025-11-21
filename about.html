@@ -3,7 +3,7 @@
 <!--Confidential-->
 <!--Private property of THQ Cyber Division and Association -->
 <!--Dimension 1st Sivan 5785 -->
-<!-- about.html -->
+<!-- Revision: 1st Kislev 5786-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,33 +13,38 @@
   <meta name="description" content="Learn about THQ Cyber Division's mission, values, and specialized cybersecurity services for organizations and researchers."/>
   <link rel="icon" type="image/png" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn"/>
   <style>
-    body { font-family:Inter,sans-serif; margin:0; background:#f5f7fb; color:#222; }
+    body { font-family: Inter,sans-serif; margin:0; background:#f5f7fb; color:#222; }
     header { background:#000; color:#fff; text-align:center; padding:18px; }
     header img { width:70px; }
     main { max-width:700px; margin:40px auto; padding:0 16px; }
     h1, h2, h3 { margin-bottom:16px; }
     section { background:#fff; border-radius:16px; box-shadow:0 2px 8px #0001; padding:20px; margin-bottom:32px; }
     nav { background:#222; position:relative; }
-.menu-btn {
-  display:none; position:absolute; right:16px; top:12px; background:transparent; border:none; color:#fff; font-size:2em; z-index:20;
-}
-.nav-list { display:flex; justify-content:center; gap:14px; margin:0; padding:0; list-style:none; }
-nav a { color:#fff; text-decoration:none; font-weight:bold; padding:8px 12px; border-radius:5px; }
-nav a:hover, nav a.active { background:#4169e1; }
-@media (max-width:700px) {
-  .nav-list { gap:8px; }
-}
-@media (max-width:600px) {
-  .nav-list {
-    display:none; flex-direction:column; background:#222;
-    position:absolute; top:50px; left:0; right:0; z-index:10;
-  }
-  nav.open .nav-list { display:flex; }
-  .menu-btn { display:inline-block; }
-}
+    .menu-btn {
+      display:none;
+      position:absolute; right:16px; top:13px;
+      background:transparent; border:none; color:#fff;
+      font-size:2em; z-index:20; cursor:pointer;
+    }
+    .nav-list {
+      display:flex; justify-content:center; gap:14px; margin:0; padding:0; list-style:none;
+    }
+    nav a { color:#fff; text-decoration:none; font-weight:bold; padding:8px 12px; border-radius:5px; }
+    nav a:hover, nav a.active { background:#4169e1; }
+    @media (max-width:700px) {
+      main { margin:15px auto; }
+      section { margin-bottom:18px; }
+    }
+    @media (max-width:600px) {
+      .nav-list {
+        display:none; flex-direction:column;
+        background:#222; position:absolute; top:52px; left:0; right:0; z-index:10;
+        border-bottom-left-radius:14px; border-bottom-right-radius:14px;
+      }
+      nav.open .nav-list { display:flex; }
+      .menu-btn { display:inline-block; }
       header img { width:56px; }
     }
-
   </style>
 </head>
 <body>
@@ -48,33 +53,20 @@ nav a:hover, nav a.active { background:#4169e1; }
     <h1>About THQ Cyber Division</h1>
   </header>
   <nav>
-  <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">&#9776;</button>
-  <ul class="nav-list">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<script>
-function toggleMenu(){
-  var nav = document.querySelector('nav');
-  nav.classList.toggle('open');
-}
-// Hide menu on resize up, show button only on mobile
-window.addEventListener('resize', function(){
-  if(window.innerWidth > 600){
-    document.querySelector('nav').classList.remove('open');
-  }
-});
-</script>
+    <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">&#9776;</button>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
   <main>
     <section>
       <h2>Our Mission</h2>
       <p>
-        THQ Cyber Division is dedicated to helping organizations, researchers, and security teams worldwide protect digital assets, reputation, and operations. We deliver trusted cyber threat intelligence, secure infrastructure, and verified security certificates.
+        THQ Cyber Division is dedicated to helping organizations, researchers, and security teams worldwide protect digital assets, reputation, and operations. We deliver trusted cyber threat intelligence, secure hosting, and verified security certificates.
       </p>
     </section>
     <section>
@@ -112,12 +104,14 @@ window.addEventListener('resize', function(){
     © 2024–2025 THQ Cyber Division Unincorporated
   </footer>
   <script>
-    // Hamburger menu JS
-    document.querySelector('.menu-btn').addEventListener('click', function(){
-      document.querySelector('.menu').classList.toggle('open');
-    });
+    function toggleMenu(){
+      document.querySelector('nav').classList.toggle('open');
+    }
+    // Always close menu when resizing desktop
     window.addEventListener('resize', function(){
-      if(window.innerWidth > 600) document.querySelector('.menu').classList.remove('open');
+      if(window.innerWidth > 600){
+        document.querySelector('nav').classList.remove('open');
+      }
     });
   </script>
 </body>
