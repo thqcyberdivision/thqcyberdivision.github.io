@@ -1,45 +1,49 @@
 # THQ Cyber Division Unincorporated
 
-Business Profile for THQ Cyber Division Unincorporated. Helping individuals and organizations with their daily computer-related tasks.
+Welcome to THQ Cyber Division. We deliver advanced cybersecurity intelligence, secure infrastructure, and trusted digital products to organizations, researchers, and technical teams globally.
 
-## About Us
+## Overview
 
-THQ Cyber Division Unincorporated is committed to providing high-quality virtual assistant and IT support services worldwide.  
-Our mission is to empower businesses and individuals by offering secure, innovative, and efficient solutions tailored to your needs.
+THQ Cyber Division specializes in cyber threat intelligence, incident response, secure hosting solutions, certified Sectigo SSL/TLS certificates, Sophos cybersecurity offerings, and custom security software. Our focus is on privacy-centric, reliable solutions for mission-critical operations, technology development, and cyber risk management.
 
-**Why Choose Us?**
-- **Personalized Support:** Dedicated assistance for your unique requirements.
-- **Expertise:** Extensive experience in virtual assistant and IT services.
-- **Flexibility:** Services designed to fit your schedule and specific needs.
+## Core Services
 
-Our vision is to be a globally recognized leader in IT solutions, renowned for innovation, quality, and exceptional client service.
+- **Cyber Threat Intelligence**
+  - Actionable threat feeds, malware analysis, rapid incident response, and subscription CTI solutions.
 
-## Services
+- **Secure Hosting & Infrastructure**
+  - Single-tenant dedicated hosts and isolated virtual instances.
+  - Hardware configurations for research, red teams, and high-security workloads.
 
-We offer a diverse suite of digital and in-person services for individuals, businesses, and organizations, including:
+- **Sectigo SSL/TLS Certificates**
+  - EV Multi-Domain SSL (3 domains) — $649.99/yr
+  - EV SSL Certificate (single domain) — $279.99/yr
+  - OV Wildcard SSL — $879.99/yr
+  - OV Multi-Domain SSL — $499.99/yr
+  - Hassle-free online purchase and crypto payments via [NOWPayments](https://nowpayments.io/).
 
-- **Shuttle Bus & Economy Transfers:**  
-  Affordable bus tickets, passenger cars, and economy minivans.
+- **Sophos Cybersecurity Suite**
+  - Enterprise managed detection, AI-powered endpoints, advanced firewall solutions, and active defense.
 
-- **Individual Transfers:**  
-  Private cars with meet & greet service—standard, business, limousines, and convertibles.
+- **Custom Security Software & Licensing**
+  - Custom development, product licensing, and integration for security and productivity platforms.
 
-- **Combined Transfers:**  
-  Seamless car + boat or car + ferry combinations for smooth island trips.  
-  [Book a transfer](https://thq-travel.vercel.app/)
+## Why Choose Us?
 
-- **Business Incorporation Services:**  
-  Launch or manage your business in any of the 50 U.S. jurisdictions with full administrative support and expert guidance.  
-  [Start Incorporation](https://thqcyberdivision.github.io/packages/)
+- Proven results for security teams, organizations, and researchers.
+- Global support, quick onboarding, and flexible payment options (crypto-friendly).
+- Transparent operations, ethical standards, and privacy-first technical delivery.
+- Strategic partnerships with industry leaders (Sectigo, Sophos, etc.).
 
-- **Land for Strategic Leasing:**  
-  Lease a portion of a secured 5-hectare private estate for embassies, training centers, data centers, satellite ground stations, health development, and more.  
-  [Contact for Lease Terms](mailto:thqcs@protonmail.com?subject=Land%20Lease%20Inquiry%20-%20THQCDU-21722)
+## Quick Start
+
+- Visit our [Services page](https://thqcyberdivision.github.io/services.html) for full product details and instant order links.
+- Questions or specific requirements? Contact us directly.
 
 ## Contact
 
-- **Email:** [thqcs@protonmail.com](mailto:thqcs@protonmail.com)
-- **Website:** [thqcyberdivision.github.io](https://thqcyberdivision.github.io/)
+- Email: [thqcs@protonmail.com](mailto:thqcs@protonmail.com)
+- Website: [thqcyberdivision.github.io](https://thqcyberdivision.github.io/)
 
 ## Policies
 
@@ -48,4 +52,4 @@ We offer a diverse suite of digital and in-person services for individuals, busi
 
 ---
 
-For more details or to view all available files, visit the [repository on GitHub](https://github.com/thqcyberdivision/thqcyberdivision.github.io/).
+For updates, technical documentation, or to contribute, visit our [GitHub repository](https://github.com/thqcyberdivision/thqcyberdivision.github.io).
