@@ -3,12 +3,12 @@
 <!--Confidential-->
 <!--Private property of THQ Cyber Division and Association -->
 <!--Dimension 1st Sivan 5785 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <title>Cyber Threat Intelligence & Sectigo SSL | THQ Cyber Division</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cyber Threat Intelligence & Sectigo SSL | THQ Cyber Division</title>
   <meta name="description" content="THQ Cyber Division provides professional cyber threat intelligence, secure hosts, and Sectigo SSL/TLS certificates for organizations and researchers." />
   <meta name="keywords" content="cyber threat intelligence, sectigo ssl, EV SSL, OV SSL, malware analysis, secure hosting, dedicated servers" />
 
@@ -24,119 +24,123 @@
   <meta name="twitter:description" content="Threat intelligence, secure hosts, Sectigo EV/OV SSL solutions and more." />
   <meta name="twitter:image" content="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "THQ Cyber Division Unincorporated",
-    "url": "https://thqcyberdivision.github.io/",
-    "logo": "https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn",
-    "description": "Professional cyber threat intelligence, secure hosting, and Sectigo SSL/TLS certificates.",
-    "sameAs": ["https://github.com/thqcyberdivision"],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Support",
-      "email": "thqcs@protonmail.com",
-      "areaServed": "Worldwide",
-      "availableLanguage": ["English"]
-    }
-  }
-  </script>
-
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#007bff">
   <link rel="icon" type="image/png" sizes="32x32" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn">
 
   <style>
-    body { font-family:sans-serif; background: #f5f7fb; color:#222; margin:0;}
-    header { background:#000; color:#fff; text-align:center; padding:20px;}
-    nav { background:#222; display: flex; justify-content: center; gap: 20px; padding: 10px 0;}
-    nav a { color:#fff; text-decoration:none; font-weight:bold; padding:8px 15px; border-radius:5px;}
-    nav a:hover, nav a.active { background:#4169e1; }
-    main { max-width:1100px; margin:40px auto; padding:0 20px;}
-    .intro { text-align:center; margin-bottom:30px;}
-    .sectigo-cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:18px; margin:20px 0;}
-    .card { background:#fff; border-radius:10px; box-shadow:0 4px 12px #0000001a; padding:18px; display:flex; flex-direction:column;}
-    .card img { max-width:120px; margin:0 auto 10px auto;}
-    .badge { background:#eef2ff; color:#4169e1; border-radius:999px; font-weight:700; font-size:0.8rem; display:inline-block; padding:6px 10px;}
-    .card .btn { background:#4169e1; color:#fff; border-radius:7px; text-decoration:none; font-weight:bold; padding:9px 14px; margin-top:auto;}
-    footer { background:#000; color:#fff; text-align:center; padding:18px 10px; margin-top:38px;}
+    :root{
+      --bg:#f5f7fb; --card:#fff; --muted:#6b7280; --primary:#4169e1; --accent:#0b3d91;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial; margin:0; background:var(--bg); color:#111; line-height:1.45}
+    a{color:var(--primary)}
+    header{background:#000; color:#fff; text-align:center; padding:22px 12px}
+    header img{width:88px; display:block; margin:0 auto 8px}
+    header h1{margin:4px 0 0; font-size:1.15rem}
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:12px;top:12px;width:auto;height:auto;padding:8px 12px;background:#fff;color:#000;border-radius:6px;z-index:9999}
+    nav{background:#222; display:flex; justify-content:center; gap:16px; padding:10px 12px; flex-wrap:wrap}
+    nav a{color:#fff; text-decoration:none; padding:8px 12px; border-radius:8px; font-weight:600}
+    nav a:hover{background:var(--primary)}
+    nav a[aria-current="page"]{background:var(--primary)}
+    main{max-width:1100px; margin:34px auto; padding:0 18px}
+    .intro{text-align:center; margin-bottom:24px}
+    .intro h2{margin:6px 0 8px;font-size:1.5rem}
+    .intro p{max-width:840px;margin:0 auto;color:var(--muted)}
+    .sectigo-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:20px 0}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);padding:18px;display:flex;flex-direction:column;min-height:210px}
+    .card img{max-width:120px;margin:0 auto 10px;display:block}
+    .card h3{margin:8px 0 6px;font-size:1.05rem;text-align:center}
+    .card p{color:var(--muted);text-align:center;margin:0}
+    .card .controls{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+    .badge{background:#eef2ff;color:var(--primary);border-radius:999px;padding:6px 10px;font-weight:700;font-size:0.85rem}
+    .btn{background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+    .services-summary{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04);text-align:center;margin-top:18px}
+    footer{background:#000;color:#fff;text-align:center;padding:18px 10px;margin-top:36px}
+    footer nav a{color:#fff;text-decoration:none}
+    @media (max-width:640px){header img{width:64px}; .intro h2{font-size:1.25rem}}
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header>
-    <img src="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn" style="width:90px;" alt="THQ Logo" />
+    <img src="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn" alt="THQ Logo" />
     <h1>THQ Cyber Division</h1>
   </header>
-  <nav>
-    <a href="index.html" class="active">Home</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
     <a href="about.html">About</a>
     <a href="services.html">Services</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <main>
+
+  <main id="main">
     <div class="intro">
       <h2>Cutting-edge Cybersecurity & Trusted Sectigo Certificates</h2>
-      <p>
-        THQ Cyber Division delivers actionable threat intelligence, secure hosting solutions, and verified Sectigo SSL/TLS certificates.  
-        Protect your business, research, or operations with proven security products and expert advisory.
-      </p>
+      <p>THQ Cyber Division delivers actionable threat intelligence, secure hosting solutions, and verified Sectigo SSL/TLS certificates. Protect your business, research, or operations with proven security products and expert advisory.</p>
     </div>
 
-    <h2 style="text-align:center;">Featured Sectigo SSL/TLS Certificates</h2>
+    <h2 style="text-align:center;margin-top:6px">Featured Sectigo SSL/TLS Certificates</h2>
 
-    <section class="sectigo-cards">
-      <!-- EV Multi-Domain SSL -->
+    <section class="sectigo-cards" aria-label="Featured certificates">
       <div class="card">
         <img src="https://images.seeklogo.com/logo-png/47/1/sectigo-logo-png_seeklogo-476321.png" alt="Sectigo EV Multi-Domain SSL">
         <h3>EV Multi-Domain SSL (3 Domains)</h3>
-        <p>Activate verified company name across multiple domains. Maximum trust.</p>
-        <span class="badge">From $649.99/yr</span>
-        <a class="btn" href="https://nowpayments.io/payment/?iid=6436837884&source=button" target="_blank">Order Now</a>
+        <p>Activate verified company identity across multiple domains for maximum trust and browser visibility.</p>
+        <div class="controls">
+          <span class="badge">From $649.99/yr</span>
+          <a class="btn" href="https://nowpayments.io/payment/?iid=6436837884&source=button" target="_blank" rel="noopener">Order</a>
+        </div>
       </div>
-      <!-- EV SSL -->
+
       <div class="card">
         <img src="https://images.seeklogo.com/logo-png/34/1/sectigo-limited-logo-png_seeklogo-344652.png" alt="Sectigo EV SSL">
         <h3>EV SSL Certificate</h3>
-        <p>Single-domain EV validation. Display company name in browser for enhanced confidence.</p>
-        <span class="badge">From $279.99/yr</span>
-        <a class="btn" href="https://nowpayments.io/payment/?iid=5091193372&source=button" target="_blank">Order Now</a>
+        <p>Single-domain EV validation. Display company name in browser for enhanced confidence and trust signals.</p>
+        <div class="controls">
+          <span class="badge">From $279.99/yr</span>
+          <a class="btn" href="https://nowpayments.io/payment/?iid=5091193372&source=button" target="_blank" rel="noopener">Order</a>
+        </div>
       </div>
-      <!-- OV Wildcard SSL -->
+
       <div class="card">
         <img src="https://seeklogo.com/images/S/sectigo-logo-3EF2BDCC26-seeklogo.com.png" alt="Sectigo OV Wildcard SSL">
         <h3>OV Wildcard SSL</h3>
-        <p>One certificate for all subdomains. Reissue unlimited times. $1M warranty. Great for business.</p>
-        <span class="badge">From $879.99/yr</span>
-        <a class="btn" href="https://nowpayments.io/payment/?iid=4363460714&source=button" target="_blank">Order Now</a>
+        <p>One certificate for all subdomains; unlimited reissues; $1M warranty. Simplify management for complex estates.</p>
+        <div class="controls">
+          <span class="badge">From $879.99/yr</span>
+          <a class="btn" href="https://nowpayments.io/payment/?iid=4363460714&source=button" target="_blank" rel="noopener">Order</a>
+        </div>
       </div>
-      <!-- OV Multi-Domain SSL -->
+
       <div class="card">
         <img src="https://images.seeklogo.com/logo-png/34/1/sectigo-limited-logo-png_seeklogo-344652.png" alt="Sectigo OV Multi-Domain SSL">
         <h3>OV Multi-Domain SSL (3 Domains)</h3>
-        <p>Secure several domains and subdomains with a single trusted certificate.</p>
-        <span class="badge">From $499.99/yr</span>
-        <a class="btn" href="https://nowpayments.io/payment/?iid=5338512201&source=button" target="_blank">Order Now</a>
+        <p>Secure multiple domains and subdomains with one certificate to reduce administrative overhead.</p>
+        <div class="controls">
+          <span class="badge">From $499.99/yr</span>
+          <a class="btn" href="https://nowpayments.io/payment/?iid=5338512201&source=button" target="_blank" rel="noopener">Order</a>
+        </div>
       </div>
     </section>
 
-    <div style="margin:35px 0;text-align:center;">
-      <h2>Full Service Portfolio</h2>
-      <p>
-        We also offer cyber threat intelligence services, incident response advisory, secure dedicated hosts & instances, Sophos endpoint solutions, and custom software for security research teams.
-        <br>
-        <a class="btn" style="margin-top:15px;" href="services.html">See All Services</a>
-      </p>
+    <div class="services-summary" aria-labelledby="services-heading">
+      <h2 id="services-heading" style="margin:0 0 8px">Full Service Portfolio</h2>
+      <p style="margin:0;color:var(--muted)">We provide cyber threat intelligence, incident response advisory, secure dedicated hosts & isolated instances, Sophos endpoint and MDR solutions, compliance assessments, and custom security software for research teams and enterprises.</p>
+      <a class="btn" href="services.html" style="margin-top:14px;display:inline-block">See All Services</a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2024–2025 THQ Cyber Division Unincorporated</p>
-    <nav>
-      <a href="terms.html" style="color:#fff;">Terms</a> |
-      <a href="privacy.html" style="color:#fff;">Privacy</a> |
-      <a href="mailto:thqcs@protonmail.com" style="color:#fff;">Contact</a>
+    <p style="margin:6px 0">&copy; 2024–2025 THQ Cyber Division Unincorporated</p>
+    <nav aria-label="footer links">
+      <a href="terms.html" style="text-decoration:none;color:#fff">Terms</a> |
+      <a href="privacy.html" style="text-decoration:none;color:#fff">Privacy</a> |
+      <a href="mailto:thqcs@protonmail.com" style="text-decoration:none;color:#fff">Contact</a>
     </nav>
   </footer>
 </body>
