@@ -4,47 +4,33 @@
 <!--Private property of THQ Cyber Division and Association -->
 <!--Dimension 1st Sivan 5785 -->
 <!-- Revision: 1st Kislev 5786-->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About Us | THQ Cyber Division</title>
-  <meta name="description" content="Learn about THQ Cyber Division's mission, values, and specialized cybersecurity services for organizations and researchers."/>
-  <link rel="icon" type="image/png" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn"/>
+  <meta name="description" content="Learn about THQ Cyber Division's mission, values, and specialized cybersecurity services for organizations and researchers." />
+  <link rel="icon" type="image/png" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn" />
+
   <style>
-    body { font-family: Inter,sans-serif; margin:0; background:#f5f7fb; color:#222; }
-    header { background:#000; color:#fff; text-align:center; padding:18px; }
-    header img { width:70px; }
-    main { max-width:700px; margin:40px auto; padding:0 16px; }
-    h1, h2, h3 { margin-bottom:16px; }
-    section { background:#fff; border-radius:16px; box-shadow:0 2px 8px #0001; padding:20px; margin-bottom:32px; }
-    nav { background:#222; position:relative; }
-    .menu-btn {
-      display:none;
-      position:absolute; right:16px; top:13px;
-      background:transparent; border:none; color:#fff;
-      font-size:2em; z-index:20; cursor:pointer;
-    }
-    .nav-list {
-      display:flex; justify-content:center; gap:14px; margin:0; padding:0; list-style:none;
-    }
-    nav a { color:#fff; text-decoration:none; font-weight:bold; padding:8px 12px; border-radius:5px; }
-    nav a:hover, nav a.active { background:#4169e1; }
-    @media (max-width:700px) {
-      main { margin:15px auto; }
-      section { margin-bottom:18px; }
-    }
-    @media (max-width:600px) {
-      .nav-list {
-        display:none; flex-direction:column;
-        background:#222; position:absolute; top:52px; left:0; right:0; z-index:10;
-        border-bottom-left-radius:14px; border-bottom-right-radius:14px;
-      }
-      nav.open .nav-list { display:flex; }
-      .menu-btn { display:inline-block; }
-      header img { width:56px; }
-    }
+    :root{--bg:#f5f7fb;--card:#fff;--muted:#6b7280;--primary:#4169e1}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;margin:0;background:var(--bg);color:#111}
+    header{background:#000;color:#fff;text-align:center;padding:18px}
+    header img{width:70px;height:auto;display:block;margin:0 auto 8px}
+    nav{background:#222;padding:8px 12px}
+    .nav-list{display:flex;justify-content:center;gap:14px;list-style:none;margin:0;padding:0}
+    .nav-list a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    .nav-list a.active{background:var(--primary)}
+    main{max-width:840px;margin:32px auto;padding:0 16px}
+    section{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);padding:20px;margin-bottom:20px}
+    h1,h2{margin:0 0 12px}
+    p,li{color:var(--muted)}
+    ul{padding-left:18px}
+    .contact a{color:var(--primary)}
+    footer{background:#111;color:#fff;text-align:center;padding:14px 2px}
+    @media (max-width:600px){header img{width:56px}; main{margin:18px auto}}
   </style>
 </head>
 <body>
@@ -52,67 +38,58 @@
     <img src="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn" alt="THQ Logo" />
     <h1>About THQ Cyber Division</h1>
   </header>
-  <nav>
-    <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">&#9776;</button>
+
+  <nav aria-label="Main navigation">
     <ul class="nav-list">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="about.html" class="active" aria-current="page">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+
   <main>
-    <section>
-      <h2>Our Mission</h2>
-      <p>
-        THQ Cyber Division is dedicated to helping organizations, researchers, and security teams worldwide protect digital assets, reputation, and operations. We deliver trusted cyber threat intelligence, secure hosting, and verified security certificates.
-      </p>
+    <section aria-labelledby="mission">
+      <h2 id="mission">Our Mission</h2>
+      <p>THQ Cyber Division helps organizations, researchers, and security teams protect digital assets, reputation, and operations. We deliver trusted cyber threat intelligence, robust infrastructure services, and enterprise-grade certificates — all with a focus on privacy, ethics, and technical excellence.</p>
     </section>
-    <section>
-      <h2>Who We Are</h2>
-      <p>
-        Based on professionalism and privacy, our team combines deep expertise in cybersecurity, infrastructure engineering, certificates, and proactive threat intelligence. We partner with leading vendors including Sectigo and Sophos.
-      </p>
+
+    <section aria-labelledby="who">
+      <h2 id="who">Who We Are</h2>
+      <p>We are a small, experienced team of security analysts, infrastructure engineers, and certificate specialists. Our backgrounds include threat research, incident response, secure hosting architecture, and commercial certificate lifecycle management. We collaborate with clients to build pragmatic security programs tailored to risk, compliance, and operational requirements.</p>
     </section>
-    <section>
-      <h2>Our Services</h2>
+
+    <section aria-labelledby="services">
+      <h2 id="services">Our Services</h2>
       <ul>
-        <li><strong>Cyber Threat Intelligence</strong> – Actionable feeds & analysis</li>
-        <li><strong>Secure Hosting</strong> – Dedicated hosts, isolated instances</li>
-        <li><strong>Sectigo SSL/TLS Certificates</strong> – EV, OV, wildcard & multidomain</li>
-        <li><strong>Sophos Security Solutions</strong> – MDR, firewall, endpoint protection</li>
-        <li><strong>Custom Security Software</strong> – Development & licensing</li>
+        <li><strong>Cyber Threat Intelligence</strong> – Actionable feeds, prioritized alerts, and analyst-led briefings.</li>
+        <li><strong>Secure Hosting</strong> – Hardened dedicated hosts, isolated instances, and secure network segmentation.</li>
+        <li><strong>Sectigo SSL/TLS Certificates</strong> – EV, OV, wildcard, and multi-domain certificates with full lifecycle support.</li>
+        <li><strong>Sophos Security Solutions</strong> – Endpoint detection & response, managed detection (MDR), and firewall integration.</li>
+        <li><strong>Custom Security Software</strong> – Tools and integrations for research teams, licensing available on request.</li>
       </ul>
     </section>
-    <section>
-      <h2>Core Values</h2>
+
+    <section aria-labelledby="values">
+      <h2 id="values">Core Values</h2>
       <ul>
-        <li>Professional service and expertise</li>
-        <li>Client privacy and security</li>
-        <li>Transparency, ethical operations</li>
-        <li>Responsive technical support</li>
+        <li>Professional service and deep technical expertise</li>
+        <li>Client privacy and responsible handling of sensitive information</li>
+        <li>Transparent, ethical operations aligned with legal and policy frameworks</li>
+        <li>Responsive and practical technical support</li>
       </ul>
     </section>
-    <section>
-      <h2>Contact</h2>
+
+    <section aria-labelledby="contact" class="contact">
+      <h2 id="contact">Contact</h2>
       <p>Email: <a href="mailto:thqcs@protonmail.com">thqcs@protonmail.com</a></p>
       <p>Site: <a href="https://thqcyberdivision.github.io/">thqcyberdivision.github.io</a></p>
     </section>
   </main>
-  <footer style="background:#111; color:#fff; text-align:center; padding:14px 2px; font-size:1em;">
+
+  <footer>
     © 2024–2025 THQ Cyber Division Unincorporated
   </footer>
-  <script>
-    function toggleMenu(){
-      document.querySelector('nav').classList.toggle('open');
-    }
-    // Always close menu when resizing desktop
-    window.addEventListener('resize', function(){
-      if(window.innerWidth > 600){
-        document.querySelector('nav').classList.remove('open');
-      }
-    });
-  </script>
 </body>
 </html>
