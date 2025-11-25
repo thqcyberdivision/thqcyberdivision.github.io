@@ -1,119 +1,68 @@
-<!DOCTYPE html>
+<!--Non Commercial -->
+<!--Reference: THQCDU-2147726840670722-->
+<!--Confidential-->
+<!--Private property of THQ Cyber Division and Association -->
+<!--Dimension 1st Sivan 5785 -->
+<!-- 5th Kislev 5786 -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Blog | THQ Cyber Division Unincorporated</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Read the latest articles, tips, and updates from THQ Cyber Division Unincorporated.">
-  <link rel="stylesheet" href="main.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn">
-  <link rel="icon" type="image/png" sizes="96x96" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn">
-  <link rel="icon" type="image/png" sizes="192x192" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>THQ Cyber Division — Blog: Cryptography & Sectigo SSL</title>
+  <meta name="description" content="Professional introductions to cryptography and the business benefits of Sectigo SSL certificates. THQ Cyber Division provides Sectigo provisioning and lifecycle management." />
+  <meta name="keywords" content="cryptography, Sectigo, SSL, TLS, certificate provisioning, website security, certificate lifecycle" />
+  <link rel="canonical" href="https://thqcyberdivision.github.io/blog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="THQ Cyber Division" />
+  <meta property="og:title" content="THQ Cyber Division — Blog: Cryptography & Sectigo SSL" />
+  <meta property="og:description" content="Learn why cryptography matters and how Sectigo SSL certificates protect businesses, customers, and reputation." />
+  <meta property="og:url" content="https://thqcyberdivision.github.io/blog.html" />
+  <meta property="og:image" content="https://images.seeklogo.com/logo-png/47/1/sectigo-logo-png_seeklogo-476321.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cryptography & Sectigo SSL — THQ Cyber Division" />
+  <meta name="twitter:description" content="Practical overview of cryptography and how Sectigo SSL certificates deliver trust and security for businesses." />
+  <meta name="twitter:image" content="https://images.seeklogo.com/logo-png/47/1/sectigo-logo-png_seeklogo-476321.png" />
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #000; }
-    footer { background: #000; color: #fff; text-align: center; padding: 15px 0; }
-    header {
-  background: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 12px 10px;
-}
-
-header img {
-  max-width: 70px;
-  height: auto;
-  margin-bottom: 6px;
-}
-
-header h1 {
-  font-size: 1.2rem;
-  margin: 0;
-  text-align: center;
-}
-
-            nav {
-      background: #222;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    :root{
+      --accent:#0b54c9;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#fbfdff;
+      --text:#0b1220;
+      --radius:12px;
     }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 15px;
-      border-radius: 5px;
-      transition: background 0.2s;
-    }
-
-@media (max-width: 768px) {
-  header img { max-width: 50px; }
-  header h1 { font-size: 1rem; }
-  nav a { font-size: 0.85rem; padding: 4px 8px; }
-}
-
-@media (max-width: 480px) {
-  header img { max-width: 45px; }
-  header h1 { font-size: 0.95rem; }
-  nav a { font-size: 0.8rem; padding: 3px 6px; }
-}
-
-    nav a.active, nav a:hover {
-      background: #4169e1;
-      color: #fff;
-    }
-    main { display: flex; flex-wrap: wrap; max-width: 1200px; margin: 30px auto; gap: 30px; padding: 0 10px; }
-    .blog-main { flex: 2 1 600px; }
-    .blog-sidebar { flex: 1 1 300px; background: #fff; border-radius: 10px; box-shadow: 0 0 12px rgba(0,0,0,0.06); padding: 20px; margin-bottom: 30px; }
-    .blog-intro { margin-bottom: 25px; }
-    .blog-intro h1 { margin-bottom: 10px; }
-    .blog-search { width: 100%; padding: 10px; margin: 15px 0; border-radius: 6px; border: 1px solid #ccc; }
-    .blog-categories { margin-bottom: 20px; }
-    .blog-categories button { margin-right: 10px; background: #eee; color: #222; padding: 5px 12px; border-radius: 5px; border: none; cursor: pointer; font-size: 0.99em; transition: background 0.2s; }
-    .blog-categories button.active, .blog-categories button:hover { background: #4169e1; color: #fff; }
-    .blog-list { display: flex; flex-direction: column; gap: 25px; }
-    .blog-preview { background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.03); display: flex; gap: 18px; padding: 18px; align-items: flex-start; position: relative; }
-    .blog-preview img { width: 120px; height: 100px; object-fit: cover; border-radius: 8px; }
-    .blog-preview h2 { margin: 0 0 10px 0; }
-    .blog-preview .meta { font-size: 0.95em; color: #555; margin-bottom: 8px; }
-    .blog-preview .summary { font-size: 1.08em; color: #222; margin-bottom: 10px; }
-    .blog-preview .read-more { background: #4169e1; color: #fff; padding: 7px 12px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.98em; cursor: pointer; border: none; }
-    .blog-preview .read-more:hover { background: #27408b; }
-    .blog-full-content { display: none; padding: 10px 0 0 0; }
-    .blog-preview.expanded .blog-full-content { display: block; }
-    .blog-preview.expanded .read-more { display: none; }
-    .blog-sidebar section { margin-bottom: 28px; }
-    .blog-sidebar h3 { margin-top: 0; }
-    .blog-sidebar form input[type="email"] { width: 100%; padding: 8px; margin-bottom: 6px; border-radius: 4px; border: 1px solid #ccc; }
-    .blog-sidebar form button { width: 100%; padding: 9px; border-radius: 4px; background: #4169e1; color: #fff; border: none; font-weight: bold; }
-    .blog-sidebar ul { list-style: none; padding-left: 0; }
-    .blog-sidebar ul li { margin-bottom: 7px; }
-    .blog-sidebar ul li a { color: #4169e1; text-decoration: none; }
-    .blog-sidebar ul li a:hover { text-decoration: underline; }
-    @media (max-width: 900px) {
-      main { flex-direction: column; }
-      .blog-sidebar { max-width: 100%; }
-      .blog-preview { flex-direction: column; align-items: flex-start; }
-      .blog-preview img { width: 100%; height: 160px; }
-     
-      header img { height: 38px; }
-    }
-    @media (max-width: 600px) {
-      main { padding: 10px 4vw; }
-   
-    }
-    footer nav a { color: #fff; margin: 0 5px; text-decoration: underline; }
+    html,body{height:100%;margin:0;background:linear-gradient(#ffffff,#f7fbff);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);}
+    header{background:#000;color:#fff;padding:22px 16px;text-align:center}
+    header img{width:88px;border-radius:10px;display:block;margin:0 auto 8px}
+    nav{background:#111;display:flex;gap:16px;justify-content:center;padding:10px 8px;flex-wrap:wrap}
+    nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a:hover, nav a.active{background:var(--accent)}
+    main{max-width:980px;margin:36px auto;padding:0 18px}
+    .intro{text-align:center;margin-bottom:28px}
+    h1,h2{color:var(--accent);margin:0 0 12px}
+    .meta{color:var(--muted);font-size:0.95rem;margin-bottom:12px}
+    article{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 8px 26px rgba(11,17,34,0.06);margin-bottom:22px}
+    p{line-height:1.6;margin:0 0 12px}
+    ul{margin:0 0 12px 20px;color:var(--muted)}
+    .hero-img{width:100%;max-height:420px;object-fit:cover;border-radius:8px;margin:12px 0}
+    .cta{display:inline-block;background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+    .share{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .share a{background:#eef4ff;color:var(--accent);padding:8px 10px;border-radius:8px;text-decoration:none;font-weight:600}
+    footer{text-align:center;color:var(--muted);padding:22px 12px;margin-top:28px}
   </style>
 </head>
 <body>
-<header>
-  <a href="index.html"><img src="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn" alt="THQ Logo"></a>
+  <header>
+    <img src="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn" alt="THQ Cyber Division logo" />
+    <h1>THQ Cyber Division — Blog</h1>
+  </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -121,270 +70,73 @@ header h1 {
     <a href="blog.html" class="active">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
-</header>
-<main>
-  <section class="blog-main">
-    <section class="blog-intro">
-      <h1>Our Blog</h1>
-      <p>Insights, updates, and tips from THQ Cyber Division Unincorporated.</p>
-      <input type="search" id="blogSearch" placeholder="Search blog posts..." class="blog-search">
-    </section>
-    <section class="blog-categories" id="blogCategories">
-      <button class="active" data-category="all">All</button>
-      <button data-category="cybersecurity">Cybersecurity</button>
-      <button data-category="productivity">Productivity</button>
-      <button data-category="news">News</button>
-      <button data-category="it-support">IT Support</button>
-      <button data-category="business-formation">Business Formation</button>
-    </section>
-    <section class="blog-list" id="blogList">
 
-      <!-- Cybersecurity: Sophos -->
-<article class="blog-preview" data-category="cybersecurity">
-  <img src="https://images.seeklogo.com/logo-png/38/1/sophos-logo-png_seeklogo-380354.png" 
-       alt="Sophos Cybersecurity Suite" 
-       style="background:#fff;padding:10px;border-radius:8px;">
-  <div>
-    <h2>Next-Gen Protection with Sophos Cybersecurity Suite</h2>
-    <p class="meta">Posted by THQ Cyber Division Team on November 8th, 2025 | <span class="category">Cybersecurity</span></p>
-    <p class="summary">Discover how Sophos’ AI-driven protection helps businesses safeguard endpoints, networks, and identities—now available through THQ Cyber Division.</p>
-    <button class="read-more">Read More</button>
-    <div class="blog-full-content">
-      <h3>Why Choose Sophos?</h3>
-      <p>Sophos provides unified threat protection across endpoints, servers, email, and cloud workloads. The Sophos Central platform allows you to manage all security components from one intuitive dashboard, reducing complexity and boosting defense automation.</p>
+  <main>
+    <section class="intro">
+      <h2>Focused briefs: Cryptography fundamentals and Sectigo SSL benefits</h2>
+      <p class="meta">Professional, business-oriented explanations and practical guidance. All articles reference our Sectigo provisioning and certificate lifecycle services. Published: 2025-11-25</p>
+      <p><a class="cta" href="services.html">View Sectigo & Certificate Services</a></p>
+    </section>
+
+    <!-- Article 1: Cryptography intro -->
+    <article id="intro-cryptography">
+      <h2>Introduction to Cryptography: What Business Leaders Need to Know</h2>
+      <p class="meta">Published: 2025-11-25 — Author: THQ Cyber Division</p>
+      <img class="hero-img" src="https://picsum.photos/seed/cryptography-business/1200/420" alt="Abstract cryptography illustration" />
+
+      <p>Cryptography is the foundation of digital trust: it turns readable information into ciphertext that only authorized parties can reverse, and it provides mechanisms to authenticate identities and verify data integrity. For businesses, cryptography is not just a technical control — it underpins customer trust, regulatory compliance, and many operational systems.</p>
+
+      <p>Core concepts:</p>
       <ul>
-        <li><strong>Endpoint Protection:</strong> AI-driven threat detection and active ransomware prevention</li>
-        <li><strong>Firewall:</strong> Advanced intrusion prevention and web filtering</li>
-        <li><strong>Managed Detection & Response (MDR):</strong> 24/7 human-led threat hunting</li>
+        <li><strong>Confidentiality:</strong> Encryption protects data in transit and at rest from eavesdroppers.</li>
+        <li><strong>Integrity:</strong> Digital signatures and message authentication detect tampering.</li>
+        <li><strong>Authentication:</strong> Certificates and keys prove identity (servers, devices, or users).</li>
+        <li><strong>Key management:</strong> Secure generation, storage, rotation, and revocation of cryptographic keys is essential — weak key management, not algorithms, is the common failure mode.</li>
       </ul>
-      <p>Businesses benefit from scalability, simplified management, and a lower total cost of ownership compared to fragmented security tools.</p>
-      <p><strong>Recommended for:</strong> Small to medium enterprises, remote teams, and organizations seeking a single unified cybersecurity framework.</p>
-      <p>Explore configurations and licensing directly on our <a href="Sophos_products.html">Sophos Product Page</a>.</p>
-    </div>
-  </div>
-</article>
 
-      <article class="blog-preview" data-category="cybersecurity">
-  <img src="https://cdn.pixabay.com/photo/2012/04/12/13/02/firewall-29940_1280.png?auto=format&fit=crop&w=400&q=80" alt="Web Application Firewall">
-  <div>
-    <h2>Protect Your Web Applications with THQ Cyber WAF</h2>
-    <p class="meta">Posted by THQ Cyber Division Team on November 6th, 2025 | <span class="category">Cybersecurity</span></p>
-    <p class="summary">Web applications face constant threats from attackers. Learn how THQ Cyber WAF offers tailored protection through custom rules, managed rule groups, and traffic filtering to safeguard your business.</p>
-    <button class="read-more">Read More</button>
-    <div class="blog-full-content">
-      <h3>How THQ Cyber WAF Secures Your Applications</h3>
-      <p>THQ Cyber WAF helps businesses of all sizes protect their web applications against attacks such as SQL injection, XSS, and DDoS. With flexible configuration options, you can:</p>
+      <p>Practical business implications: properly configured TLS (HTTPS) prevents interception and impersonation, protecting customer data and preserving brand reputation. Strong cryptography and disciplined lifecycle management also reduce regulatory risk and support secure integrations with partners and platforms.</p>
+
+      <p>THQ Cyber Division provides advisory and operational services to translate cryptographic principles into actionable programs: inventories of cryptographic usage, risk-based prioritization, key-management guidance, and hands-on support for certificate provisioning and lifecycle automation.</p>
+
+      <div class="share">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://thqcyberdivision.github.io/blog.html#intro-cryptography" target="_blank" rel="noreferrer noopener">Share on LinkedIn</a>
+        <a href="https://twitter.com/intent/tweet?text=Introduction%20to%20Cryptography%20by%20THQ%20Cyber%20Division&url=https://thqcyberdivision.github.io/blog.html#intro-cryptography" target="_blank" rel="noreferrer noopener">Share on Twitter</a>
+        <a class="cta" href="services.html">Sectigo Provisioning & Key Management</a>
+      </div>
+    </article>
+
+    <!-- Article 2: Sectigo SSL -->
+    <article id="sectigo-ssl-benefits">
+      <h2>Sectigo SSL Certificates: Business Benefits and Practical Considerations</h2>
+      <p class="meta">Published: 2025-11-25 — Author: THQ Cyber Division</p>
+      <img class="hero-img" src="https://images.seeklogo.com/logo-png/47/1/sectigo-logo-png_seeklogo-476321.png" alt="Sectigo logo" />
+
+      <p>Sectigo is a major certificate authority offering a comprehensive range of SSL/TLS products for businesses — from single-domain OV/EV certificates to wildcard and multi-domain SAN products. When deployed and managed correctly, Sectigo certificates deliver tangible business benefits: protection of customer data, demonstrable identity assurance, and operational convenience for certificate lifecycle tasks.</p>
+
+      <p>Primary business benefits:</p>
       <ul>
-        <li>Deploy Starter, Business, or Enterprise packages depending on your security needs</li>
-        <li>Customize Web ACLs and rules for granular protection</li>
-        <li>Integrate managed rule groups for minimal maintenance</li>
+        <li><strong>Customer trust & brand protection:</strong> Trusted certificates prevent site impersonation and display browser security indicators; EV/OV certificates provide stronger identity signals to customers and partners.</li>
+        <li><strong>Data protection:</strong> TLS encryption prevents unauthorized interception of credentials, personal data, and payment information during transit.</li>
+        <li><strong>Regulatory & partner requirements:</strong> Many compliance frameworks and partner integrations require properly authenticated TLS sessions and auditable certificate handling.</li>
+        <li><strong>Flexible deployment:</strong> Wildcard and SAN certificates reduce management overhead across many subdomains and services; Sectigo's product set supports varied enterprise topologies.</li>
+        <li><strong>Operational assurances:</strong> Warranty coverage, reissue policies, and documented validation processes provide an additional layer of risk management.</li>
       </ul>
-      <p>Pricing starts from $50/month for basic protection up to $300/month for enterprise-grade solutions. THQ Cyber WAF also offers usage-based pricing for high-traffic applications and optional setup support.</p>
-      <p>Enhance your security posture today. <a href="services.html#thq-waf">Explore WAF Packages</a>.</p>
-    </div>
-  </div>
-</article>
-      <article class="blog-preview" data-category="it-support">
-  <img src="https://cdn.pixabay.com/photo/2022/07/14/05/46/datacenter-7320495_1280.png?auto=format&fit=crop&w=400&q=80" alt="Cloud VMware Deployment">
-  <div>
-    <h2>Maximize Efficiency with Elastic VMware Services</h2>
-    <p class="meta">Posted by THQ Cyber Division Team on November 6th, 2025 | <span class="category">IT Support</span></p>
-    <p class="summary">Discover how THQ Cyber’s Elastic VMware Service allows businesses to deploy virtualized environments quickly and securely, with flexible instance options and regional deployments.</p>
-    <button class="read-more">Read More</button>
-    <div class="blog-full-content">
-      <h3>Elastic VMware Service: Flexible and Scalable Cloud Infrastructure</h3>
-      <p>THQ Cyber Elastic VMware Service offers pre-configured virtual environments with 4 or 8 instances, allowing businesses to scale operations without complex setup. Key benefits include:</p>
-      <ul>
-        <li>Choice of deployment regions: Paris, London, Tokyo, or Ohio</li>
-        <li>Rapid provisioning of secure, high-performance instances</li>
-        <li>Fully managed or self-managed options for operational flexibility</li>
-        <li>Enterprise-level redundancy and performance for mission-critical workloads</li>
-      </ul>
-      <p>Pricing: 4 Instances from $4,061.72/month, 8 Instances from $8,123.44/month. Ideal for research teams, red teams, and businesses seeking reliable virtual infrastructure.</p>
-      <p>Ready to streamline your cloud deployment? <a href="services.html#elastic-vmware">Learn More & Order</a>.</p>
-    </div>
-  </div>
-</article>
 
+      <p>Common operational pitfalls include expired certificates, inconsistent key storage, and manual renewal processes that lead to outages. These are avoidable with automated renewal, centralized key storage, monitoring, and documented emergency revocation procedures.</p>
 
-      
-      <!-- Cybersecurity -->
-      <article class="blog-preview" data-category="cybersecurity">
-          <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Lock">
-        <div>
-          <h2>10-Step Cybersecurity Checklist for Small Businesses</h2>
-          <p class="meta">Posted by THQ Cyber Division Team on September 26th, 2025 | <span class="category">Cybersecurity</span></p>
-          <p class="summary">Is your business protected from the latest threats? Follow our actionable 10-step checklist to secure your email, devices, cloud accounts, and more. Download a printable version for your office!</p>
-          <button class="read-more">Read More</button>
-          <div class="blog-full-content">
-            <h3>10 Steps to Protect Your Small Business</h3>
-            <ol>
-              <li>Use strong, unique passwords for all accounts.</li>
-              <li>Enable two-factor authentication wherever possible.</li>
-              <li>Regularly update all software and operating systems.</li>
-              <li>Train employees to recognize phishing attempts.</li>
-              <li>Back up your data regularly to secure, offsite locations.</li>
-              <li>Install and maintain antivirus software.</li>
-              <li>Restrict admin rights to essential personnel only.</li>
-              <li>Secure your Wi-Fi networks with strong encryption.</li>
-              <li>Monitor account activity for suspicious behavior.</li>
-              <li>Have an incident response plan (know who to call and what to do).</li>
-            </ol>
-            <p>Download a printable checklist for your team, and reach out to THQ Cyber Division for a custom security audit!</p>
-          </div>
-        </div>
-      </article>
-      <!-- Productivity -->
-      <article class="blog-preview" data-category="productivity">
-        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Virtual Assistant Productivity">
-        <div>
-          <h2>How a Virtual Assistant Can Boost Your Team's Productivity</h2>
-          <p class="meta">Posted by Jane Doe on September 26th, 2025 | <span class="category">Productivity</span></p>
-          <p class="summary">Discover how delegating tasks to a skilled virtual assistant helped one of our clients reclaim 10+ hours per week, streamline document workflows, and focus on core business growth.</p>
-          <button class="read-more">Read More</button>
-          <div class="blog-full-content">
-            <h3>Client Story: More Time, Less Stress</h3>
-            <p>One of our professional services clients was overwhelmed with repetitive document editing, inbox management, and appointment coordination. After partnering with a THQ Cyber Division virtual assistant, they delegated all routine scheduling, received error-free reports, and gained back more than 10 hours a week.</p>
-            <ul>
-              <li>Routine admin tasks handled daily</li>
-              <li>Calendar and travel planning streamlined</li>
-              <li>Quick turnaround on document proofreading</li>
-              <li>Consistent communication with project stakeholders</li>
-            </ul>
-            <p>Ready to reclaim your time? <a href="contact.html">Contact us</a> to learn more about our tailored virtual assistant services.</p>
-          </div>
-        </div>
-      </article>
-      <!-- News -->
-      <article class="blog-preview" data-category="news">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Company News">
-        <div>
-          <h2>THQ Cyber Division Launches New Client Portal</h2>
-          <p class="meta">Posted by THQ Cyber Division Team on September 26th, 2025 | <span class="category">News</span></p>
-          <p class="summary">We’re excited to announce our new secure client portal—making it easier than ever to request support, manage your information, and access exclusive resources.</p>
-          <button class="read-more">Read More</button>
-          <div class="blog-full-content">
-            <h3>About the Portal</h3>
-            <p>The new portal allows registered users to:</p>
-            <ul>
-              <li>Submit and track support requests online</li>
-              <li>Access downloadable resources and guides</li>
-              <li>Securely update their contact and service details</li>
-              <li>Receive real-time notifications about service changes</li>
-            </ul>
-            <p>Visit the <a href="#">Client Portal</a> (login required) or <a href="contact.html">contact support</a> to get started.</p>
-          </div>
-        </div>
-      </article>
-      <!-- IT Support -->
-      <article class="blog-preview" data-category="it-support">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="IT Support Solutions">
-        <div>
-          <h2>5 IT Support Tips Every Remote Worker Should Know</h2>
-          <p class="meta">Posted by Support Specialist on September 26th, 2025 | <span class="category">IT Support</span></p>
-          <p class="summary">Remote work is here to stay. Learn five essential IT support practices—from device updates to secure backups—to keep your workflow smooth and your data safe.</p>
-          <button class="read-more">Read More</button>
-          <div class="blog-full-content">
-            <h3>Essential Tips</h3>
-            <ol>
-              <li>Always keep your operating system and apps up to date.</li>
-              <li>Use a VPN when connecting to public or home Wi-Fi.</li>
-              <li>Back up important files to secure cloud or external storage.</li>
-              <li>Install endpoint security and enable firewalls.</li>
-              <li>Contact IT support early if you notice strange behavior or performance issues.</li>
-            </ol>
-            <p>Our remote IT support team is available for quick troubleshooting, device setup, and ongoing protection.</p></div>
-      </article>
-      <!-- Business Formation -->
-      <article class="blog-preview" data-category="business-formation">
-        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=400&q=80" alt="Business Incorporation Success">
-        <div>
-          <h2>Case Study: Launching a US LLC with THQ Cyber Division</h2>
-          <p class="meta">Posted by THQ Cyber Division Team on September 26th, 2025 | <span class="category">Business Formation</span></p>
-          <p class="summary">Discover how we guide our clients step-by-step. See what sets our business support apart.</p>
-          <button class="read-more">Read More</button>
-          <div class="blog-full-content">
-            <h3>Our LLC Formation Approach</h3>
-            <ul>
-              <li>Personalized guidance through state selection and registration</li>
-              <li>Transparent pricing and document preparation</li>
-              <li>Virtual office and registered agent options</li>
-              <li>Ongoing compliance reminders and support</li>
-            </ul>
-            <p>Ready to launch your business? <a href="contact.html">Get in touch</a> for a free consultation.</p>
-          </div>
-        </div>
-      </article>
-    </section>
-  </section>
-  <aside class="blog-sidebar">
-    <section>
-      <h3>About This Blog</h3>
-      <p>We share the latest in cybersecurity, digital productivity, practical IT tips.</p>
-    </section>
-    <section>
-      <h3>Subscribe</h3>
-      <form action="https://formspree.io/f/mnnvzaaz" method="POST">
-        <input type="email" name="email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-    <section>
-      <h3>Popular Posts</h3>
-      <ul>
-        <li><a href="#">10-Step Cybersecurity Checklist for Small Businesses</a></li>
-        <li><a href="#">How a Virtual Assistant Can Boost Your Team's Productivity</a></li>
-      </ul>
-    </section>
-  </aside>
-</main>
-<footer>
-  <p>&copy; 2024 - 2025 THQ Cyber Division Unincorporated. All rights reserved.</p>
-  <nav>
-    <a href="terms.html">Terms</a> |
-    <a href="privacy.html">Privacy</a> |
-    <a href="mailto:thqcs@protonmail.com">Contact</a>
-    <a href="rss.xml" style="margin-left:10px;">RSS</a>
-  </nav>
-</footer>
-<script>
-(function() {
-  let currentCategory = 'all';
+      <p>THQ Cyber Division provides end-to-end Sectigo services: product selection (OV, EV, wildcard, multi-domain), validation and issuance, secure key storage recommendations, automation of renewals, installation and configuration guidance (including HSTS and secure TLS parameters), and rapid revocation support if needed. Our service minimizes operational friction while ensuring the highest practical level of trust for customers and partners.</p>
 
-  function filterPosts() {
-    const search = document.getElementById('blogSearch').value.toLowerCase();
-    document.querySelectorAll('.blog-preview').forEach(post => {
-      const matchesCategory = (currentCategory === "all" || post.dataset.category === currentCategory);
-      const text = post.innerText.toLowerCase();
-      const matchesSearch = !search || text.includes(search);
-      post.style.display = (matchesCategory && matchesSearch) ? 'flex' : 'none';
-    });
-  }
+      <div class="share">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://thqcyberdivision.github.io/blog.html#sectigo-ssl-benefits" target="_blank" rel="noreferrer noopener">Share on LinkedIn</a>
+        <a href="https://twitter.com/intent/tweet?text=Sectigo%20SSL%20Benefits%20for%20Business%20by%20THQ%20Cyber%20Division&url=https://thqcyberdivision.github.io/blog.html#sectigo-ssl-benefits" target="_blank" rel="noreferrer noopener">Share on Twitter</a>
+        <a class="cta" href="services.html">Request Sectigo Provisioning</a>
+      </div>
+    </article>
 
-  // Category filter
-  document.querySelectorAll('.blog-categories button').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.blog-categories button').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      currentCategory = this.getAttribute('data-category');
-      filterPosts();
-    });
-  });
+  </main>
 
-  // Search filter
-  document.getElementById('blogSearch').addEventListener('input', filterPosts);
-
-  // Read More
-  document.querySelectorAll('.read-more').forEach(button => {
-    button.addEventListener('click', function() {
-      const preview = this.closest('.blog-preview');
-      preview.classList.add('expanded');
-    });
-  });
-
-  // Initial filter
-  filterPosts();
-})();
-</script>
+  <footer>
+    <p>&copy; 2025 THQ Cyber Division Unincorporated — Sectigo SSL provisioning and certificate lifecycle management available via our <a href="services.html">Services</a> page.</p>
+  </footer>
 </body>
 </html>
