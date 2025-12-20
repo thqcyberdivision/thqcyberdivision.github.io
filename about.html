@@ -22,6 +22,39 @@
   <meta name="description" content="Learn about THQ Cyber Division's mission, values, and specialized cybersecurity services for organizations and researchers." />
   <link rel="icon" type="image/png" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn" />
 
+  <!-- ================= Security Hardening ================= -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-DNS-Prefetch-Control" content="off">
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+<meta http-equiv="Permissions-Policy" content="
+  geolocation=(),
+  camera=(),
+  microphone=(),
+  payment=(),
+  usb=()
+">
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://embed.tawk.to;
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data: https://ipfs.io;
+  frame-src https://embed.tawk.to;
+  connect-src 'self';
+  font-src 'self';
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'none';
+">
+<!-- ======================================================= -->
+
   <style>
     :root{--bg:#f5f7fb;--card:#fff;--muted:#6b7280;--primary:#4169e1}
     *{box-sizing:border-box}
