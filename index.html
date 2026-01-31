@@ -39,9 +39,10 @@
 
   <!-- ================= Security Hardening ================= -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
+
+ <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="X-DNS-Prefetch-Control" content="off">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
@@ -57,18 +58,19 @@
 
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://embed.tawk.to;
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://ipfs.io https://images.seeklogo.com https://ipfs.tech https://seeklogo.com;
-  frame-src https://www.youtube.com https://embed.tawk.to;
-  connect-src 'self';
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://embed.tawk.to https://*.tawk.to;
+  style-src 'self' 'unsafe-inline'  https://embed.tawk.to https://*.tawk.to;
+  img-src 'self' data: https://ipfs.io https://images.seeklogo.com https://ipfs.tech https://seeklogo.com https://*.tawk.to https://embed.tawk.to;
+  frame-src https://www.youtube.com https://embed.tawk.to https://*.tawk.to https://w1.tawk.to;;
+  connect-src 'self' https://*.tawk.to wss://*.tawk.to;
   font-src 'self';
   object-src 'none';
   base-uri 'self';
   form-action 'self' https://fabform.io https://nowpayments.io;
   frame-ancestors 'none';
 ">
-<!-- ======================================================= -->
+  
+  <!-- ======================================================= -->
 
   
   <style>
