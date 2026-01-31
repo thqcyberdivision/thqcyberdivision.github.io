@@ -85,7 +85,7 @@
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: https://ipfs.io https://cdn.pixabay.com https://nowpayments.io https://ballisticdomains.com https://www.knownhost.com https://www.master.cz https://images.seeklogo.com https://assets.sophos.com https:[...]
   frame-src https://embed.tawk.to;
-  connect-src 'self';
+  connect-src 'self' https://*.tawk.to wss://*.tawk.to;
   font-src 'self';
   object-src 'none';
   base-uri 'self';
@@ -341,16 +341,14 @@ Get ready-to-submit PCI Compliance reports for your merchant bank.</p>
 	<span class="badge">From $249.00/yr</span>
 	<label for="plan-select-hg">Plan:</label>
   <select id="plan-select-hg">
-    <option value="one-year">1 year</option>
-    <option value="two-years">2 years</option>
-	<option value="three-years">3 years</option>
-  </select>
-	
-	<div id="payment-button-hg" style="margin-top:10px;">
-    <a href="https://nowpayments.io/payment/?iid=5461873662&source=button" target="_blank" rel="noreferrer noopener">
-      <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
-    </a>
-  </div>
+  <option value="one-year">1 year</option>
+  <option value="two-years">2 years</option>
+  <option value="three-years">3 years</option>
+</select>
+
+<div id="payment-button-hg" style="margin-top:10px;">
+  <!-- JS will inject the correct NOWPayments button here -->
+</div>
 </div>
 
   <!-- EV CERTIFICATES -->
@@ -529,17 +527,17 @@ function setupPayment(selectId, buttonId, idMap, priceMap, currency, unit) {
 
 // Initialize HackerGuardian (unique IDs)
 setupPayment(
-  'plan-select-hg',
-  'payment-button-hg',
+  'plan-select-hg',          // <-- dropdown ID
+  'payment-button-hg',       // <-- button container ID
   {
-    'one-year': '5461873662',
-    'two-years': '4566127488',
-    'three-years': '4565801205'
+    'one-year':   '5461873662', // <-- NOWPayments iid for 1 year
+    'two-years':  '4566127488', // <-- NOWPayments iid for 2 years
+    'three-years':'4565801205'  // <-- NOWPayments iid for 3 years
   },
   {
-    'one-year': '249.00',
-    'two-years': '435.75',
-    'three-years': '622.50'
+    'one-year':   '249.00',
+    'two-years':  '435.75',
+    'three-years':'622.50'
   },
   '$',
   'yr'
