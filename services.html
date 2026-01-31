@@ -109,10 +109,10 @@
     https://static.tawk.to;
   frame-src https://embed.tawk.to https://*.tawk.to;
   connect-src 'self' https://*.tawk.to wss://*.tawk.to;
-  font-src 'self';
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
+  font-src 'self' https://*.tawk.to wss://*.tawk.to;
+  object-src 'self' https://*.tawk.to wss://*.tawk.to;
+  base-uri 'self' https://*.tawk.to wss://*.tawk.to;
+  form-action 'self' https://*.tawk.to wss://*.tawk.to;
 ">
 
 <!-- ======================================================= -->
