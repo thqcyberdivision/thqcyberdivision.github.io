@@ -10,7 +10,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NQGQSGEVY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){dataLayer.push(arguments);} 
   gtag('js', new Date());
 
   gtag('config', 'G-8NQGQSGEVY');
@@ -18,7 +18,7 @@
   <title>Cyber Threat Intelligence, Secure Hosts & Custom Software | THQ Cyber Division</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="THQ Cyber Division provides professional Cyber Threat Intelligence, incident response advisory, secure Dedicated Hosts and Dedicated Instances rentals and bespoke custom software for security teams." />
+  <meta name="description" content="THQ Cyber Division provides professional Cyber Threat Intelligence, incident response advisory, secure Dedicated Hosts and Dedicated Instances rentals and bespoke c[...]"
   <meta name="keywords" content="cyber threat intelligence, threat feeds, malware analysis, incident response, dedicated hosts, dedicated instances, custom software, secure infrastructure" />
  
 	<!-- Open Graph -->
@@ -83,7 +83,7 @@
   default-src 'self';
   script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://embed.tawk.to;
   style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://ipfs.io https://cdn.pixabay.com https://ballisticdomains.com https://www.knownhost.com https://www.master.cz https://images.seeklogo.com https://assets.sophos.com https://nowpayments.io;
+  img-src 'self' data: https://ipfs.io https://cdn.pixabay.com https://ballisticdomains.com https://www.knownhost.com https://www.master.cz https://images.seeklogo.com https://assets.sophos.com https:[...]
   frame-src https://embed.tawk.to;
   connect-src 'self';
   font-src 'self';
@@ -337,16 +337,16 @@
 Gain PCI scan compliance with vulnerability scanning by a PCI Approved Scanning Vendor.
 Get ready-to-submit PCI Compliance reports for your merchant bank.</p>
 	<p>Make your path to PCI compliance as simple as possible with this turn-key solution</p>
-  
+   
 	<span class="badge">From $249.00/yr</span>
-	<label for="plan-select-8v">Plan:</label>
-  <select id="plan-select-8v">
+	<label for="plan-select-hg">Plan:</label>
+  <select id="plan-select-hg">
     <option value="one-year">1 year</option>
     <option value="two-years">2 years</option>
 	<option value="three-years">3 years</option>
   </select>
 	
-	<div id="payment-button-8v" style="margin-top:10px;">
+	<div id="payment-button-hg" style="margin-top:10px;">
     <a href="https://nowpayments.io/payment/?iid=5461873662&source=button" target="_blank" rel="noreferrer noopener">
       <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
     </a>
@@ -381,7 +381,7 @@ Get ready-to-submit PCI Compliance reports for your merchant bank.</p>
   <p><strong>Issuance:</strong> 1–5 Days</p>
   <p><strong>Warranty:</strong> $1,750,000</p>
   <p><strong>Total Domains:</strong> 1</p>
-  <p>Display your verified company name in the browser bar to enhance customer confidence and trust.</p>
+  <p>Display your verified company name across up to 250 different domains for maximum visibility and trust.</p>
   <span class="badge">From $279.99/yr</span>
   <div style="margin-top:10px;">
     <a href="https://nowpayments.io/payment/?iid=5091193372&source=button" target="_blank" rel="noreferrer noopener">
@@ -497,41 +497,62 @@ Get ready-to-submit PCI Compliance reports for your merchant bank.</p>
 
 
 <script>
-function setupPayment(selectId, buttonId, oneyearId, twoyearId, threeyearId, badgeSelector, oneyearPrice, twoyearPrice, threeyearPrice, currency) {
-  const osSelect = document.getElementById(selectId);
-  const paymentDiv = document.getElementById(buttonId);
-  const badge = paymentDiv.closest('.card').querySelector(badgeSelector);
+function setupPayment(selectId, buttonId, idMap, priceMap, currency, unit) {
+  const sel = document.getElementById(selectId);
+  const payDiv = document.getElementById(buttonId);
+  if (!sel || !payDiv) return console.warn('setupPayment: missing elements', selectId, buttonId);
 
-  osSelect.addEventListener('change', function() {
-    if (this.value === 'one-year') {
-      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${oneyearId}&source=button" target="_blank" rel="noreferrer noopener">
-        <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
+  // find badge inside the same card
+  const badge = payDiv.closest('.card').querySelector('.badge');
+
+  function update() {
+    const value = sel.value;
+    const iid = idMap[value];
+    const price = priceMap[value];
+
+    // Render payment button
+    if (iid) {
+      payDiv.innerHTML = `<a href=\"https://nowpayments.io/payment/?iid=${encodeURIComponent(iid)}&source=button\" target=\"_blank\" rel=\"noreferrer noopener\">
+        <img src=\"https://nowpayments.io/images/embeds/payment-button-white.svg\" alt=\"Pay with NOWPayments\">
       </a>`;
-      badge.textContent = `From ${currency}${oneyearPrice}/mo`;
-    }else if (this.value === 'two-year') {
-      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${twoyearId}&source=button" target="_blank" rel="noreferrer noopener">
-        <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
-      </a>`;
-      badge.textContent = `From ${currency}${twoyearPrice}/mo`;
+    } else {
+      payDiv.innerHTML = '';
     }
-	
-	else {
-      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${threeyearId}&source=button" target="_blank" rel="noreferrer noopener">
-        <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
-      </a>`;
-      badge.textContent = `From ${currency}${threeyearPrice}/mo`;
-    }
-  });
+
+    // Update badge text (unit e.g. '/yr' or '/mo')
+    if (badge && price !== undefined) badge.textContent = `From ${currency}${price}${unit ? '/' + unit : ''}`;
+  }
+
+  sel.addEventListener('change', update);
+  update(); // initialize immediately to reflect current selection
 }
 
-// Initialize all products
-// setupPayment('os-select-small', 'payment-button-small', '4617309514', '6025163369', 'span.badge', 179, 179 + 95, '€');
-// setupPayment('os-select-medium', 'payment-button-medium', 'MEDIUM-LINUX-ID', 'MEDIUM-WINDOWS-ID', 'span.badge', 335, 335 + 95, '€');
-// setupPayment('os-select-large', 'payment-button-large', 'LARGE-LINUX-ID', 'LARGE-WINDOWS-ID', 'span.badge', 647, 647 + 95, '€');
-// setupPayment('os-select-4v', 'payment-button-4v', 'DI4V-LINUX-ID', 'DI4V-WINDOWS-ID', 'span.badge', 145, 145 + 95, '$');
-setupPayment('plan-select-8v', 'payment-button-8v', '5461873662', '4566127488', '4565801205', 'span.badge', 249, 435.75, 622.5, '$');
-// setupPayment('os-select-16v', 'payment-button-16v', 'DI16V-LINUX-ID', 'DI16V-WINDOWS-ID', 'span.badge', 637.73, 637.73 + 95, '$');
+// Initialize HackerGuardian (unique IDs)
+setupPayment(
+  'plan-select-hg',
+  'payment-button-hg',
+  {
+    'one-year': '5461873662',
+    'two-years': '4566127488',
+    'three-years': '4565801205'
+  },
+  {
+    'one-year': '249.00',
+    'two-years': '435.75',
+    'three-years': '622.50'
+  },
+  '$',
+  'yr'
+);
 
+// Previous setupPayment examples (left commented for reference)
+// setupPayment('os-select-small', 'payment-button-small', {'linux':'4617309514','windows':'4617309514'}, {'linux':'179','windows':'274'}, '€', 'mo');
+// setupPayment('os-select-medium', 'payment-button-medium', {'linux':'MEDIUM-LINUX-ID','windows':'MEDIUM-WINDOWS-ID'}, {'linux':'335','windows':'430'}, '€', 'mo');
+// setupPayment('os-select-large', 'payment-button-large', {'linux':'LARGE-LINUX-ID','windows':'LARGE-WINDOWS-ID'}, {'linux':'647','windows':'742'}, '€', 'mo');
+// setupPayment('os-select-4v', 'payment-button-4v', {'linux':'DI4V-LINUX-ID','windows':'DI4V-WINDOWS-ID'}, {'linux':'145','windows':'240'}, '$', 'mo');
+// setupPayment('os-select-8v', 'payment-button-8v', {'linux':'DI8V-LINUX-ID','windows':'DI8V-WINDOWS-ID'}, {'linux':'290','windows':'385'}, '$', 'mo');
+
+</script>
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
