@@ -65,11 +65,14 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="X-DNS-Prefetch-Control" content="off">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<link rel="dns-prefetch" href="//embed.tawk.to">
+<link rel="dns-prefetch" href="//cdn.tawk.to">
+<link rel="dns-prefetch" href="//va.tawk.to">
 
 <meta http-equiv="Permissions-Policy" content="
   geolocation=(),
@@ -82,11 +85,15 @@
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
   script-src 'self' 'unsafe-inline'
-    https://www.googletagmanager.com
-    https://embed.tawk.to;
+  https://www.googletagmanager.com
+  https://embed.tawk.to
+  https://*.tawk.to;
   style-src 'self' 'unsafe-inline'
-    https://embed.tawk.to;
- img-src 'self' data: blob:
+  https://embed.tawk.to
+	https://*
+  https://*.tawk.to
+  https://cdn.tawk.to;
+  img-src 'self' data: blob:
   https://ipfs.io
   https://cdn.pixabay.com
   https://nowpayments.io
@@ -99,10 +106,11 @@
   https://cdn.tawk.to
   https://seeklogo.com;
 
-  frame-src https://embed.tawk.to;
+  frame-src  https://embed.tawk.to
+  https://*.tawk.to;;
   connect-src 'self'
-    https://*.tawk.to
-    wss://*.tawk.to;
+	 https://*.tawk.to
+  	wss://*.tawk.to;
   font-src 'self';
   object-src 'none';
   base-uri 'self';
