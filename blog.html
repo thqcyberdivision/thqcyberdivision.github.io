@@ -59,14 +59,14 @@
   default-src 'self';
   script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com https://embed.tawk.to;
   style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://ipfs.io https://picsum.photos https://images.seeklogo.com https://pixabay.com https://cdn.pixabay.com https://assets.sophos.com https://tpc.googlesyndication.com https://pagead2.googlesyndication.com;
+  img-src 'self' data: https://ipfs.io https://picsum.photos https://embed.tawk.to https://images.seeklogo.com https://pixabay.com https://cdn.pixabay.com https://assets.sophos.com https://tpc.googlesyndication.com https://pagead2.googlesyndication.com;
   frame-src https://embed.tawk.to https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://securepubads.g.doubleclick.net;
-  connect-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://securepubads.g.doubleclick.net https://stats.g.doubleclick.net;
-  font-src 'self';
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
-  frame-ancestors 'none';
+  connect-src 'self' https://pagead2.googlesyndication.com https://embed.tawk.to https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://securepubads.g.doubleclick.net https://stats.g.doubleclick.net;
+  font-src 'self' https://embed.tawk.to;
+  object-src 'none' https://embed.tawk.to;
+  base-uri 'self' https://embed.tawk.to;
+  form-action 'self' https://embed.tawk.to;
+  frame-ancestors 'none' https://embed.tawk.to;
 ">
 <!-- ======================================================= -->
 
