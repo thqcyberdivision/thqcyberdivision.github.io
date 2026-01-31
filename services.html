@@ -330,23 +330,25 @@
 
 <!-- Dedicated Instance - 16 vCPU -->
 <div class="card">
-  <h3>Dedicated Instance - 16 vCPU</h3>
-  <p>High-CPU instance, 16 vCPU, 64GB RAM, 2x300GB NVMe</p>
-  <img src="https://cdn.pixabay.com/photo/2022/07/21/09/12/offshore-dedicated-hosting-7335768_1280.png" alt="16vCPU Instance" />
-  <span class="badge">From $637.73/mo</span>
-
-  <label for="os-select-16v">Operating System:</label>
-  <select id="os-select-16v">
-    <option value="linux">Linux</option>
-    <option value="windows">Windows</option>
+  <h3>HackerGuardian PCI Scan Control Center</h3>
+  <img src="http://ipfs.io/ipfs/QmWx1xqZwKgmggedEH4exyXKJwCoXFpJNsQo6DjAEPwDiE" alt="HackerGuardian PCI Scan Control Center" />
+	
+  <p>Make your path to PCI compliance as simple as possible with this turn-key solution</p>
+  <span class="badge">From $249.00/yr</span>
+	<label for="os-select-8v">Plan:</label>
+  <select id="os-select-8v">
+    <option value="one-year">1 year</option>
+    <option value="two-years">2 years</option>
+	<option value="three-years">3 years</option>
   </select>
-
-  <div id="payment-button-16v" style="margin-top:10px;">
-    <a href="https://nowpayments.io/payment/?iid=DI16V-LINUX-ID&source=button" target="_blank" rel="noreferrer noopener">
+	
+	<div id="payment-button-8v" style="margin-top:10px;">
+    <a href="https://nowpayments.io/payment/?iid=5461873662&source=button" target="_blank" rel="noreferrer noopener">
       <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
     </a>
   </div>
 </div>
+
   <!-- EV CERTIFICATES -->
 <!-- EV Certificates -->
 
@@ -491,34 +493,41 @@
 
 
 <script>
-function setupPayment(selectId, buttonId, linuxId, windowsId, badgeSelector, linuxPrice, windowsPrice, currency) {
+function setupPayment(selectId, buttonId, oneyearId, twoyearId, threeyearId, badgeSelector, oneyearPrice, twoyearPrice, threeyearPrice, currency) {
   const osSelect = document.getElementById(selectId);
   const paymentDiv = document.getElementById(buttonId);
   const badge = paymentDiv.closest('.card').querySelector(badgeSelector);
 
   osSelect.addEventListener('change', function() {
-    if (this.value === 'windows') {
-      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${windowsId}&source=button" target="_blank" rel="noreferrer noopener">
+    if (this.value === 'one-year') {
+      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${oneyearId}&source=button" target="_blank" rel="noreferrer noopener">
         <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
       </a>`;
-      badge.textContent = `From ${currency}${windowsPrice}/mo`;
-    } else {
-      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${linuxId}&source=button" target="_blank" rel="noreferrer noopener">
+      badge.textContent = `From ${currency}${oneyearPrice}/mo`;
+    }else if (this.value === 'two-year') {
+      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${twoyearId}&source=button" target="_blank" rel="noreferrer noopener">
         <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
       </a>`;
-      badge.textContent = `From ${currency}${linuxPrice}/mo`;
+      badge.textContent = `From ${currency}${twoyearPrice}/mo`;
+    }
+	
+	else {
+      paymentDiv.innerHTML = `<a href="https://nowpayments.io/payment/?iid=${threeyearId}&source=button" target="_blank" rel="noreferrer noopener">
+        <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
+      </a>`;
+      badge.textContent = `From ${currency}${threeyearPrice}/mo`;
     }
   });
 }
 
 // Initialize all products
-setupPayment('os-select-small', 'payment-button-small', '4617309514', '6025163369', 'span.badge', 179, 179 + 95, '€');
-setupPayment('os-select-medium', 'payment-button-medium', 'MEDIUM-LINUX-ID', 'MEDIUM-WINDOWS-ID', 'span.badge', 335, 335 + 95, '€');
-setupPayment('os-select-large', 'payment-button-large', 'LARGE-LINUX-ID', 'LARGE-WINDOWS-ID', 'span.badge', 647, 647 + 95, '€');
-setupPayment('os-select-4v', 'payment-button-4v', 'DI4V-LINUX-ID', 'DI4V-WINDOWS-ID', 'span.badge', 145, 145 + 95, '$');
-setupPayment('os-select-8v', 'payment-button-8v', 'DI8V-LINUX-ID', 'DI8V-WINDOWS-ID', 'span.badge', 290, 290 + 95, '$');
-setupPayment('os-select-16v', 'payment-button-16v', 'DI16V-LINUX-ID', 'DI16V-WINDOWS-ID', 'span.badge', 637.73, 637.73 + 95, '$');
-</script>
+// setupPayment('os-select-small', 'payment-button-small', '4617309514', '6025163369', 'span.badge', 179, 179 + 95, '€');
+// setupPayment('os-select-medium', 'payment-button-medium', 'MEDIUM-LINUX-ID', 'MEDIUM-WINDOWS-ID', 'span.badge', 335, 335 + 95, '€');
+// setupPayment('os-select-large', 'payment-button-large', 'LARGE-LINUX-ID', 'LARGE-WINDOWS-ID', 'span.badge', 647, 647 + 95, '€');
+// setupPayment('os-select-4v', 'payment-button-4v', 'DI4V-LINUX-ID', 'DI4V-WINDOWS-ID', 'span.badge', 145, 145 + 95, '$');
+setupPayment('os-select-8v', 'payment-button-8v', '5461873662', '4566127488', '4565801205', 'span.badge', 249, 435.75, 622.5, '$');
+// setupPayment('os-select-16v', 'payment-button-16v', 'DI16V-LINUX-ID', 'DI16V-WINDOWS-ID', 'span.badge', 637.73, 637.73 + 95, '$');
+
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
