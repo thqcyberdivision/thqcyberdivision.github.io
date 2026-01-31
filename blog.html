@@ -8,14 +8,14 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NQGQSGEVY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);} 
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8NQGQSGEVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-8NQGQSGEVY');
+  </script>
 
-  gtag('config', 'G-8NQGQSGEVY');
-</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>THQ Cyber Division — Blog: Cryptography & Sectigo SSL</title>
@@ -37,38 +37,39 @@
   <meta name="twitter:description" content="Practical overview of cryptography and how Sectigo SSL certificates deliver trust and security for businesses." />
   <meta name="twitter:image" content="https://images.seeklogo.com/logo-png/47/1/sectigo-logo-png_seeklogo-476321.png" />
 
-  <!-- ================= Security Hardening ================= -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="X-DNS-Prefetch-Control" content="off">
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <!-- ================= Security & CSP ================= -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-DNS-Prefetch-Control" content="off">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=(), usb=()">
 
-<meta http-equiv="Permissions-Policy" content="
-  geolocation=(),
-  camera=(),
-  microphone=(),
-  payment=(),
-  usb=()
-">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' 'unsafe-eval'
+      https://www.googletagmanager.com
+      https://pagead2.googlesyndication.com
+      https://www.google-analytics.com
+      https://embed.tawk.to;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: https://*.googlesyndication.com https://*.gstatic.com https://embed.tawk.to https://images.seeklogo.com https://cdn.pixabay.com https://pixabay.com;
+    frame-src https://embed.tawk.to https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://securepubads.g.doubleclick.net;
+    connect-src 'self' https://pagead2.googlesyndication.com https://tpc.googlesyndication.com https://securepubads.g.doubleclick.net https://stats.g.doubleclick.net https://embed.tawk.to;
+    font-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+  ">
+  <!-- ==================================================== -->
 
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://www.google-analytics.com https://embed.tawk.to;
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://ipfs.io https://picsum.photos https://embed.tawk.to https://images.seeklogo.com https://pixabay.com https://cdn.pixabay.com https://assets.sophos.com https://tpc.googlesyndication.com https://pagead2.googlesyndication.com;
-  frame-src https://embed.tawk.to https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://pagead2.googlesyndication.com https://securepubads.g.doubleclick.net;
-  connect-src 'self' https://pagead2.googlesyndication.com https://embed.tawk.to https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://securepubads.g.doubleclick.net https://stats.g.doubleclick.net;
-  font-src 'self' https://embed.tawk.to;
-  object-src 'none' https://embed.tawk.to;
-  base-uri 'self' https://embed.tawk.to;
-  form-action 'self' https://embed.tawk.to;
-  frame-ancestors 'none' https://embed.tawk.to;
-">
-<!-- ======================================================= -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ipfs.io/ipfs/Qma2qoAgFdPvqjH79ywqn4h4JevVYNEv4YyR8PBdgqWVUn">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9920132045090748"
+     crossorigin="anonymous"></script> 
 
   <style>
     :root{
