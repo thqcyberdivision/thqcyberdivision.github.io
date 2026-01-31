@@ -86,15 +86,19 @@
     https://embed.tawk.to;
   style-src 'self' 'unsafe-inline'
     https://embed.tawk.to;
-  img-src 'self' data:
-    https://ipfs.io
-    https://cdn.pixabay.com
-    https://nowpayments.io
-    https://ballisticdomains.com
-    https://www.knownhost.com
-    https://www.master.cz
-    https://images.seeklogo.com
-    https://assets.sophos.com;
+ img-src 'self' data: blob:
+  https://ipfs.io
+  https://cdn.pixabay.com
+  https://nowpayments.io
+  https://ballisticdomains.com
+  https://www.knownhost.com
+  https://www.master.cz
+  https://images.seeklogo.com
+  https://assets.sophos.com
+  https://*.tawk.to
+  https://cdn.tawk.to
+  https://seeklogo.com;
+
   frame-src https://embed.tawk.to;
   connect-src 'self'
     https://*.tawk.to
