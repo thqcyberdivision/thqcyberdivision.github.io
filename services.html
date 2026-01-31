@@ -63,7 +63,7 @@
 
 <!-- ================= Security Hardening ================= -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="X-DNS-Prefetch-Control" content="off">
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
@@ -81,17 +81,30 @@
 
 <meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://embed.tawk.to;
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://ipfs.io https://cdn.pixabay.com https://nowpayments.io https://ballisticdomains.com https://www.knownhost.com https://www.master.cz https://images.seeklogo.com https://assets.sophos.com https:[...]
+  script-src 'self' 'unsafe-inline'
+    https://www.googletagmanager.com
+    https://embed.tawk.to;
+  style-src 'self' 'unsafe-inline'
+    https://embed.tawk.to;
+  img-src 'self' data:
+    https://ipfs.io
+    https://cdn.pixabay.com
+    https://nowpayments.io
+    https://ballisticdomains.com
+    https://www.knownhost.com
+    https://www.master.cz
+    https://images.seeklogo.com
+    https://assets.sophos.com;
   frame-src https://embed.tawk.to;
-  connect-src 'self' https://*.tawk.to wss://*.tawk.to;
+  connect-src 'self'
+    https://*.tawk.to
+    wss://*.tawk.to;
   font-src 'self';
   object-src 'none';
   base-uri 'self';
   form-action 'self';
-  frame-ancestors 'none';
 ">
+
 <!-- ======================================================= -->
 	
   <style>
