@@ -60,12 +60,12 @@
   default-src 'self';
   script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://embed.tawk.to https://*.tawk.to;
   style-src 'self' 'unsafe-inline'  https://embed.tawk.to https://*.tawk.to;
-  img-src 'self' data: https://ipfs.io https://images.seeklogo.com https://ipfs.tech https://seeklogo.com https://*.tawk.to https://embed.tawk.to;
+  img-src 'self' data: https://ipfs.io https://images.seeklogo.com https://ipfs.tech https://seeklogo.com https://*.tawk.to https://embed.tawk.to https://s3.amazonaws.com;
   frame-src https://www.youtube.com https://embed.tawk.to https://*.tawk.to https://w1.tawk.to;;
   connect-src 'self' https://*.tawk.to wss://*.tawk.to;
-  font-src 'self';
-  object-src 'none';
-  base-uri 'self';
+  font-src 'self' https://*.tawk.to wss://*.tawk.to;
+  object-src 'self' https://*.tawk.to wss://*.tawk.to;
+  base-uri 'self' https://*.tawk.to wss://*.tawk.to;
   form-action 'self' https://fabform.io https://nowpayments.io;
   frame-ancestors 'none';
 ">
