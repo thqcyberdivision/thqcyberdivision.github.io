@@ -271,23 +271,53 @@
   </div>
 </div>
 
-<!-- Dedicated Host - Medium -->
+<!-- PositiveSSL EV -->
 <div class="card">
-  <h3>Dedicated Host - Medium</h3>
-  <p>Single-tenant host, 8 vCPU, 32GB RAM, 1TB NVMe</p>
-  <img src="https://www.knownhost.com/blog/wp-content/uploads/2018/08/server-rack.jpg" alt="Medium Host" />
-  <span class="badge">From €335/mo</span>
+  <h3>PositiveSSL EV</h3>
 
-  <label for="os-select-medium">Operating System:</label>
-  <select id="os-select-medium">
-    <option value="linux">Linux</option>
-    <option value="windows">Windows</option>
+  <img src="http://ipfs.io/ipfs/QmayrovHyt146rjRrMZd8nvLf8uokfkx3d9AnYMtNpxDfH"
+       alt="PositiveSSL EV Certificate"
+       style="width:100%;border-radius:10px;margin:10px 0;">
+
+  <p>
+    The PositiveSSL EV offers industry-standard encryption strength and the high assurance 
+    that is synonymous with Extended Validation at a price point that fits easily into almost any budget.
+  </p>
+
+  <ul style="list-style:none;padding-left:0;margin-top:10px;">
+    <li>Email Signing: ✅</li>
+    <li>Email Encryption: ✅</li>
+    <li>Document Signing: ✅</li>
+    <li>Certificate Authentication: ✅</li>
+    <li>Server Support: ❌</li>
+    <li>Device Licensing: Unlimited</li>
+    <li>Verified Company Name: ✅</li>
+    <li>SAN Support: ✅</li>
+    <li>Vulnerability Assessment: ✅</li>
+    <li>Wildcard: ❌</li>
+    <li>Site Seal: Dynamic</li>
+    <li>Server Licensing: Unlimited</li>
+    <li>Malware Scan: ✅</li>
+  </ul>
+
+  <p><strong>Validation Type:</strong> EV</p>
+  <p><strong>Issuance:</strong> 1–5 Days</p>
+  <p><strong>Reissue:</strong> Unlimited</p>
+  <p><strong>Warranty:</strong> $1,000,000</p>
+
+  <label for="plan-select-positivessl-ev">Plan:</label>
+  <select id="plan-select-positivessl-ev">
+    <option value="1y">1 Year</option>
+    <option value="2y">2 Years</option>
+    <option value="3y">3 Years</option>
+    <option value="4y">4 Years</option>
+    <option value="5y">5 Years</option>
   </select>
 
-  <div id="payment-button-medium" style="margin-top:10px;">
-    <a href="https://nowpayments.io/payment/?iid=MEDIUM-LINUX-ID&source=button" target="_blank" rel="noreferrer noopener">
-      <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
-    </a>
+  <span class="badge">From $159.99/yr</span>
+
+  <div id="payment-button-positivessl-ev" style="margin-top:10px;">
+    <!-- JS injects NOWPayments button -->
   </div>
 </div>
 
@@ -744,6 +774,48 @@ setupPayment(
   update();
 })();
 
+</script>
+<script>
+//PositiveSSL
+  (function () {
+    const basePrices = {
+      '1y': 159.99,
+      '2y': 279.98,
+      '3y': 399.98,
+      '4y': 519.97,
+      '5y': 639.96
+    };
+
+    const iidMap = {
+      '1y': '5308284368',
+      '2y': '5521789407',
+      '3y': '5297592405',
+      '4y': '4813456811',
+      '5y': '6319803968'
+    };
+
+    const planSel = document.getElementById('plan-select-positivessl-ev');
+    const payDiv = document.getElementById('payment-button-positivessl-ev');
+    const badge = payDiv.closest('.card').querySelector('.badge');
+
+    function update() {
+      const plan = planSel.value;
+      const total = basePrices[plan].toFixed(2);
+      const iid = iidMap[plan];
+
+      badge.textContent = `From $${total}/yr`;
+
+      payDiv.innerHTML = `
+        <a href="https://nowpayments.io/payment/?iid=${encodeURIComponent(iid)}&source=button"
+           target="_blank" rel="noreferrer noopener">
+          <img src="https://nowpayments.io/images/embeds/payment-button-white.svg"
+               alt="Pay with NOWPayments">
+        </a>`;
+    }
+
+    planSel.addEventListener('change', update);
+    update();
+  })();
 </script>
 
 	
