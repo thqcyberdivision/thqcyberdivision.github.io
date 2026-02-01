@@ -311,25 +311,51 @@
   </div>
 </div>
 
-<!-- Dedicated Instance - 4 vCPU -->
+<!-- DigiCert Secure Email Certificate for Individuals (S/MIME Class 1) -->
 <div class="card">
-  <h3>Dedicated Instance - 4 vCPU</h3>
-  <p>Isolated instance, 4 vCPU, 16GB RAM, 150GB NVMe</p>
-  <img src="https://cdn.pixabay.com/photo/2022/01/11/21/17/server-6931508_1280.png" alt="4vCPU Instance" />
-  <span class="badge">From $145/mo</span>
+  <h3>DigiCert Secure Email Certificate for Individuals (S/MIME Class 1)</h3>
 
-  <label for="os-select-4v">Operating System:</label>
-  <select id="os-select-4v">
-    <option value="linux">Linux</option>
-    <option value="windows">Windows</option>
+  <img src="http://ipfs.io/ipfs/QmdHUTQZ7ZXwJcj6AD8hrBMrz7Cpu9hQ5addPMSnqvNYe7"
+       alt="DigiCert Secure Email S/MIME Class 1"
+       style="width:100%;border-radius:10px;margin:10px 0;">
+
+  <p>
+    The DigiCert Secure Email Certificate for Individuals (S/MIME Class 1)
+    uses mailbox validation to digitally sign and encrypt emails, allowing
+    recipients to instantly verify the sender’s identity.
+  </p>
+
+
+<ul style="list-style:none;padding-left:0;margin-top:10px;">
+    <li>Email Signing: ✅</li>
+    <li>Email Encryption: ✅</li>
+    <li>Document Signing: ✅</li>
+    <li>Certificate Authentication: ✅</li>
+    <li>Server Support: ❌</li>
+    <li>Device Licensing: Unlimited</li>
+  </ul>
+	
+  	<p><strong>Validation Type:</strong> Mailbox-Validated</p>
+  	<p><strong>Issuance:</strong> Instant</p>
+  	<p><strong>Warranty:</strong> N/A</p>
+	<p><strong>Reissue:</strong> Unlimited</p>
+  
+
+  
+
+  <span class="badge">From $40.00/yr</span>
+
+  <label for="plan-select-digicert-smime-class1">Plan:</label>
+  <select id="plan-select-digicert-smime-class1">
+    <option value="one-year">1 Year</option>
+    <option value="two-years">2 Years</option>
   </select>
 
-  <div id="payment-button-4v" style="margin-top:10px;">
-    <a href="https://nowpayments.io/payment/?iid=DI4V-LINUX-ID&source=button" target="_blank" rel="noreferrer noopener">
-      <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
-    </a>
+  <div id="payment-button-digicert-smime-class1" style="margin-top:10px;">
+    <!-- JS injects NOWPayments button -->
   </div>
 </div>
+
 
 <!-- DigiCert Secure Email for Business (Premium) -->
 <div class="card">
@@ -374,27 +400,23 @@
 
 <!-- Web Security -->
 <div class="card">
-  <h3>HackerGuardian PCI Scan Control Center</h3>
-  <img src="http://ipfs.io/ipfs/QmWx1xqZwKgmggedEH4exyXKJwCoXFpJNsQo6DjAEPwDiE" alt="HackerGuardian PCI Scan Control Center" />
+	<h3>HackerGuardian PCI Scan Control Center</h3>
+	<img src="http://ipfs.io/ipfs/QmWx1xqZwKgmggedEH4exyXKJwCoXFpJNsQo6DjAEPwDiE" alt="HackerGuardian PCI Scan Control Center" />
 
 	<p>HackerGuardian PCI Scan Control Center provides an on-demand security auditing service and PCI Scan compliance reports.</p>
    <!-- HackerGuardian Compliance & Capabilities -->
-<ul style="list-style:none;padding-left:0;margin-top:10px;">
-  <li><strong>Email Signing:</strong> ✅ Yes</li>
-  <li><strong>Email Encryption:</strong> ✅ Yes</li>
-  <li><strong>Document Signing:</strong> ✅ Yes</li>
-  <li><strong>Certificate Authentication:</strong> ✅ Yes</li>
-  <li><strong>Server Support:</strong> ❌ No</li>
-  <li><strong>Device Licensing:</strong> Unlimited</li>
-</ul>
-
+	<ul style="list-style:none;padding-left:0;margin-top:10px;">
+	  <li>Email Signing: ✅</li>
+	  <li>Email Encryption: ✅</li>
+	  <li>Document Signing: ✅</li>
+	  <li>Certificate Authentication: ✅</li>
+	  <li>Server Support: ❌</li>
+	  <li>Device Licensing: Unlimited</li>
+	</ul>
 	<p><strong>Validation Type:</strong> OV</p>
-<p><strong>Issuance:</strong> 1–3 Days</p>
-<p><strong>Reissue:</strong> Unlimited</p>
-<p><strong>Warranty:</strong> N/A</p>
-
-
-
+	<p><strong>Issuance:</strong> 1–3 Days</p>
+	<p><strong>Warranty:</strong> N/A</p>
+	<p><strong>Reissue:</strong> Unlimited</p>
 	<span class="badge">From $249.00/yr</span>
 	<label for="plan-select-hg">Plan:</label>
   <select id="plan-select-hg">
@@ -601,21 +623,42 @@ setupPayment(
 );
 
 </script>
+
 <script>
-setupPayment(
-  'plan-select-digicert-email',
-  'payment-button-digicert-email',
-  {
-    'one-year':  '6041884820',
-    'two-years': '6345961913'
-  },
-  {
-    'one-year':  '108.00',
-    'two-years': '205.20'
-  },
-  '$',
-  'yr'
-);
+//Digicert Business Premium
+	
+	setupPayment(
+	  'plan-select-digicert-email',
+	  'payment-button-digicert-email',
+	  {
+	    'one-year':  '6041884820',
+	    'two-years': '6345961913'
+	  },
+	  {
+	    'one-year':  '108.00',
+	    'two-years': '205.20'
+	  },
+	  '$',
+	  'yr'
+	);
+</script>
+
+<script>
+	//Digicert Individual SMIME Class 1
+	setupPayment(
+	  'plan-select-digicert-smime-class1',
+	  'payment-button-digicert-smime-class1',
+	  {
+	    'one-year': '5112065419',
+	    'two-years': '6160427421'
+	  },
+	  {
+	    'one-year': '40.00',
+	    'two-years': '91.20'
+	  },
+	  '$',
+	  'yr'
+	);
 </script>
 
 
