@@ -703,47 +703,47 @@ setupPayment(
 </script>
 
 <script>
+//Comodo EV SSL
+(function () {
+  const basePrices = {
+    '1y': 279.99,
+    '2y': 489.98,
+    '3y': 699.98,
+    '4y': 909.97,
+    '5y': 1119.96
+  };
 
-	(function () {
-	  const basePrices = {
-	    '1y': 279.99,
-	    '2y': 489.98,
-	    '3y': 699.98,
-	    '4y': 909.97,
-	    '5y': 1119.96
-	  };
-	
-	  const iidMap = {
-	    '1y': '6181409015',
-	    '2y': '5297798567',
-	    '3y': '5895990290',
-	    '4y': '4468543319',
-	    '5y': '5884470863'
-	  };
-	
-	  const planSel = document.getElementById('plan-select-comodo-ev');
-	  const payDiv = document.getElementById('payment-button-comodo-ev');
-	  const badge = payDiv.closest('.card').querySelector('.badge');
-	
-	  function update() {
-	    const plan = planSel.value;
-	    const total = (basePrices[plan] + installFee).toFixed(2);
-	    const iid = iidMap[plan];
-	
-	    badge.textContent = `From $${total}/yr`;
-	
-	    payDiv.innerHTML = `
-	      <a href="https://nowpayments.io/payment/?iid=${encodeURIComponent(iid)}&source=button"
-	         target="_blank" rel="noreferrer noopener">
-	        <img src="https://nowpayments.io/images/embeds/payment-button-white.svg"
-	             alt="Pay with NOWPayments">
-	      </a>`;
-	  }
-	
-	  planSel.addEventListener('change', update);
-	  installSel.addEventListener('change', update);
-	  update();
-	})();
+  const iidMap = {
+    '1y': '6181409015',
+    '2y': '5297798567',
+    '3y': '5895990290',
+    '4y': '4468543319',
+    '5y': '5884470863'
+  };
+
+  const planSel = document.getElementById('plan-select-comodo-ev');
+  const payDiv = document.getElementById('payment-button-comodo-ev');
+  const badge = payDiv.closest('.card').querySelector('.badge');
+
+  function update() {
+    const plan = planSel.value;
+    const total = basePrices[plan].toFixed(2); // removed installFee
+    const iid = iidMap[plan];
+
+    badge.textContent = `From $${total}/yr`;
+
+    payDiv.innerHTML = `
+      <a href="https://nowpayments.io/payment/?iid=${encodeURIComponent(iid)}&source=button"
+         target="_blank" rel="noreferrer noopener">
+        <img src="https://nowpayments.io/images/embeds/payment-button-white.svg"
+             alt="Pay with NOWPayments">
+      </a>`;
+  }
+
+  planSel.addEventListener('change', update); // removed installSel
+  update();
+})();
+
 </script>
 
 	
