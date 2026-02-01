@@ -722,13 +722,11 @@ setupPayment(
 	  };
 	
 	  const planSel = document.getElementById('plan-select-comodo-ev');
-	  const installSel = document.getElementById('install-select-comodo-ev');
 	  const payDiv = document.getElementById('payment-button-comodo-ev');
 	  const badge = payDiv.closest('.card').querySelector('.badge');
 	
 	  function update() {
 	    const plan = planSel.value;
-	    const installFee = installSel.value === 'yes' ? 90.00 : 0;
 	    const total = (basePrices[plan] + installFee).toFixed(2);
 	    const iid = iidMap[plan];
 	
