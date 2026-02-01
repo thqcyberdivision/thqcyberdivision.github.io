@@ -291,25 +291,66 @@
   </div>
 </div>
 
-<!-- Dedicated Host - Large -->
+<!-- Comodo EV SSL Certificate -->
 <div class="card">
-  <h3>Dedicated Host - Large</h3>
-  <p>Single-tenant host, 16 vCPU, 64GB RAM, 2TB NVMe</p>
-  <img src="https://www.master.cz/mydata/myuploads/2020/08/Depositphotos_15938211_l-2015.jpg" alt="Large Host" />
-  <span class="badge">From €647/mo</span>
+  <h3>Comodo EV SSL Certificate</h3>
 
-  <label for="os-select-large">Operating System:</label>
-  <select id="os-select-large">
-    <option value="linux">Linux</option>
-    <option value="windows">Windows</option>
+  <img src="http://ipfs.io/ipfs/QmTSS637aTmAZkjNUnvRHGE2cnFKqgUJRG2PBC68uPefZx"
+       alt="Comodo EV SSL"
+       style="width:100%;border-radius:10px;margin:10px 0;">
+
+  <p>
+    The Comodo EV SSL Certificate is one of the most fully-loaded SSL certificates
+    on the market, featuring a verified company name, HackerGuardian vulnerability
+    scan, and a free dynamic site seal (valued at $119).
+  </p>
+
+  <ul style="list-style:none;padding-left:0;margin-top:10px;">
+    <li>Email Signing: ✅</li>
+    <li>Email Encryption: ✅</li>
+    <li>Document Signing: ✅</li>
+    <li>Certificate Authentication: ✅</li>
+    <li>Server Support: ❌</li>
+    <li>Server Licensing: Unlimited</li>
+    <li>Verified Company Name: ✅</li>
+    <li>SAN Support:</strong> ✅</li>
+    <li>Vulnerability Assessment: ✅</li>
+    <li>Wildcard: ❌</li>
+    <li>Site Seal: Dynamic</li>
+    <li>Malware Scan: ✅</li>
+  </ul>
+
+	
+  <p><strong>Validation Type:</strong> EV</p>
+  <p><strong>Issuance:</strong> 1–5 Days</p>
+  <p><strong>Reissue:</strong> Unlimited</p>
+  <p><strong>Warranty:</strong> $1,750,000</p>
+
+  
+  <span class="badge">From $279.99/yr</span>
+
+  <label for="plan-select-comodo-ev">Plan:</label>
+  <select id="plan-select-comodo-ev">
+    <option value="1y">1 Year</option>
+    <option value="2y">2 Years</option>
+    <option value="3y">3 Years</option>
+    <option value="4y">4 Years</option>
+    <option value="5y">5 Years</option>
   </select>
 
-  <div id="payment-button-large" style="margin-top:10px;">
-    <a href="https://nowpayments.io/payment/?iid=LARGE-LINUX-ID&source=button" target="_blank" rel="noreferrer noopener">
-      <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
-    </a>
+  <label for="sitelock-select-comodo-ev" style="margin-top:10px;">
+    Free SiteLock Monitor?
+  </label>
+  <select id="sitelock-select-comodo-ev">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
+
+  <div id="payment-button-comodo-ev" style="margin-top:10px;">
+    <!-- JS injects NOWPayments button -->
   </div>
 </div>
+
 
 <!-- DigiCert Secure Email Certificate for Individuals (S/MIME Class 1) -->
 <div class="card">
@@ -661,6 +702,53 @@ setupPayment(
 	);
 </script>
 
+<script>
+
+	(function () {
+	  const basePrices = {
+	    '1y': 279.99,
+	    '2y': 489.98,
+	    '3y': 699.98,
+	    '4y': 909.97,
+	    '5y': 1119.96
+	  };
+	
+	  const iidMap = {
+	    '1y': '6181409015',
+	    '2y': '5297798567',
+	    '3y': '5895990290',
+	    '4y': '4468543319',
+	    '5y': '5884470863'
+	  };
+	
+	  const planSel = document.getElementById('plan-select-comodo-ev');
+	  const installSel = document.getElementById('install-select-comodo-ev');
+	  const payDiv = document.getElementById('payment-button-comodo-ev');
+	  const badge = payDiv.closest('.card').querySelector('.badge');
+	
+	  function update() {
+	    const plan = planSel.value;
+	    const installFee = installSel.value === 'yes' ? 90.00 : 0;
+	    const total = (basePrices[plan] + installFee).toFixed(2);
+	    const iid = iidMap[plan];
+	
+	    badge.textContent = `From $${total}/yr`;
+	
+	    payDiv.innerHTML = `
+	      <a href="https://nowpayments.io/payment/?iid=${encodeURIComponent(iid)}&source=button"
+	         target="_blank" rel="noreferrer noopener">
+	        <img src="https://nowpayments.io/images/embeds/payment-button-white.svg"
+	             alt="Pay with NOWPayments">
+	      </a>`;
+	  }
+	
+	  planSel.addEventListener('change', update);
+	  installSel.addEventListener('change', update);
+	  update();
+	})();
+</script>
+
+	
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
