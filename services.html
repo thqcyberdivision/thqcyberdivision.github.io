@@ -315,6 +315,13 @@
     <option value="5y">5 Years</option>
   </select>
 
+<label for="sitelock-select-positivessl-ev" style="margin-top:10px;">
+    Free SiteLock Monitor?
+  </label>
+  <select id="sitelock-select-positivessl-ev">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
 
 
   <div id="payment-button-positivessl-ev" style="margin-top:10px;">
@@ -795,15 +802,17 @@ setupPayment(
       '5y': '6319803968'
     };
 
-    const planSel = document.getElementById('plan-select-positivessl-ev');
+const planSel = document.getElementById('plan-select-positivessl-ev');
     const payDiv = document.getElementById('payment-button-positivessl-ev');
     const badge = payDiv.closest('.card').querySelector('.badge');
+    const sitelockSel = document.getElementById('sitelock-select-positivessl-ev');
 
     function update() {
       const plan = planSel.value;
-      const total = basePrices[plan].toFixed(2);
       const iid = iidMap[plan];
+      const total = basePrices[plan].toFixed(2);
 
+      // Optionally, we could add extra logic if SiteLock Yes/No changes price
       badge.textContent = `From $${total}/yr`;
 
       payDiv.innerHTML = `
@@ -815,6 +824,7 @@ setupPayment(
     }
 
     planSel.addEventListener('change', update);
+    sitelockSel.addEventListener('change', update);
     update();
   })();
 </script>
