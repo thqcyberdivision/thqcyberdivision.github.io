@@ -251,23 +251,59 @@
 
    <section class="catalog">
 
-<!-- Dedicated Host - Small -->
+<!-- EnterpriseSSL Pro with EV -->
 <div class="card">
-  <h3>Dedicated Host - Small</h3>
-  <p>Single-tenant host, 4 vCPU, 16GB RAM, 500GB NVMe</p>
-  <img src="https://ballisticdomains.com/wp-content/uploads/2020/03/iStock-1148197230_cropped.jpg" alt="Small Host" />
-  <span class="badge">From €179/mo</span>
+  <h3>EnterpriseSSL Pro with EV</h3>
 
-  <label for="os-select-small">Operating System:</label>
-  <select id="os-select-small">
-    <option value="linux">Linux</option>
-    <option value="windows">Windows</option>
+  <img src="http://ipfs.io/ipfs/QmP8KiqYbtivBTt1AJo89E2i8FUyN7LGp7qWkuWUisxgwV"
+       alt="EnterpriseSSL Pro EV Certificate"
+       style="width:100%;border-radius:10px;margin:10px 0;">
+
+  <p>
+    EnterpriseSSL Pro with EV represents the absolute maximum in trust and assurance you can receive from an SSL certificate. 
+    This is the ultimate in identity assurance.
+  </p>
+
+  <ul style="list-style:none;padding-left:0;margin-top:10px;">
+    <li>Email Signing: ✅</li>
+    <li>Email Encryption: ✅</li>
+    <li>Document Signing: ✅</li>
+    <li>Certificate Authentication: ✅</li>
+    <li>Server Support: ❌</li>
+    <li>Device Licensing: Unlimited</li>
+    <li>Verified Company Name: ✅</li>
+    <li>SAN Support: ✅</li>
+    <li>Vulnerability Assessment: ✅</li>
+    <li>Wildcard: ❌</li>
+    <li>Site Seal: Dynamic</li>
+    <li>Server Licensing: Unlimited</li>
+    <li>Malware Scan: ✅</li>
+  </ul>
+
+  <p><strong>Validation Type:</strong> EV</p>
+  <p><strong>Issuance:</strong> 1–5 Days</p>
+  <p><strong>Reissue:</strong> Unlimited</p>
+  <p><strong>Warranty:</strong> $2,000,000</p>
+
+  <span class="badge">From $1,349.00/yr</span>
+  <label for="plan-select-enterprise-ev">Plan:</label>
+  <select id="plan-select-enterprise-ev">
+    <option value="1y">1 Year</option>
+    <option value="2y">2 Years</option>
+    <option value="3y">3 Years</option>
+    <option value="4y">4 Years</option>
+    <option value="5y">5 Years</option>
   </select>
 
-  <div id="payment-button-small" style="margin-top:10px;">
-    <a href="https://nowpayments.io/payment/?iid=4617309514&source=button" target="_blank" rel="noreferrer noopener">
-      <img src="https://nowpayments.io/images/embeds/payment-button-white.svg" alt="Cryptocurrency & Bitcoin payment button by NOWPayments">
-    </a>
+  <label for="sitelock-select-enterprise-ev" style="margin-top:10px;">
+    Free SiteLock Monitor?
+  </label>
+  <select id="sitelock-select-enterprise-ev">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
+  <div id="payment-button-enterprise-ev" style="margin-top:10px;">
+    <!-- JS injects NOWPayments button -->
   </div>
 </div>
 
@@ -814,6 +850,56 @@ const planSel = document.getElementById('plan-select-positivessl-ev');
 
       // Optionally, we could add extra logic if SiteLock Yes/No changes price
       badge.textContent = `From $${total}/yr`;
+
+      payDiv.innerHTML = `
+        <a href="https://nowpayments.io/payment/?iid=${encodeURIComponent(iid)}&source=button"
+           target="_blank" rel="noreferrer noopener">
+          <img src="https://nowpayments.io/images/embeds/payment-button-white.svg"
+               alt="Pay with NOWPayments">
+        </a>`;
+    }
+
+    planSel.addEventListener('change', update);
+    sitelockSel.addEventListener('change', update);
+    update();
+  })();
+</script>
+
+<script>
+	//EnterpriseSSL
+  (function () {
+    const basePrices = {
+      '1y': 1349.00,
+      '2y': 2360.75,
+      '3y': 3372.50,
+      '4y': 4384.25,
+      '5y': 5396.00
+    };
+
+    const iidMap = {
+      '1y': '4324034025',
+      '2y': '5127779367',
+      '3y': '5173794034',
+      '4y': '5899206080',
+      '5y': '4302753040'
+    };
+
+    const planSel = document.getElementById('plan-select-enterprise-ev');
+    const payDiv = document.getElementById('payment-button-enterprise-ev');
+    const badge = payDiv.closest('.card').querySelector('.badge');
+    const sitelockSel = document.getElementById('sitelock-select-enterprise-ev');
+
+    function update() {
+      const plan = planSel.value;
+      const iid = iidMap[plan];
+      let total = basePrices[plan];
+
+      // Optional: Add SiteLock price adjustment if "Yes"
+      if (sitelockSel.value === 'yes') {
+        total += 0.00; // Example: add $50/yr for SiteLock
+      }
+
+      badge.textContent = `From $${total.toFixed(2)}/yr`;
 
       payDiv.innerHTML = `
         <a href="https://nowpayments.io/payment/?iid=${encodeURIComponent(iid)}&source=button"
