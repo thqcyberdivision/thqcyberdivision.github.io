@@ -87,6 +87,7 @@
   script-src 'self' 'unsafe-inline'
     https://www.googletagmanager.com
     https://embed.tawk.to
+	https://www.paypal.com
     https://*.tawk.to;
   style-src 'self' 'unsafe-inline'
     https://embed.tawk.to
@@ -102,17 +103,19 @@
     https://www.master.cz
     https://seeklogo.com
     https://images.seeklogo.com
+	https://www.paypal.com
     https://assets.sophos.com
     https://*.tawk.to
     https://cdn.tawk.to
     https://w1.tawk.to
     https://static.tawk.to;
-  frame-src https://embed.tawk.to https://*.tawk.to;
-  connect-src 'self' https://*.tawk.to wss://*.tawk.to;
-  font-src 'self' https://*.tawk.to wss://*.tawk.to;
-  object-src 'self' https://*.tawk.to wss://*.tawk.to;
-  base-uri 'self' https://*.tawk.to wss://*.tawk.to;
-  form-action 'self' https://*.tawk.to wss://*.tawk.to;
+	
+  frame-src https://embed.tawk.to https://*.tawk.to https://www.paypal.com;
+  connect-src 'self' https://*.tawk.to wss://*.tawk.to https://www.paypal.com;
+  font-src 'self' https://*.tawk.to wss://*.tawk.to https://www.paypal.com;
+  object-src 'self' https://*.tawk.to wss://*.tawk.to https://www.paypal.com;
+  base-uri 'self' https://*.tawk.to wss://*.tawk.to https://www.paypal.com;
+  form-action 'self' https://*.tawk.to wss://*.tawk.to https://www.paypal.com;
 ">
 
 <!-- ======================================================= -->
@@ -227,6 +230,9 @@
   </style>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9920132045090748"
      crossorigin="anonymous"></script>
+	<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAiOGkOkHp0Ty5kSv9OEzfVo_uY1JCGt3KnqL4sze8MT2-E-Fe1pgRXfi-rwX-lXTPl97wmIQsl5CKJ3A&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
 </head>
 <body>
 
@@ -543,6 +549,14 @@
 <div id="payment-button-hg" style="margin-top:10px;">
   <!-- JS will inject the correct NOWPayments button here -->
 </div>
+
+<div id="paypal-container-5AFF56JXV4QZG"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "5AFF56JXV4QZG",
+  }).render("#paypal-container-5AFF56JXV4QZG")
+</script>
+	
 </div>
 
   <!-- EV CERTIFICATES -->
