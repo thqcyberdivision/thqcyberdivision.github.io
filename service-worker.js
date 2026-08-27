@@ -1,4 +1,4 @@
-const CACHE_NAME = 'thq-cache-v4';
+const CACHE_NAME = 'thq-cache-v3';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -10,16 +10,12 @@ const urlsToCache = [
   '/main.js',
   '/logo.png',
   '/email-icon.png',
-  '/favicon_16x16.png',
-  '/favicon_32x32.png',
-  '/favicon_96x96.png',
-  '/favicon_192x192.png',
+  '/assets/favicon_16x16.ico',
+  '/assets/favicon_32x32.ico',
+  '/assets/favicon_96x96.ico',
+  '/assets/favicon_192x192.ico',
   '/manifest.json',
   '/website_cover.jpg',
-  '/assets/payments/paypal.svg',
-  '/assets/payments/nowpayments.svg',
-  '/assets/payments/debit.svg',
-  '/bookings.html',
   '/terms.html',
   '/privacy.html',
 ];
