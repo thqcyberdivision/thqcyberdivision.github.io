@@ -1,55 +1,38 @@
 # THQ Cyber Division Unincorporated
 
-Welcome to THQ Cyber Division. We deliver advanced cybersecurity intelligence, secure infrastructure, and trusted digital products to organizations, researchers, and technical teams globally.
+THQ Cyber Division delivers practical cybersecurity services for organizations, researchers, and technical teams. We specialise in cyber threat intelligence, secure hosting, enterprise-grade certificates, and Sophos-backed endpoint and network security services.
 
-## Overview
+## Live site
+https://thqcyberdivision.github.io/
 
-THQ Cyber Division specializes in cyber threat intelligence, incident response, secure hosting solutions, certified Sectigo SSL/TLS certificates, Sophos cybersecurity offerings, and custom security software. Our focus is on privacy-centric, reliable solutions for mission-critical operations, technology development, and cyber risk management.
+## Core services
+- Cyber Threat Intelligence (CTI)
+  - Actionable feeds, prioritized alerts, analyst briefings, and incident triage support.
+- Managed Detection & Response (MDR) / Endpoint Detection & Response (EDR)
+  - Sophos-based solutions for continuous detection, investigation, and response.
+- Advisory & Assessments
+  - Penetration testing, vulnerability assessments, and security program advisory.
 
-## Core Services
+## Featured solutions
+- Sophos MDR/EDR and Next-Gen Firewall integrations.
+- Secure, privacy-minded hosting for research and operational deployments.
 
-- **Cyber Threat Intelligence**
-  - Actionable threat feeds, malware analysis, rapid incident response, and subscription CTI solutions.
+## How to get started
+- View services and product links: https://thqcyberdivision.github.io/services.html  
+- Read articles and guidance: https://thqcyberdivision.github.io/blog.html  
+- Contact us to request a quote or technical consultation:
+  - Email: thqcs@protonmail.com
 
-- **Secure Hosting & Infrastructure**
-  - Single-tenant dedicated hosts and isolated virtual instances.
-  - Hardware configurations for research, red teams, and high-security workloads.
-
-- **Sectigo SSL/TLS Certificates**
-  - EV Multi-Domain SSL (3 domains) — $649.99/yr
-  - EV SSL Certificate (single domain) — $279.99/yr
-  - OV Wildcard SSL — $879.99/yr
-  - OV Multi-Domain SSL — $499.99/yr
-  - Hassle-free online purchase and crypto payments via [NOWPayments](https://nowpayments.io/).
-
-- **Sophos Cybersecurity Suite**
-  - Enterprise managed detection, AI-powered endpoints, advanced firewall solutions, and active defense.
-
-- **Custom Security Software & Licensing**
-  - Custom development, product licensing, and integration for security and productivity platforms.
-
-## Why Choose Us?
-
-- Proven results for security teams, organizations, and researchers.
-- Global support, quick onboarding, and flexible payment options (crypto-friendly).
-- Transparent operations, ethical standards, and privacy-first technical delivery.
-- Strategic partnerships with industry leaders (Sectigo, Sophos, etc.).
-
-## Quick Start
-
-- Visit our [Services page](https://thqcyberdivision.github.io/services.html) for full product details and instant order links.
-- Questions or specific requirements? Contact us directly.
-
-## Contact
-
-- Email: [thqcs@protonmail.com](mailto:thqcs@protonmail.com)
-- Website: [thqcyberdivision.github.io](https://thqcyberdivision.github.io/)
+## Notes on deployment & assets
+- The site relies on HTTPS-hosted assets. If you host or add images, ensure URLs use HTTPS to avoid mixed-content blocking in browsers.
+- If using the service worker, clear site data or unregister the service worker after deployments to ensure updated assets are fetched.
 
 ## Policies
+- Privacy: https://thqcyberdivision.github.io/privacy.html  
+- Terms: https://thqcyberdivision.github.io/terms.html
 
-- [Privacy Policy](https://thqcyberdivision.github.io/privacy.html)
-- [Terms of Use](https://thqcyberdivision.github.io/terms.html)
+## Contributing / Edits
+This repository contains the static site (HTML, JS). For small changes, edit pages directly; for larger updates, please open an issue or PR.
 
 ---
-
-For updates, technical documentation, or to contribute, visit our [GitHub repository](https://github.com/thqcyberdivision/thqcyberdivision.github.io).
+THQ Cyber Division — helping organisations and individuals manage cybersecurity, securely and responsibly.
