@@ -24,28 +24,28 @@
             "type": "image/png"
         },
          {
-            "src": "/assets/favicon_16x16.png",
+            "src": "/assets/favicon_16x16.ico",
             "sizes": "16x16",
             "type": "image/x-icon"
         },
         {
-            "src": "/assets/favicon_32x32.png",
+            "src": "/assets/favicon_32x32.ico",
             "sizes": "32x32",
             "type": "image/x-icon"
         },
         {
-            "src": "/assets/favicon_96x96.png",
+            "src": "/assets/favicon_96x96.ico",
             "sizes": "96x96",
             "type": "image/x-icon"
         },
         {
-            "src": "/assets/favicon_192x192.png",
+            "src": "/assets/favicon_192x192.ico",
             "sizes": "192x192",
             "type": "image/x-icon"
         }
        
         ],
-    "related_applications": [
+        "related_applications": [
         {
             "platform": "web",
             "url": "/about.html"
