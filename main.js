@@ -59,7 +59,7 @@ if (dataElement && refreshButton) {
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-T83TYG9SG6');
+gtag('config', 'G-8NQGQSGEVY');
 
 // Google Translate initialization (if used)
 function googleTranslateElementInit() {
