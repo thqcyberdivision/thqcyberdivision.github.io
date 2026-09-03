@@ -26,10 +26,8 @@
   <meta name="robots" content="index,follow">
   <meta name="author" content="THQ Cyber Division Unincorporated">
   
-  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#007bff">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://thqcyberdivision.github.io/assets/favicon_32x32.ico">
-
+ 
 
   <!-- Canonical -->
 
@@ -70,15 +68,11 @@
 
 
   <!-- ================= Security Hardening ================= -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <!-- Security-related metadata -->
 
- <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="X-DNS-Prefetch-Control" content="on">
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-DNS-Prefetch-Control" content="on">
 
 <meta http-equiv="Permissions-Policy" content="
   geolocation=(),
@@ -88,83 +82,369 @@
   usb=()
 ">
 
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://aplo-evnt.com https://*.apollo.io https://embed.tawk.to https://*.tawk.to https://assets.apollo.io;
-  style-src 'self' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to;
-  img-src 'self' data: https://ipfs.io https://images.seeklogo.com https://cdn.pixabay.com https://www.sophos.com https://www.sophosassets.com https://cww.verifytrustseal.com https://*.tawk.to https://tawk.link;
-  frame-src https://www.youtube.com https://embed.tawk.to https://*.tawk.to https://w1.tawk.to https://aplo-evnt.com https://assets.apollo.io;
-  connect-src 'self' https://*.tawk.to wss://*.tawk.to https://cww.verifytrustseal.com https://aplo-evnt.com;
-  font-src 'self' https://*.tawk.to https://fonts.gstatic.com https://cww.verifytrustseal.com https://assets.apollo.io https://aplo-evnt.com;
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self' https://fabform.io https://nowpayments.io https://*.tawk.to https://cww.verifytrustseal.com https://aplo-evnt.com https://assets.apollo.io;
-  frame-ancestors 'none';
-">
-  
+<meta
+http-equiv="Content-Security-Policy"
+content="
+default-src 'self';
+script-src 'self' 'unsafe-inline'
+https://www.googletagmanager.com
+https://www.google-analytics.com
+https://aplo-evnt.com
+https://*.apollo.io
+https://embed.tawk.to
+https://*.tawk.to
+https://assets.apollo.io
+https://pagead2.googlesyndication.com;
+style-src 'self' 'unsafe-inline'
+https://embed.tawk.to
+https://*.tawk.to;
+img-src 'self' data:
+https://ipfs.io
+https://images.seeklogo.com
+https://cdn.pixabay.com
+https://www.sophos.com
+https://www.sophosassets.com
+https://cww.verifytrustseal.com
+https://*.tawk.to
+https://tawk.link;
+frame-src
+https://www.youtube.com
+https://embed.tawk.to
+https://*.tawk.to
+https://w1.tawk.to
+https://aplo-evnt.com
+https://assets.apollo.io;
+connect-src 'self'
+https://www.google-analytics.com
+https://*.tawk.to
+wss://*.tawk.to
+https://cww.verifytrustseal.com
+https://aplo-evnt.com;
+font-src 'self'
+https://*.tawk.to
+https://fonts.gstatic.com
+https://cww.verifytrustseal.com
+https://assets.apollo.io
+https://aplo-evnt.com;
+object-src 'none';
+base-uri 'self';
+form-action 'self'
+https://fabform.io
+https://nowpayments.io
+https://*.tawk.to
+https://cww.verifytrustseal.com
+https://aplo-evnt.com
+https://assets.apollo.io;
+frame-ancestors 'none';
+">  
   <!-- ======================================================= -->
 
   
-  <style>
+   <style>
     :root{
-      --bg:#f5f7fb; --card:#fff; --muted:#6b7280; --primary:#4169e1; --accent:#0b3d91;
+      --bg:#f5f7fb;
+      --card:#fff;
+      --muted:#6b7280;
+      --primary:#4169e1;
+      --accent:#0b3d91;
     }
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial; margin:0; background:var(--bg); color:#111; line-height:1.45}
-    a{color:var(--primary)}
-    header{background:#000; color:#fff; text-align:center; padding:22px 12px}
-    header img{width:88px; display:block; margin:0 auto 8px}
-    header h1{margin:4px 0 0; font-size:1.15rem}
-    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:12px;top:12px;width:auto;height:auto;padding:8px 12px;background:#fff;color:#000;border-radius:6px;z-index:9999}
-    nav{background:#222; display:flex; justify-content:center; gap:16px; padding:10px 12px; flex-wrap:wrap}
-    nav a{color:#fff; text-decoration:none; padding:8px 12px; border-radius:8px; font-weight:600}
-    nav a:hover{background:var(--primary)}
-    nav a[aria-current="page"]{background:var(--primary)}
-    main{max-width:1100px; margin:34px auto; padding:0 18px}
-    .intro{text-align:center; margin-bottom:24px}
-    .intro h2{margin:6px 0 8px;font-size:1.5rem}
-    .intro p{max-width:840px;margin:0 auto;color:var(--muted)}
-    .sectigo-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:20px 0}
-    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);padding:18px;display:flex;flex-direction:column;min-height:210px}
-    .card img{max-width:120px;margin:0 auto 10px;display:block}
-    .card h3{margin:8px 0 6px;font-size:1.05rem;text-align:center}
-    .card p{color:var(--muted);text-align:center;margin:0}
-    .card .controls{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
-    .badge{background:#eef2ff;color:var(--primary);border-radius:999px;padding:6px 10px;font-weight:700;font-size:0.85rem}
-    .btn{background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
-    .services-summary{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04);text-align:center;margin-top:18px}
-    footer{background:#000;color:#fff;text-align:center;padding:18px 10px;margin-top:36px}
-       
-    footer nav a{color:#fff;text-decoration:none}
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      margin:0;
+      background:var(--bg);
+      color:#111;
+      line-height:1.45;
+    }
+
+    a{
+      color:var(--primary);
+    }
+
+    a:focus-visible{
+      outline:3px solid #8ab4ff;
+      outline-offset:3px;
+    }
+
+    header{
+      background:#000;
+      color:#fff;
+      text-align:center;
+      padding:22px 12px;
+    }
+
+    header img{
+      width:88px;
+      height:auto;
+      display:block;
+      margin:0 auto 8px;
+    }
+
+    header h1{
+      margin:4px 0 0;
+      font-size:1.15rem;
+    }
+
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+
+    .skip-link:focus{
+      left:12px;
+      top:12px;
+      width:auto;
+      height:auto;
+      padding:8px 12px;
+      background:#fff;
+      color:#000;
+      border-radius:6px;
+      z-index:9999;
+    }
+
+    nav{
+      background:#222;
+      display:flex;
+      justify-content:center;
+      gap:16px;
+      padding:10px 12px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:8px;
+      font-weight:600;
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"]{
+      background:var(--primary);
+    }
+
+    main{
+      max-width:1100px;
+      margin:34px auto;
+      padding:0 18px;
+    }
+
+    .intro{
+      text-align:center;
+      margin-bottom:24px;
+    }
+
+    .intro h2{
+      margin:6px 0 8px;
+      font-size:1.5rem;
+    }
+
+    .intro p{
+      max-width:840px;
+      margin:0 auto;
+      color:var(--muted);
+    }
+
+    .section-title{
+      text-align:center;
+      margin-top:6px;
+    }
+
+    .sectigo-cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+      margin:20px 0;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.06);
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      min-height:250px;
+    }
+
+    .card img{
+      width:auto;
+      max-width:120px;
+      height:90px;
+      object-fit:contain;
+      margin:0 auto 10px;
+      display:block;
+    }
+
+    .card h3{
+      margin:8px 0 6px;
+      font-size:1.05rem;
+      text-align:center;
+    }
+
+    .card p{
+      color:var(--muted);
+      text-align:center;
+      margin:0;
+    }
+
+    .card .controls{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-top:auto;
+      padding-top:16px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:var(--primary);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      transition:opacity .2s ease,transform .2s ease;
+    }
+
+    .btn:hover{
+      opacity:.9;
+      transform:translateY(-1px);
+    }
+
+    .services-summary{
+      background:var(--card);
+      padding:20px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.04);
+      text-align:center;
+      margin-top:18px;
+    }
+
+    .services-summary p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    footer{
+      background:#000;
+      color:#fff;
+      text-align:center;
+      padding:22px 14px;
+      margin-top:36px;
+    }
+
+    .footer-company{
+      line-height:1.6;
+    }
+
+    .footer-company strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:5px;
+    }
+
+    .footer-note{
+      max-width:700px;
+      margin:10px auto 0;
+      color:#d1d5db;
+      font-size:.85rem;
+    }
+
     .footer-certificate{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  margin:8px auto 10px;
-}
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      margin:14px auto 12px;
+    }
 
-.footer-certificate img{
-  width:70px;
-  height:70px;
-  object-fit:contain;
-  display:block;
-  margin:0 auto 4px;
-}
+    .footer-certificate img{
+      width:70px;
+      height:70px;
+      object-fit:contain;
+      display:block;
+      margin:0 auto 5px;
+    }
 
-.footer-certificate a{
-  color:#fff;
-  text-decoration:none;
-  font-size:.78rem;
-}
+    .footer-certificate a{
+      color:#fff;
+      text-decoration:none;
+      font-size:.78rem;
+    }
 
-.footer-certificate a:hover{
-  text-decoration:underline;
-}
-    @media (max-width:640px){header img{width:64px}; .intro h2{font-size:1.25rem}}
-    
+    .footer-certificate a:hover{
+      text-decoration:underline;
+    }
+
+    .footer-links{
+      margin-top:12px;
+    }
+
+    .footer-links a{
+      color:#fff;
+      text-decoration:none;
+      margin:0 5px;
+    }
+
+    .footer-links a:hover{
+      text-decoration:underline;
+    }
+
+    .copyright{
+      margin:14px 0 8px;
+      color:#d1d5db;
+      font-size:.85rem;
+    }
+
+    @media (max-width:640px){
+      header img{
+        width:64px;
+      }
+
+      .intro h2{
+        font-size:1.25rem;
+      }
+
+      nav{
+        gap:6px;
+      }
+
+      nav a{
+        padding:8px 10px;
+        font-size:.92rem;
+      }
+
+      main{
+        margin:26px auto;
+        padding:0 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      .btn{
+        transition:none;
+      }
+    }
   </style>
+
    <script>
     function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
     o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
@@ -176,10 +456,16 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
   <header>
-    <img src="https://thqcyberdivision.github.io/assets/THQ Cyber Division Logo.png" alt="THQ Logo" />
+    <img
+      src="https://thqcyberdivision.github.io/assets/THQ%20Cyber%20Division%20Logo.png"
+      alt="THQ Cyber Division logo"
+      width="88"
+      height="88"
+    >
     <h1>THQ Cyber Division</h1>
   </header>
 
@@ -191,7 +477,10 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main id="main"><section class="intro" aria-labelledby="intro-heading">
+  <main id="main">
+
+
+<section class="intro" aria-labelledby="intro-heading">
   <h2 id="intro-heading">Cybersecurity Solutions for Modern Organisations</h2>
 
   <p>
@@ -333,50 +622,77 @@
   </a>
 
 </section>
+
   </main>
 
-<footer>
+  <footer>
 
-  <div class="footer-company">
-    <strong>THQ Cyber Division</strong>
-    <div>c/o 2709 N Hayden Island Dr</div>
-    <div>STE 105211</div>
-    <div>Portland, Oregon, [97217], USA</div>
-    <div>Tel: 503-568-1586</div>
-  </div>
-  <div class="footer-certificate">
-  <a href="https://thqcyberdivision.github.io/assets/Sophos Authorized Partner Certificate.pdf" target="_blank" rel="noopener noreferrer" aria-label="View THQ Cyber Division certificate">
+<div class="footer-company">
+  <strong>THQ Cyber Division Unincorporated</strong>
+
+  <div>c/o 2709 N Hayden Island Dr</div>
+  <div>STE 105211</div>
+  <div>Portland, Oregon, [97217], USA</div>
+  <div>Tel: 503-568-1586</div>
+</div>
+
+<div class="footer-note">
+  THQ Cyber Division operates as part of the THQ organisation and
+  provides cybersecurity solutions and related technology services.
+</div>
+
+<div class="footer-certificate">
+  <a
+    href="https://thqcyberdivision.github.io/assets/Sophos%20Authorized%20Partner%20Certificate.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="View Sophos Authorized Partner Certificate"
+  >
     <img
-      src="https://thqcyberdivision.github.io/assets/Sophos Authorized Partner Logo.png"
-      alt="THQ Cyber Division Certificate"
-      width="240"
-      height="240"
+      src="https://thqcyberdivision.github.io/assets/Sophos%20Authorized%20Partner%20Logo.png"
+      alt="Sophos Authorized Partner"
+      width="70"
+      height="70"
+      loading="lazy"
     >
+    View Sophos Partner Certificate
   </a>
 </div>
 
-  <p style="margin:14px 0 8px">
-    &copy; 2024&ndash;2026 THQ Cyber Division Unincorporated
-  </p>
+<p class="copyright">
+  &copy; 2024&ndash;2026 THQ Cyber Division Unincorporated
+</p>
 
-  <nav aria-label="Footer links">
-    <a href="terms.html">Terms</a> |
-    <a href="privacy.html">Privacy</a> |
-    <a href="mailto:thqcs@protonmail.com">Contact</a>
-  </nav>
-    
+<nav
+  class="footer-links"
+  aria-label="Footer navigation"
+>
+  <a href="terms.html">Terms</a>
+  <span aria-hidden="true">|</span>
+  <a href="privacy.html">Privacy</a>
+  <span aria-hidden="true">|</span>
+  <a href="mailto:thqcs@protonmail.com">Contact</a>
+</nav>
+
   </footer>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6927884137e09f19631a6b8e/1jb16og5k';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script--></body>
+
+  <!-- Tawk.to -->
+
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+
+    (function(){
+      var s1=document.createElement("script");
+      var s0=document.getElementsByTagName("script")[0];
+
+      s1.async=true;
+      s1.src='https://embed.tawk.to/6927884137e09f19631a6b8e/1jb16og5k';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+</body>
 </html>
