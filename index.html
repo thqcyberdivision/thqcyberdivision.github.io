@@ -445,6 +445,402 @@ frame-ancestors 'none';
         transition:none;
       }
     }
+     /* =========================================================
+   THQ MOBILE UI ENHANCEMENT
+   Reference: THQCDU-2147726840670722
+   Desktop theme preserved
+   ========================================================= */
+
+/* Prevent accidental horizontal scrolling */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make embedded media responsive without changing desktop design */
+.card iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* Improve button touch area */
+.btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Keep cards comfortable on smaller screens */
+.card {
+  overflow: hidden;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 18px 12px;
+  }
+
+  header img {
+    width: 68px;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  nav {
+    gap: 5px;
+    padding: 8px 8px;
+  }
+
+  nav a {
+    padding: 9px 11px;
+    font-size: 0.9rem;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    width: 100%;
+    margin: 22px auto;
+    padding: 0 12px;
+  }
+
+  .intro {
+    margin-bottom: 20px;
+  }
+
+  .intro h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .intro p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .sectigo-cards {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .card {
+    width: 100%;
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .card p {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .card .controls {
+    padding-top: 14px;
+  }
+
+  .services-summary {
+    padding: 17px;
+    margin-top: 16px;
+  }
+
+  .services-summary h2 {
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  .services-summary p {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  footer {
+    padding: 20px 12px;
+  }
+
+  .footer-company {
+    font-size: 0.82rem;
+  }
+
+  .footer-note {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer-links a {
+    margin: 0;
+    padding: 6px 4px;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .copyright {
+    line-height: 1.5;
+  }
+}
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  header {
+    padding: 14px 10px;
+  }
+
+  header img {
+    width: 54px;
+    margin-bottom: 6px;
+  }
+
+  header h1 {
+    font-size: 0.98rem;
+    line-height: 1.3;
+  }
+
+  nav {
+    padding: 7px 5px;
+    gap: 4px;
+  }
+
+  nav a {
+    font-size: 0.82rem;
+    padding: 8px 9px;
+    min-height: 40px;
+    border-radius: 7px;
+  }
+
+  main {
+    margin: 18px auto;
+    padding: 0 10px;
+  }
+
+  .intro {
+    margin-bottom: 17px;
+  }
+
+  .intro h2 {
+    font-size: 1.15rem;
+    line-height: 1.3;
+    margin-bottom: 7px;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .sectigo-cards {
+    gap: 12px;
+    margin: 12px 0;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 7px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    margin: 10px 0 6px;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .card .controls {
+    padding-top: 12px;
+  }
+
+  .card .btn {
+    width: 100%;
+  }
+
+  .services-summary {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .services-summary h2 {
+    font-size: 1.05rem;
+  }
+
+  .services-summary p {
+    font-size: 0.9rem;
+  }
+
+  .services-summary .btn {
+    width: 100%;
+    margin-top: 12px !important;
+  }
+
+  footer {
+    padding: 18px 10px;
+    margin-top: 24px;
+  }
+
+  .footer-company strong {
+    font-size: 0.92rem;
+  }
+
+  .footer-company,
+  .footer-note,
+  .copyright {
+    font-size: 0.78rem;
+  }
+
+  .footer-certificate img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-certificate a {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .footer-links {
+    gap: 3px 7px;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    padding: 6px 3px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  header h1 {
+    font-size: 0.92rem;
+  }
+
+  nav {
+    gap: 3px;
+  }
+
+  nav a {
+    font-size: 0.76rem;
+    padding: 7px 7px;
+  }
+
+  main {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card p {
+    font-size: 0.87rem;
+  }
+
+  .btn {
+    font-size: 0.88rem;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+  nav a,
+  .btn,
+  .footer-links a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  nav a:active,
+  .btn:active,
+  .footer-links a:active {
+    transform: scale(0.98);
+  }
+
+  .btn:hover {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
   </style>
 
    <script>
