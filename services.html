@@ -1,4 +1,3 @@
-
 <!--Non Commercial -->
 <!--Reference: THQCDU-2147726840670722-->
 <!--Confidential-->
@@ -9,47 +8,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Sophos Cybersecurity Products | THQ Cyber Division</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="keywords" content="Sophos, cybersecurity, firewall, endpoint, MDR, threat prevention, antivirus, secure network">
   <meta name="description" content="Explore Sophos endpoint, firewall, and managed detection services delivered by THQ Cyber Division — MDR, EDR, advisory assessments, and secure deployment support.">
   <meta property="og:title" content="Sophos Solutions | THQ Cyber Division">
   <meta property="og:description" content="Explore Sophos endpoint, firewall, and managed detection (MDR/EDR) services delivered by THQ Cyber Division.">
   <meta property="og:image" content="https://thqcyberdivision.github.io/assets/THQ Cyber Division Logo.png"> 
   
- <link rel="icon" type="image/png" sizes="16x16" href="https://thqcyberdivision.github.io/assets/favicon_16x16.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://thqcyberdivision.github.io/assets/favicon_16x16.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="https://thqcyberdivision.github.io/assets/favicon_32x32.ico">
   <link rel="icon" type="image/png" sizes="96x96" href="https://thqcyberdivision.github.io/assets/favicon_96x96.ico">
   <link rel="icon" type="image/png" sizes="192x192" href="https://thqcyberdivision.github.io/assets/favicon_192x192.ico">
-  <!-- ================= Security Hardening ================= -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-<meta http-equiv="Permissions-Policy" content="
-  geolocation=(),
-  camera=(),
-  microphone=(),
-  payment=(),
-  usb=()
-">
 
-<meta http-equiv="Content-Security-Policy" content="
-  default-src 'self';
-  script-src 'self';
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://ipfs.io;
-  frame-src https://www.sophos.com;
-  connect-src 'self';
-  font-src 'self';
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
-  frame-ancestors 'self';
-">
-<!-- ======================================================= -->
+  <!-- ================= Security Hardening ================= -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+  <meta http-equiv="Permissions-Policy" content="
+    geolocation=(),
+    camera=(),
+    microphone=(),
+    payment=(),
+    usb=()
+  ">
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: https://ipfs.io;
+    frame-src https://www.sophos.com;
+    connect-src 'self';
+    font-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'self';
+  ">
+  <!-- ======================================================= -->
 
   <style>
     :root {
@@ -61,6 +62,17 @@
       --radius: 12px;
       --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100%;
+      min-height: 100%;
+      overflow-x: hidden;
+    }
+
     body {
       font-family: Inter, system-ui, sans-serif;
       background: var(--bg);
@@ -68,38 +80,53 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      height: 100vh;
+
+      /*
+       * Use dynamic viewport height where supported.
+       * This behaves better on mobile browsers when the
+       * address bar expands/collapses.
+       */
+      min-height: 100vh;
+      min-height: 100dvh;
+
+      overflow-x: hidden;
     }
-   header {
-  background: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 12px 10px;
-}
 
-header img {
-  max-width: 70px;
-  height: auto;
-  margin-bottom: 6px;
-}
+    header {
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 12px 10px;
+      flex-shrink: 0;
+    }
 
-header h1 {
-  font-size: 1.2rem;
-  margin: 0;
-  text-align: center;
-}
+    header img {
+      max-width: 70px;
+      height: auto;
+      margin-bottom: 6px;
+      display: block;
+    }
 
-            nav {
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    nav {
       background: #222;
       padding: 10px 0;
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
+      flex-shrink: 0;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
@@ -107,32 +134,34 @@ header h1 {
       padding: 8px 15px;
       border-radius: 5px;
       transition: background 0.2s;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
-@media (max-width: 768px) {
-  header img { max-width: 50px; }
-  header h1 { font-size: 1rem; }
-  nav a { font-size: 0.85rem; padding: 4px 8px; }
-}
+    nav a:hover,
+    nav a.active {
+      background: var(--accent);
+    }
 
-@media (max-width: 480px) {
-  header img { max-width: 45px; }
-  header h1 { font-size: 0.95rem; }
-  nav a { font-size: 0.8rem; padding: 3px 6px; }
-}
-
-    nav a:hover, nav a.active { background: var(--accent); }
-
+    /*
+     * Main area fills the remaining viewport.
+     * min-height:0 is important for flex layouts containing iframes.
+     */
     main {
-      flex: 1;
+      flex: 1 1 auto;
       position: relative;
       overflow: hidden;
+      min-height: 0;
+      width: 100%;
     }
 
     iframe {
       border: none;
       width: 100%;
       height: 100%;
+      min-height: 0;
       display: block;
     }
 
@@ -142,38 +171,269 @@ header h1 {
       text-align: center;
       padding: 12px;
       font-size: 0.9rem;
+      flex-shrink: 0;
     }
+
+    footer nav {
+      background: transparent;
+      padding: 4px 0 0;
+      gap: 6px;
+    }
+
+    footer nav a {
+      padding: 5px 6px;
+      min-height: 34px;
+      font-size: 0.88rem;
+    }
+
+    /* =======================================================
+       TABLET
+       ======================================================= */
+
+    @media (max-width: 768px) {
+
+      header {
+        padding: 12px 10px;
+      }
+
+      header img {
+        max-width: 50px;
+      }
+
+      header h1 {
+        font-size: 1rem;
+      }
+
+      nav {
+        gap: 5px;
+        padding: 7px 6px;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+        min-height: 40px;
+      }
+
+      footer {
+        padding: 10px 8px;
+        font-size: 0.82rem;
+      }
+
+      footer p {
+        margin: 5px 0;
+        line-height: 1.45;
+      }
+
+      footer nav {
+        gap: 3px 6px;
+      }
+
+      footer nav a {
+        font-size: 0.82rem;
+        padding: 6px 5px;
+      }
+    }
+
+    /* =======================================================
+       MOBILE PHONES
+       ======================================================= */
+
+    @media (max-width: 480px) {
+
+      header {
+        padding: 10px 8px;
+      }
+
+      header img {
+        max-width: 45px;
+        margin-bottom: 5px;
+      }
+
+      header h1 {
+        font-size: 0.95rem;
+        line-height: 1.25;
+      }
+
+      nav {
+        padding: 6px 5px;
+        gap: 3px;
+      }
+
+      nav a {
+        font-size: 0.8rem;
+        padding: 7px 8px;
+        min-height: 40px;
+        border-radius: 6px;
+      }
+
+      /*
+       * Keep the Sophos iframe usable on phones while
+       * allowing it to occupy the available screen area.
+       */
+      main {
+        min-height: 0;
+        height: auto;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+      }
+
+      footer {
+        padding: 10px 7px;
+        font-size: 0.76rem;
+      }
+
+      footer p {
+        margin: 4px 0;
+        line-height: 1.45;
+      }
+
+      footer nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2px 5px;
+        padding-top: 3px;
+      }
+
+      footer nav a {
+        font-size: 0.76rem;
+        padding: 6px 4px;
+        min-height: 36px;
+      }
+    }
+
+    /* =======================================================
+       VERY SMALL PHONES
+       ======================================================= */
+
+    @media (max-width: 360px) {
+
+      header {
+        padding: 9px 6px;
+      }
+
+      header img {
+        max-width: 42px;
+      }
+
+      header h1 {
+        font-size: 0.9rem;
+      }
+
+      nav {
+        gap: 2px;
+        padding: 5px 3px;
+      }
+
+      nav a {
+        font-size: 0.75rem;
+        padding: 7px 6px;
+      }
+
+      footer {
+        font-size: 0.72rem;
+      }
+
+      footer nav a {
+        font-size: 0.72rem;
+        padding: 5px 3px;
+      }
+    }
+
+    /* =======================================================
+       TOUCH DEVICES
+       ======================================================= */
+
+    @media (hover: none) and (pointer: coarse) {
+
+      nav a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      nav a:active {
+        transform: scale(0.98);
+      }
+
+      nav a:hover {
+        background: transparent;
+      }
+
+      nav a.active {
+        background: var(--accent);
+      }
+    }
+
+    /* =======================================================
+       ACCESSIBILITY
+       ======================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      nav a {
+        transition: none;
+      }
+    }
+
   </style>
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9920132045090748"
      crossorigin="anonymous"></script>
 </head>
+
 <body>
+
   <header>
-    <img src="https://thqcyberdivision.github.io/assets/THQ Cyber Division Logo.png" alt="THQ Logo" />
+    <img
+      src="https://thqcyberdivision.github.io/assets/THQ Cyber Division Logo.png"
+      alt="THQ Logo"
+    />
     <h1>Sophos Cybersecurity Solutions</h1>
   </header>
 
-  <nav>
+  <nav aria-label="Main navigation">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="services.html" class="active">Services</a>
+    <a href="services.html" class="active" aria-current="page">Services</a>
     <a href="https://thqcyberdivision.blogspot.com/">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <main>
     <!-- Official Sponsored Sophos iframe -->
-    <iframe src="https://www.sophos.com/en-us/site-in-a-box?partner_referral_id=001aJ00000UTJijQAH&partner_name=THQ+Cyber+Division+Unincorporated" title="Official Sophos Products"></iframe>
+    <iframe
+      src="https://www.sophos.com/en-us/site-in-a-box?partner_referral_id=001aJ00000UTJijQAH&partner_name=THQ+Cyber+Division+Unincorporated"
+      title="Official Sophos Products"
+      loading="eager"
+      allowfullscreen
+    ></iframe>
   </main>
 
-<footer>
-    <p>&copy; 2024 - 2026 THQ Cyber Division Unincorporated. All rights reserved.</p>
-    <nav>
-      <a href="terms.html">Terms</a> |
-      <a href="privacy.html">Privacy</a> |
+  <footer>
+
+    <p>
+      &copy; 2024 - 2026 THQ Cyber Division Unincorporated.
+      All rights reserved.
+    </p>
+
+    <nav aria-label="Footer navigation">
+      <a href="terms.html">Terms</a>
+      <span aria-hidden="true">|</span>
+      <a href="privacy.html">Privacy</a>
+      <span aria-hidden="true">|</span>
       <a href="mailto:thqcs@protonmail.com">Contact</a>
-      <a href="rss.xml" style="margin-left:10px;">RSS</a>
+      <a href="rss.xml">RSS</a>
     </nav>
+
   </footer>
 
 </body>
