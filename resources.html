@@ -1,0 +1,1360 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Non Commercial -->
+  <!-- Reference: THQCDU-2147726840670722 -->
+  <!-- Confidential -->
+  <!-- Private property of THQ Cyber Division and Association -->
+  <!-- Dimension 1st Sivan 5785 -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Resources &amp; Publications | THQ Cyber Division</title>
+
+  <meta name="description"
+    content="Explore cybersecurity resources, SSL/TLS certificates, Sophos documentation, threat intelligence, security guidance and technical publications from THQ Cyber Division.">
+  <meta name="keywords"
+    content="cybersecurity resources, cybersecurity publications, SSL TLS certificates, HTTPS, PKI, Sophos MDR, Sophos EDR, cyber threat intelligence, endpoint security">
+  <meta name="author" content="THQ Cyber Division Unincorporated">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#007bff">
+
+  <link rel="canonical"
+    href="https://thqcyberdivision.github.io/resources.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title"
+    content="Resources &amp; Publications | THQ Cyber Division">
+  <meta property="og:description"
+    content="Cybersecurity documentation, SSL/TLS resources, threat intelligence, technical guidance and security publications.">
+  <meta property="og:url"
+    content="https://thqcyberdivision.github.io/resources.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="THQ Cyber Division">
+  <meta property="og:image"
+    content="https://thqcyberdivision.github.io/assets/THQ%20Cyber%20Division%20Logo.png">
+  <meta property="og:image:alt" content="THQ Cyber Division logo">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title"
+    content="Resources &amp; Publications | THQ Cyber Division">
+  <meta name="twitter:description"
+    content="Explore cybersecurity resources, SSL/TLS certificates, technical publications and trusted security guidance.">
+  <meta name="twitter:image"
+    content="https://thqcyberdivision.github.io/assets/THQ%20Cyber%20Division%20Logo.png">
+
+  <!-- Favicon and web manifest -->
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://thqcyberdivision.github.io/assets/favicon_32x32.ico">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Google Analytics -->
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-8NQGQSGEVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-8NQGQSGEVY');
+  </script>
+
+  <!-- Security-related metadata -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy"
+    content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-DNS-Prefetch-Control" content="on">
+  <meta http-equiv="Permissions-Policy"
+    content="geolocation=(), camera=(), microphone=(), payment=(), usb=()">
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #667085;
+      --primary: #4169e1;
+      --accent: #0b3d91;
+      --border: #e2e8f0;
+      --dark: #080b12;
+      --radius: 14px;
+      --shadow: 0 8px 28px rgba(15, 23, 42, .06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      max-width: 100%;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI",
+        Roboto, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 3px solid #8ab4ff;
+      outline-offset: 3px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 9999;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+      top: 12px;
+      padding: 10px 14px;
+      background: #ffffff;
+      color: #000000;
+      border-radius: 6px;
+    }
+
+    /* Header */
+
+    header {
+      background: var(--dark);
+      color: #ffffff;
+      text-align: center;
+      padding: 22px 14px;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    header img {
+      display: block;
+      width: 78px;
+      height: auto;
+      margin: 0 auto 8px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.3rem;
+      letter-spacing: .2px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #b8c4d9;
+      font-size: .9rem;
+    }
+
+    /* Navigation */
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 10px 12px;
+      background: #171b25;
+    }
+
+    .main-nav a {
+      color: #f8fafc;
+      text-decoration: none;
+      padding: 9px 13px;
+      border-radius: 8px;
+      font-size: .92rem;
+      font-weight: 600;
+      transition: background .2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Main layout */
+
+    main {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 30px 22px 46px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 42px 26px;
+      border-radius: 18px;
+      color: #ffffff;
+      text-align: center;
+      background: linear-gradient(135deg, #07152e, #0b3d91 65%, #4169e1);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      right: -95px;
+      top: -100px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 28px rgba(255,255,255,.04),
+                  0 0 0 58px rgba(255,255,255,.03);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 11px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 30px;
+      color: #e0eaff;
+      font-size: .77rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      position: relative;
+      z-index: 1;
+      max-width: 750px;
+      margin: 0 auto 12px;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.2;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 1;
+      max-width: 740px;
+      margin: 0 auto;
+      color: #e2eaf8;
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 23px;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      font-size: .92rem;
+      font-weight: 700;
+      transition: transform .2s ease, opacity .2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: .92;
+      transform: translateY(-1px);
+    }
+
+    .btn-light {
+      background: #ffffff;
+      color: #173b86;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: #cbd5e1;
+      color: white;
+    }
+	.btn-outlind {
+      background: transparent;
+      border-color: #cbd5e1;
+      color: var(--accent);
+    }
+
+
+    /* Section headings */
+
+    .section-heading {
+      margin: 36px 0 8px;
+      font-size: 1.55rem;
+      line-height: 1.3;
+    }
+
+    .section-description {
+      margin: 0 0 20px;
+      max-width: 800px;
+      color: var(--muted);
+    }
+
+    /* Resource categories */
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .category-card {
+      padding: 21px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .category-icon {
+      display: flex;
+      width: 46px;
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      background: #eaf0ff;
+      color: var(--accent);
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .category-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .category-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* Search and filters */
+
+    .resource-toolbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 240px;
+      gap: 12px;
+      padding: 17px;
+      margin: 20px 0;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .resource-toolbar label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .resource-toolbar input,
+    .resource-toolbar select {
+      width: 100%;
+      min-height: 46px;
+      padding: 11px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #ffffff;
+      color: var(--text);
+      font: inherit;
+    }
+
+    .result-count {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Publication cards */
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 21px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, .1);
+    }
+
+    .resource-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 12px;
+    }
+
+    .resource-tag {
+      display: inline-flex;
+      padding: 4px 9px;
+      border-radius: 5px;
+      background: #eaf0ff;
+      color: #173b86;
+      font-size: .73rem;
+      font-weight: 750;
+    }
+
+    .resource-type {
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .resource-card h3 {
+      margin: 0 0 9px;
+      font-size: 1.08rem;
+      line-height: 1.4;
+    }
+
+    .resource-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .resource-card .resource-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      align-self: flex-start;
+      margin-top: auto;
+      font-size: .91rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .resource-link:hover {
+      text-decoration: underline;
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      padding: 32px 18px;
+      background: #ffffff;
+      border: 1px dashed #cbd5e1;
+      border-radius: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    /* Resource Library Pagination */
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 26px 0 8px;
+    }
+
+    .page-button {
+      min-height: 42px;
+      padding: 9px 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #173b86;
+      font: inherit;
+      font-size: .9rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .page-button:hover:not(:disabled) {
+      background: #eaf0ff;
+    }
+
+    .page-button:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+
+    #page-indicator {
+      color: #667085;
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    /* Publication notice */
+
+    .publication-notice {
+      margin-top: 30px;
+      padding: 19px 21px;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      background: #edf3ff;
+    }
+
+    .publication-notice h3 {
+      margin: 0 0 5px;
+      font-size: 1rem;
+    }
+
+    .publication-notice p {
+      margin: 0;
+      color: #374151;
+      font-size: .92rem;
+    }
+
+    /* Contact panel */
+
+    .contact-panel {
+      margin-top: 35px;
+      padding: 28px 24px;
+      border-radius: 15px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .contact-panel h2 {
+      margin: 0 0 9px;
+      font-size: 1.45rem;
+    }
+
+    .contact-panel p {
+      max-width: 720px;
+      margin: 0 auto 18px;
+      color: var(--muted);
+    }
+
+    /* Footer */
+
+    footer {
+      padding: 26px 16px;
+      margin-top: 10px;
+      background: #000000;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .footer-company {
+      font-size: .85rem;
+      line-height: 1.65;
+    }
+
+    .footer-company strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+
+    .footer-note {
+      max-width: 700px;
+      margin: 12px auto 0;
+      color: #d1d5db;
+      font-size: .85rem;
+    }
+
+    .footer-certificate {
+      margin: 16px auto 10px;
+    }
+
+    .footer-certificate a {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: #ffffff;
+      font-size: .8rem;
+      text-decoration: none;
+    }
+
+    .footer-certificate img {
+      display: block;
+      width: 66px;
+      height: 66px;
+      object-fit: contain;
+    }
+
+    .footer-certificate a:hover,
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin: 14px 0 8px;
+      color: #d1d5db;
+      font-size: .83rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: #ffffff;
+      font-size: .84rem;
+      text-decoration: none;
+    }
+
+    @media (max-width: 850px) {
+      .category-grid,
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      main {
+        padding: 24px 16px 36px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      header {
+        padding: 17px 10px;
+      }
+
+      header img {
+        width: 60px;
+      }
+
+      header h1 {
+        font-size: 1.1rem;
+      }
+
+      .main-nav {
+        gap: 4px;
+        padding: 8px 5px;
+      }
+
+      .main-nav a {
+        padding: 8px 9px;
+        font-size: .82rem;
+      }
+
+      main {
+        padding: 18px 12px 30px;
+      }
+
+      .hero {
+        padding: 32px 17px;
+        border-radius: 13px;
+      }
+
+      .hero h2 {
+        font-size: 1.75rem;
+      }
+
+      .hero p {
+        font-size: .93rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .section-heading {
+        margin-top: 28px;
+        font-size: 1.3rem;
+      }
+
+      .category-grid,
+      .resource-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .category-card,
+      .resource-card {
+        padding: 17px;
+      }
+
+      .resource-toolbar {
+        grid-template-columns: 1fr;
+        padding: 13px;
+      }
+
+      .pagination {
+        gap: 9px;
+      }
+
+      .page-button {
+        padding: 9px 12px;
+      }
+
+      .contact-panel {
+        padding: 22px 16px;
+      }
+
+      footer {
+        padding: 22px 12px;
+      }
+
+      .footer-company,
+      .footer-note,
+      .copyright {
+        font-size: .8rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <a href="index.html" aria-label="THQ Cyber Division home">
+      <img
+        src="https://thqcyberdivision.github.io/assets/THQ%20Cyber%20Division%20Logo.png"
+        alt="THQ Cyber Division logo"
+        width="78"
+        height="78"
+      >
+    </a>
+    <h1>THQ Cyber Division</h1>
+    <p>Cybersecurity Resources &amp; Publications</p>
+  </header>
+
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="resources.html" aria-current="page">Resources</a>
+    <a href="https://thqcyberdivision.blogspot.com/">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- Introduction -->
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <span class="eyebrow">Knowledge • Security • Resilience</span>
+
+      <h2 id="hero-heading">Resources &amp; Publications</h2>
+
+      <p>
+        Explore cybersecurity documentation, threat intelligence,
+        technical guidance and trusted external resources to help
+        organisations understand security risks and make informed
+        technology decisions.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#library">
+          Explore the Resource Library
+        </a>
+        <a class="btn btn-outline"
+           href="https://thqcyberdivision.blogspot.com/" >
+          Read Our Blog
+        </a>
+      </div>
+    </section>
+
+    <!-- Resource categories -->
+
+    <section aria-labelledby="categories-heading">
+      <h2 class="section-heading" id="categories-heading">
+        Explore by Subject
+      </h2>
+
+      <p class="section-description">
+        Browse resources covering cybersecurity operations, security
+        technologies, threat awareness, SSL/TLS and organisational resilience.
+      </p>
+
+      <div class="category-grid">
+
+        <article class="category-card">
+          <div class="category-icon" aria-hidden="true">01</div>
+          <h3>Threat Intelligence</h3>
+          <p>
+            Explore threat advisories, vulnerability information,
+            emerging attack techniques and resources for understanding
+            the changing cyber threat landscape.
+          </p>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon" aria-hidden="true">02</div>
+          <h3>Endpoint Security &amp; MDR</h3>
+          <p>
+            Find information about endpoint protection, detection and
+            response, managed security operations and Sophos security
+            solutions.
+          </p>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon" aria-hidden="true">03</div>
+          <h3>SSL/TLS &amp; Digital Certificates</h3>
+          <p>
+            Learn about HTTPS, digital certificates, certificate
+            authorities, public key infrastructure, TLS configuration
+            and certificate lifecycle management.
+          </p>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon" aria-hidden="true">04</div>
+          <h3>Security Guidance</h3>
+          <p>
+            Access established security frameworks, practical guidance
+            and recommendations for improving organisational
+            cybersecurity practices.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Searchable resource library -->
+
+    <section id="library" aria-labelledby="library-heading">
+      <h2 class="section-heading" id="library-heading">
+        Resource Library
+      </h2>
+
+      <p class="section-description">
+        Search the library or filter resources by subject. External
+        materials are provided through their respective publishers.
+      </p>
+
+      <div class="resource-toolbar">
+        <div>
+          <label for="resource-search">Search resources</label>
+          <input
+            id="resource-search"
+            type="search"
+            placeholder="e.g. SSL, MDR, vulnerabilities, NIST..."
+            autocomplete="off"
+          >
+        </div>
+
+        <div>
+          <label for="resource-category">Filter by category</label>
+          <select id="resource-category">
+            <option value="all">All resources</option>
+            <option value="sophos">Sophos &amp; Endpoint Security</option>
+            <option value="ssl-tls">SSL/TLS &amp; Certificates</option>
+            <option value="publications">THQ Publications</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="result-count" id="result-count" aria-live="polite">
+        Loading resources...
+      </p>
+
+      <div class="resource-grid" id="resource-grid">
+
+        <!-- Sophos resources -->
+
+        <article class="resource-card"
+          data-category="sophos"
+          data-search="sophos state of ransomware 2026 report">
+          <div class="resource-meta">
+            <span class="resource-tag">Sophos</span>
+            <span class="resource-type">Official documentation</span>
+          </div>
+          <h3>State of Ransomware Report 2026</h3>
+          <p>
+            <strong>2,158 IT</strong> and <strong>cybersecurity decisionmakers</strong> from organizations that had been hit by <strong>ransomware</strong> in the previous <strong>12 months</strong> were interviewed across <strong>17 countries</strong>: USA, Brazil, Chile, Colombia, Mexico, UK, France, Germany, Italy, Spain, Switzerland, Australia, India,
+			Japan, Singapore, South Africa, and UAE. Respondents came from organizations with <strong>100</strong> to <strong>5,000 employees</strong> across <strong>15</strong> industry <strong>sectors</strong>.
+          </p>
+          <a class="resource-link"
+             href="\assets\sophos\sophos-state-ransomware-report-2026-THQ.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Read More <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article class="resource-card"
+          data-category="sophos"
+          data-search="sophos managed detection response MDR vendor checklist">
+          <div class="resource-meta">
+            <span class="resource-tag">Sophos</span>
+            <span class="resource-type">Technical resource</span>
+          </div>
+          <h3>Managed Detection and Response (MDR) Security Vendor Checklist</h3>
+          <p>
+            Finding the right <strong>MDR</strong> provider isn’t just about choosing a <strong>vendor</strong> — it’s about 
+			securing a <strong>true</strong> partner who <strong>empowers</strong> your <strong>team</strong> to <strong>focus</strong> on what <strong>matters</strong> most. Questions covering <strong>visibility</strong>, <strong>solution intergration</strong>, <strong>threat remediation response time</strong>, <strong>levels of service and interaction </strong>, and <strong>comprehensive incident response</strong>.
+          </p>
+          <a class="resource-link"
+             href="\assets\sophos\sophos-mdr-vendor-checklist-THQ.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Explore MDR checklist<span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article class="resource-card"
+          data-category="sophos"
+          data-search="sophos managed detection response MDR buyers guide">
+          <div class="resource-meta">
+            <span class="resource-tag">Sophos</span>
+            <span class="resource-type">Technical resource</span>
+          </div>
+          <h3>Managed Detection and Response Buyer's Guide</h3>
+          <p>
+            <strong>MDR</strong> is rapidly becoming <strong>a must-have protection</strong> for <strong>organizations</strong> of all <strong>sizes</strong>. Working with a <strong>trusted</strong>, <strong>proven MDR vendor</strong> like <strong>Sophos</strong> offers multiple <strong>benefits</strong> — whether you want to fully <strong>outsource</strong> your <strong>threat hunting</strong> or <strong>complement</strong> and <strong>enhance</strong> your <strong>in-house</strong> services
+          </p>
+          <a class="resource-link"
+             href="\assets\sophos\sophos-mdr-buyers-guide-THQ.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Read Guide <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <!-- SSL/TLS and digital certificates -->
+
+        <article class="resource-card"
+          data-category="ssl-tls"
+          data-search="A Quick Guide to SSL/TLS Certificates for making the best choice when considering your website security options">
+          <div class="resource-meta">
+            <span class="resource-tag">SSL/TLS</span>
+            <span class="resource-type">Certificate fundamentals</span>
+          </div>
+          <h3>Quick Guide to SSL/TLS</h3>
+          <p>
+            SSL stands for <strong>Secure Socket Layer</strong>. It’s a technology that establishes a secure connection between a visitor’s web browser and your website so that <strong>all communication transmitted between them is encrypted</strong> and, therefore, secure. SSL is also used for transmitting secure email, secure files, and other forms of information. 
+          </p>
+          <a class="resource-link"
+             href="\assets\ssltls\Guide-to-SSL.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Read SSL/TLS Quick Guide <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+
+		
+		<article class="resource-card"
+          data-category="ssl-tls"
+          data-search="Top 10 Reasons why businesses or enterprises need SSL">
+          <div class="resource-meta">
+            <span class="resource-tag">SSL/TLS</span>
+            <span class="resource-type">Enterprise cybersecurity</span>
+          </div>
+          <h3>Why Businesses/Enterprises need SSL</h3>
+          <p>
+            <strong>Trust makes all the difference</strong> in the world of online business. Investment in technology to protect customers and earn their trust is a critical success factor for any company that does business online or hosts an e-commerce website. The effective implementation of SSL certificates and correct placement and <strong>use of trust marks are proven tools</strong> in the establishment of customer trust.
+
+          </p>
+          <a class="resource-link"
+             href="\assets\ssltls\Top-10-Reasons-Biz-Needs.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Read Guide <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article class="resource-card"
+          data-category="ssl-tls"
+          data-search="Let's Encrypt free automated TLS HTTPS certificates certificate renewal ACME">
+          <div class="resource-meta">
+            <span class="resource-tag">SSL/TLS</span>
+            <span class="resource-type">Enterprise cybersecurity</span>
+          </div>
+          <h3>Let's Encrypt Domain Validated Certificates</h3>
+          <p>
+            Let’s Encrypt (LE) is a non-profit Certificate Authority (CA) that issues free 90-day Domain 
+			Validated SSL certificates. This is a phenomenal service for small websites and blogs <strong>where 
+			the owner has no financial stake</strong> and is just looking to <strong>add no-frills encryption</strong>.
+          </p>
+          <a class="resource-link"
+             href="\assets\ssltls\Let's_Encrypt_Talking Points.pdf"
+             target="_blank" rel="noopener noreferrer">
+            Read documentation <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <!-- THQ publications -->
+
+        <article class="resource-card"
+          data-category="publications"
+          data-search="THQ Cyber Division blog articles cybersecurity insights updates">
+          <div class="resource-meta">
+            <span class="resource-tag">THQ Publications</span>
+            <span class="resource-type">Company blog</span>
+          </div>
+          <h3>Enterprise &amp; Business Cybersecurity Insights &amp; Articles</h3>
+          <p>
+            Visit the our <strong>blog</strong> for <strong>company updates</strong>,
+            <strong>cybersecurity articles</strong>, <strong>security guidance</strong> and relevant
+            technology <strong>information</strong> which <strong>affect</strong> your <strong>enterprise</strong> or <strong>business</strong>.
+          </p>
+          <a class="resource-link"
+             href="https://thqcyberdivision.blogspot.com/"
+             target="_blank" rel="noopener noreferrer">
+            Read our blog <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article class="resource-card"
+          data-category="publications"
+          data-search="THQ Cyber Division Sophos solutions products services">
+          <div class="resource-meta">
+            <span class="resource-tag">THQ Publications</span>
+            <span class="resource-type">Company information</span>
+          </div>
+          <h3>Sophos Solutions &amp; SSL Services</h3>
+          <p>
+            Learn more about <strong>cybersecurity solutions offerings</strong> supplied through our <strong>webpage</strong>, including, <strong>MDR</strong>, <strong>endpoint security</strong>, <strong>Sophos</strong> solutions and <strong>SSL/TLS</strong> certificates for your <strong>Enterprise</strong> &amp; <strong>Business</strong>.
+          </p>
+          <a class="resource-link" href="services.html">
+            Explore our services <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="resource-card"
+          data-category="publications"
+          data-search="THQ Cyber Division contact cybersecurity product enquiry business organisation">
+          <div class="resource-meta">
+            <span class="resource-tag">THQ Publications</span>
+            <span class="resource-type">Enquiries</span>
+          </div>
+          <h3>Enquiries</h3>
+          <p>
+            <strong>Contact</strong> our <strong>team</strong> to enquire about available <strong>SSL Certificates</strong>, <strong>Sophos</strong> solutions or if your <strong>request</strong> a <strong>quote</strong> on <strong>Sophos solutions</strong> or <strong>SSL/TLS Certificates</strong>.
+          </p>
+          <a class="resource-link" href="contact.html">
+            Contact THQ <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+      </div>
+
+      <!-- Pagination -->
+
+      <nav class="pagination" id="resource-pagination"
+           aria-label="Resource library pages">
+        <button class="page-button" id="previous-page"
+                type="button" disabled>
+          Previous
+        </button>
+
+        <span id="page-indicator" aria-live="polite">
+          Page 1
+        </span>
+
+        <button class="page-button" id="next-page" type="button">
+          Next
+        </button>
+      </nav>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <strong>No matching resources found.</strong>
+        <p>Try a different search term or select another category.</p>
+        <button class="btn" id="reset-search" type="button">
+          Reset filters
+        </button>
+      </div>
+    </section>
+
+    <!-- Publication information -->
+
+    <aside class="publication-notice">
+      <h3>About these resources</h3>
+      <p>
+        External resources link to their respective publishers.
+        Third-party documentation, recommendations and frameworks
+        are maintained by those organisations and may change over
+        time. Their inclusion does not mean that THQ Cyber Division
+        endorses every statement or guarantees any particular
+        security outcome. Verify current versions and applicability
+        before relying on technical guidance.
+      </p>
+    </aside>
+
+    <!-- Contact -->
+
+    <section class="contact-panel" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Looking for a Specific Resource?</h2>
+      <p>
+        If you are researching Sophos products, endpoint security,
+        managed detection and response, SSL/TLS certificates or
+        related cybersecurity services, contact THQ Cyber Division
+        with your enquiry.
+      </p>
+      <a class="btn" href="contact.html">Contact Our Team</a>
+      <a class="btn btn-outlind"
+         href="https://thqcyberdivision.blogspot.com/">
+        Visit Our Blog
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-company">
+      <strong>THQ Cyber Division Unincorporated</strong>
+      <div>c/o 2709 N Hayden Island Dr</div>
+      <div>STE 105211</div>
+      <div>Portland, Oregon, 97217, USA</div>
+      <div>
+        Tel:
+        <a href="tel:+15035681586"
+           style="color:#ffffff">503-568-1586</a>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      THQ Cyber Division provides cybersecurity solutions and
+      related technology services.
+    </div>
+
+    <div class="footer-certificate">
+      <a
+        href="https://thqcyberdivision.github.io/assets/Sophos%20Authorized%20Partner%20Certificate.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View Sophos Authorized Partner Certificate"
+      >
+        <img
+          src="https://thqcyberdivision.github.io/assets/Sophos%20Authorized%20Partner%20Logo.png"
+          alt="Sophos Authorized Partner"
+          width="66"
+          height="66"
+          loading="lazy"
+        >
+        View Sophos Partner Certificate
+      </a>
+    </div>
+
+    <p class="copyright">
+      &copy; 2024&ndash;2026 THQ Cyber Division Unincorporated
+    </p>
+
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="terms.html">Terms</a>
+      <span aria-hidden="true">|</span>
+      <a href="privacy.html">Privacy</a>
+      <span aria-hidden="true">|</span>
+      <a href="https://www.linkedin.com/in/thqcyberdivision/">LinkedIn</a>
+      <span aria-hidden="true">|</span>
+      <a href="mailto:thqcs@protonmail.com">Contact</a>
+    </nav>
+  </footer>
+
+  <!-- Resource search, category filtering and pagination -->
+
+  <script>
+    (function () {
+      "use strict";
+
+      const searchInput = document.getElementById("resource-search");
+      const categorySelect = document.getElementById("resource-category");
+
+      const cards = Array.from(
+        document.querySelectorAll(".resource-card")
+      );
+
+      const count = document.getElementById("result-count");
+      const emptyState = document.getElementById("empty-state");
+      const resetButton = document.getElementById("reset-search");
+
+      const pagination = document.getElementById("resource-pagination");
+      const previousButton = document.getElementById("previous-page");
+      const nextButton = document.getElementById("next-page");
+      const pageIndicator = document.getElementById("page-indicator");
+
+      const pageSize = 6;
+      let currentPage = 1;
+      let filteredCards = [];
+
+      function filterResources() {
+        const query = searchInput.value.trim().toLowerCase();
+        const category = categorySelect.value;
+
+        filteredCards = cards.filter(function (card) {
+          const text = (
+            card.textContent + " " +
+            (card.dataset.search || "")
+          ).toLowerCase();
+
+          const matchesText =
+            !query || text.includes(query);
+
+          const matchesCategory =
+            category === "all" ||
+            card.dataset.category === category;
+
+          return matchesText && matchesCategory;
+        });
+
+        currentPage = 1;
+        renderPage();
+      }
+
+      function renderPage() {
+        const total = filteredCards.length;
+        const totalPages = Math.ceil(total / pageSize);
+        const start = (currentPage - 1) * pageSize;
+        const end = start + pageSize;
+
+        /* Hide every card before showing the current page. */
+        cards.forEach(function (card) {
+          card.hidden = true;
+        });
+
+        /* Show only matching cards for this page. */
+        filteredCards.slice(start, end).forEach(function (card) {
+          card.hidden = false;
+        });
+
+        if (total === 0) {
+          count.textContent = "No matching resources found.";
+        } else {
+          count.textContent =
+            "Showing " + (start + 1) + "–" +
+            Math.min(end, total) + " of " + total + " resources.";
+        }
+
+        emptyState.hidden = total !== 0;
+
+        /* Hide pagination when all results fit on one page. */
+        pagination.hidden = total <= pageSize;
+
+        pageIndicator.textContent =
+          "Page " + (total === 0 ? 0 : currentPage) +
+          " of " + totalPages;
+
+        previousButton.disabled = currentPage <= 1;
+        nextButton.disabled =
+          totalPages === 0 || currentPage >= totalPages;
+      }
+
+      previousButton.addEventListener("click", function () {
+        if (currentPage > 1) {
+          currentPage--;
+          renderPage();
+
+          document.getElementById("library-heading")
+            .scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+        }
+      });
+
+      nextButton.addEventListener("click", function () {
+        const totalPages = Math.ceil(
+          filteredCards.length / pageSize
+        );
+
+        if (currentPage < totalPages) {
+          currentPage++;
+          renderPage();
+
+          document.getElementById("library-heading")
+            .scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+        }
+      });
+
+      searchInput.addEventListener("input", filterResources);
+      categorySelect.addEventListener("change", filterResources);
+
+      resetButton.addEventListener("click", function () {
+        searchInput.value = "";
+        categorySelect.value = "all";
+        filterResources();
+        searchInput.focus();
+      });
+
+      filterResources();
+    })();
+  </script>
+
+  <!-- Tawk.to live chat -->
+
+  <script>
+    var Tawk_API = Tawk_API || {};
+    var Tawk_LoadStart = new Date();
+
+    (function () {
+      var script = document.createElement("script");
+      var firstScript = document.getElementsByTagName("script")[0];
+
+      script.async = true;
+      script.src =
+        "https://embed.tawk.to/6927884137e09f19631a6b8e/1jb16og5k";
+      script.charset = "UTF-8";
+      script.setAttribute("crossorigin", "*");
+
+      firstScript.parentNode.insertBefore(script, firstScript);
+    })();
+  </script>
+
+</body>
+</html>
