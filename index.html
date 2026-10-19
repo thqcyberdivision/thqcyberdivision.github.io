@@ -841,6 +841,183 @@ body {
     scroll-behavior: auto !important;
   }
 }
+     
+/* =========================================================
+   THQ CYBER DIVISION — PRIVACY & COOKIE NOTICE
+   Add-on only: existing theme and styles preserved
+   Reference: THQCDU-2147726840670722
+   ========================================================= */
+
+.cookie-notice,
+.cookie-settings-panel {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.cookie-notice *,
+.cookie-settings-panel * {
+  box-sizing: border-box;
+}
+
+.cookie-notice {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 100000;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  color: #111;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, .22);
+}
+
+.cookie-notice[hidden],
+.cookie-settings-panel[hidden] {
+  display: none !important;
+}
+
+.cookie-notice h2,
+.cookie-settings-panel h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  color: #111;
+}
+
+.cookie-notice p,
+.cookie-settings-panel p {
+  margin: 0 0 12px;
+  font-size: .92rem;
+  line-height: 1.55;
+  color: #374151;
+}
+
+.cookie-notice a,
+.cookie-settings-panel a {
+  color: #0b3d91;
+  text-decoration: underline;
+}
+
+.cookie-notice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.cookie-notice-actions button,
+.cookie-settings-panel button {
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid #4169e1;
+  border-radius: 7px;
+  background: #4169e1;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cookie-notice-actions button.cookie-secondary,
+.cookie-settings-panel button.cookie-secondary {
+  background: #fff;
+  color: #0b3d91;
+}
+
+.cookie-notice button:focus-visible,
+.cookie-settings-panel button:focus-visible {
+  outline: 3px solid #8ab4ff;
+  outline-offset: 3px;
+}
+
+.cookie-settings-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 100001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, .55);
+}
+
+.cookie-settings-content {
+  width: 100%;
+  max-width: 540px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 22px;
+  border-radius: 12px;
+  background: #fff;
+  color: #111;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, .25);
+}
+
+.cookie-setting-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cookie-setting-row input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.cookie-setting-row label {
+  line-height: 1.5;
+  font-size: .92rem;
+}
+
+.cookie-required {
+  color: #374151;
+  font-size: .82rem;
+}
+
+.cookie-settings-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+@media (max-width: 480px) {
+  .cookie-notice {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    padding: 15px;
+  }
+
+  .cookie-notice-actions {
+    flex-direction: column;
+  }
+
+  .cookie-notice-actions button {
+    width: 100%;
+  }
+
+  .cookie-settings-content {
+    padding: 17px;
+  }
+
+  .cookie-settings-actions {
+    flex-direction: column;
+  }
+
+  .cookie-settings-actions button {
+    width: 100%;
+  }
+}
+
   </style>
 
    <script>
@@ -1052,6 +1229,261 @@ body {
 </nav>
 
   </footer>
+  
+<!-- THQ Cyber Division Privacy & Cookie Notice -->
+<section
+  id="cookie-notice"
+  class="cookie-notice"
+  role="region"
+  aria-labelledby="cookie-notice-title"
+  aria-describedby="cookie-notice-description"
+  hidden
+>
+  <h2 id="cookie-notice-title">Privacy & Cookie Notice</h2>
+
+  <p id="cookie-notice-description">
+    THQ Cyber Division uses cookies and similar technologies to support
+    website functionality, understand website traffic and measure
+    advertising. Third-party services used on this website may include
+    Google Analytics, Google AdSense, Apollo and Tawk.to. These services
+    may process information in accordance with their own privacy policies.
+  </p>
+
+  <p>
+    Read our <a href="privacy.html">Privacy Notice</a> and
+    <a href="terms.html">Terms</a> to learn more. You can review your
+    cookie preferences at any time using the cookie settings control.
+  </p>
+
+  <div class="cookie-notice-actions">
+    <button type="button" id="cookie-accept">
+      Accept all
+    </button>
+
+    <button type="button" id="cookie-reject" class="cookie-secondary">
+      Reject optional cookies
+    </button>
+
+    <button type="button" id="cookie-customize" class="cookie-secondary">
+      Cookie settings
+    </button>
+  </div>
+</section>
+
+<!-- Cookie Preferences Panel -->
+<section
+  id="cookie-settings-panel"
+  class="cookie-settings-panel"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cookie-settings-title"
+  hidden
+>
+  <div class="cookie-settings-content">
+    <h2 id="cookie-settings-title">Cookie Settings</h2>
+
+    <p>
+      Choose your preferences below. Essential website functions are
+      always enabled. Saving these choices records your preferences;
+      it does not, by itself, block third-party scripts already running.
+    </p>
+
+    <div class="cookie-setting-row">
+      <input type="checkbox" id="cookie-essential" checked disabled>
+      <label for="cookie-essential">
+        <strong>Essential cookies</strong><br>
+        <span class="cookie-required">
+          Required for basic website functionality. Always active.
+        </span>
+      </label>
+    </div>
+
+    <div class="cookie-setting-row">
+      <input type="checkbox" id="cookie-analytics">
+      <label for="cookie-analytics">
+        <strong>Analytics</strong><br>
+        Help measure website usage and understand visitor activity.
+      </label>
+    </div>
+
+    <div class="cookie-setting-row">
+      <input type="checkbox" id="cookie-advertising">
+      <label for="cookie-advertising">
+        <strong>Advertising and personalisation</strong><br>
+        May support advertising measurement and personalised ads.
+      </label>
+    </div>
+
+    <div class="cookie-setting-row">
+      <input type="checkbox" id="cookie-third-party">
+      <label for="cookie-third-party">
+        <strong>Third-party services</strong><br>
+        Services such as Apollo and Tawk.to may use cookies or similar
+        technologies for their respective functionality.
+      </label>
+    </div>
+
+    <div class="cookie-settings-actions">
+      <button type="button" id="cookie-save">
+        Save preferences
+      </button>
+
+      <button type="button" id="cookie-settings-cancel"
+        class="cookie-secondary">
+        Cancel
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Persistent control for reopening cookie preferences -->
+<div id="cookie-preferences-link"
+  style="position:fixed;left:10px;bottom:10px;z-index:99998;"
+  hidden>
+  <button type="button" id="cookie-reopen"
+    style="background:#fff;color:#0b3d91;border:1px solid #4169e1;
+    border-radius:7px;padding:9px 12px;cursor:pointer;font:inherit;">
+    Cookie settings
+  </button>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var STORAGE_KEY = "thqcd_cookie_preferences_v1";
+
+  var notice = document.getElementById("cookie-notice");
+  var panel = document.getElementById("cookie-settings-panel");
+  var preferencesLink = document.getElementById("cookie-preferences-link");
+
+  if (!notice || !panel || !preferencesLink) return;
+
+  var analytics = document.getElementById("cookie-analytics");
+  var advertising = document.getElementById("cookie-advertising");
+  var thirdParty = document.getElementById("cookie-third-party");
+
+  var acceptButton = document.getElementById("cookie-accept");
+  var rejectButton = document.getElementById("cookie-reject");
+  var customizeButton = document.getElementById("cookie-customize");
+  var saveButton = document.getElementById("cookie-save");
+  var cancelButton = document.getElementById("cookie-settings-cancel");
+  var reopenButton = document.getElementById("cookie-reopen");
+
+  var previousFocus = null;
+
+  function readPreferences() {
+    try {
+      var saved = localStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function showNotice() {
+    notice.hidden = false;
+    preferencesLink.hidden = true;
+  }
+
+  function hideNotice() {
+    notice.hidden = true;
+    preferencesLink.hidden = false;
+  }
+
+  function openSettings() {
+    previousFocus = document.activeElement;
+
+    var saved = readPreferences();
+
+    analytics.checked = !!(saved && saved.analytics);
+    advertising.checked = !!(saved && saved.advertising);
+    thirdParty.checked = !!(saved && saved.thirdParty);
+
+    panel.hidden = false;
+    document.getElementById("cookie-settings-title").focus();
+  }
+
+  function closeSettings() {
+    panel.hidden = true;
+
+    if (previousFocus && typeof previousFocus.focus === "function") {
+      previousFocus.focus();
+    }
+  }
+
+  function savePreferences(values) {
+    var record = {
+      essential: true,
+      analytics: !!values.analytics,
+      advertising: !!values.advertising,
+      thirdParty: !!values.thirdParty,
+      choice: values.choice,
+      updatedAt: new Date().toISOString()
+    };
+
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
+    } catch (error) {
+      /* The browser may block local storage. */
+    }
+
+    hideNotice();
+    closeSettings();
+  }
+
+  acceptButton.addEventListener("click", function () {
+    savePreferences({
+      analytics: true,
+      advertising: true,
+      thirdParty: true,
+      choice: "accepted"
+    });
+  });
+
+  rejectButton.addEventListener("click", function () {
+    savePreferences({
+      analytics: false,
+      advertising: false,
+      thirdParty: false,
+      choice: "rejected"
+    });
+  });
+
+  customizeButton.addEventListener("click", openSettings);
+
+  saveButton.addEventListener("click", function () {
+    savePreferences({
+      analytics: analytics.checked,
+      advertising: advertising.checked,
+      thirdParty: thirdParty.checked,
+      choice: "custom"
+    });
+  });
+
+  cancelButton.addEventListener("click", closeSettings);
+  reopenButton.addEventListener("click", openSettings);
+
+  panel.addEventListener("click", function (event) {
+    if (event.target === panel) closeSettings();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !panel.hidden) {
+      closeSettings();
+    }
+  });
+
+  var existingPreferences = readPreferences();
+
+  if (existingPreferences) {
+    hideNotice();
+  } else {
+    showNotice();
+  }
+})();
+</script>
+
 
   <!-- Tawk.to -->
 
