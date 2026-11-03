@@ -1,8 +1,9 @@
-const CACHE_NAME = 'thq-cache-v5';
+const CACHE_NAME = 'thq-cache-v6';
 const urlsToCache = [
   '/',
   '/index.html',
   '/ja/index.html',
+  '/ja/services.html',
   '/about.html',
   '/services.html',
   '/contact.html',
@@ -85,8 +86,9 @@ self.addEventListener('fetch', (event) => {
           return response;
         })
         .catch(() => {
+          // For images, you could return a cached placeholder if you have one
           if ((request.destination || '').includes('image')) {
-            return caches.match('/assets/images/offline-image.png');
+            return caches.match('/assets/images/offline-image.png'); // optional
           }
           return new Response('', { status: 503, statusText: 'Service Unavailable' });
         });
