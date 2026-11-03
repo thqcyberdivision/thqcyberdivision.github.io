@@ -2,26 +2,15 @@ const CACHE_NAME = 'thq-cache-v5';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/ja/index.html',
   '/about.html',
   '/services.html',
-  '/blog.html',
   '/contact.html',
-  '/main.css',
+  '/manifest.json',
   '/main.js',
   '/assets/THQ Cyber Division Logo.png',
-  '/assets/Sophos Authorized Partner Logo.png',
-  '/email-icon.png',
-  '/assets/favicon_16x16.ico',
   '/assets/favicon_32x32.ico',
-  '/assets/favicon_96x96.ico',
-  '/assets/favicon_192x192.ico',
-  '/manifest.json',
-  '/website_cover.jpg',
-  '/assets/payments/paypal.svg',
-  '/assets/payments/nowpayments.svg',
-  '/assets/payments/debit.svg',
-  '/terms.html',
-  '/privacy.html',
+  '/website_cover.jpg'
 ];
 
 // Install: pre-cache resources (resilient)
@@ -29,7 +18,6 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
-      // Use Promise.allSettled so one missing resource doesn't break install
       const results = await Promise.allSettled(
         urlsToCache.map((url) =>
           fetch(url, { cache: 'no-store' })
@@ -38,7 +26,6 @@ self.addEventListener('install', (event) => {
               return cache.put(url, res);
             })
             .catch((err) => {
-              // Log which URL failed so you can fix or remove it
               console.warn('Failed to cache', url, err);
               return null;
             })
@@ -74,7 +61,6 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(request)
         .then((response) => {
-          // Optionally update cache with the latest page
           const copy = response.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
           return response;
@@ -92,7 +78,6 @@ self.addEventListener('fetch', (event) => {
       if (cachedResponse) return cachedResponse;
       return fetch(request)
         .then((response) => {
-          // Only cache same-origin/basic responses
           if (response && response.status === 200 && response.type === 'basic') {
             const responseClone = response.clone();
             caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
@@ -100,9 +85,8 @@ self.addEventListener('fetch', (event) => {
           return response;
         })
         .catch(() => {
-          // For images, you could return a cached placeholder if you have one
           if ((request.destination || '').includes('image')) {
-            return caches.match('/assets/images/offline-image.png'); // optional
+            return caches.match('/assets/images/offline-image.png');
           }
           return new Response('', { status: 503, statusText: 'Service Unavailable' });
         });
