@@ -1,12 +1,18 @@
-const CACHE_NAME = 'thq-cache-v6';
+const CACHE_NAME = 'thq-cache-v7';
 const urlsToCache = [
   '/',
   '/index.html',
   '/ja/index.html',
   '/ja/services.html',
+  '/ja/about.html',
+  '/ja/contact.html',
+  '/ja/terms.html',
+  '/ja/privacy.html',
   '/about.html',
   '/services.html',
   '/contact.html',
+  '/terms.html',
+  '/privacy.html',
   '/manifest.json',
   '/main.js',
   '/assets/THQ Cyber Division Logo.png',
