@@ -11,164 +11,45 @@
   <title>サイバーセキュリティソリューション | THQ Cyber Division</title>
   <meta name="description" content="THQ Cyber Divisionは、Sophosのサイバーセキュリティソリューション、脅威インテリジェンス、アドバイザリーサービスを通じて、組織のサイバー防御力強化を支援します。" />
   <meta name="theme-color" content="#007bff" />
+  <link rel="canonical" href="https://thqcyberdivision.github.io/ja/" />
+  <link rel="alternate" hreflang="ja" href="https://thqcyberdivision.github.io/ja/" />
+  <link rel="alternate" hreflang="en" href="https://thqcyberdivision.github.io/" />
   <style>
     :root { --bg:#f5f7fb; --card:#fff; --muted:#6b7280; --primary:#4169e1; --accent:#0b3d91; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body {
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-      background:var(--bg);
-      color:#111;
-      line-height:1.45;
-    }
+    body { margin:0; font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; background:var(--bg); color:#111; line-height:1.55; }
     a { color:var(--primary); text-decoration:none; }
     a:hover { text-decoration:underline; }
-    header {
-      background:#000;
-      color:#fff;
-      text-align:center;
-      padding:22px 12px;
-    }
-    header img {
-      width:88px;
-      height:auto;
-      display:block;
-      margin:0 auto 8px;
-    }
-    header h1 {
-      margin:4px 0 0;
-      font-size:1.15rem;
-    }
-    nav {
-      background:#222;
-      display:flex;
-      justify-content:center;
-      gap:16px;
-      padding:10px 12px;
-      flex-wrap:wrap;
-    }
-    nav a {
-      color:#fff;
-      text-decoration:none;
-      padding:8px 12px;
-      border-radius:8px;
-      font-weight:600;
-    }
-    nav a:hover,
-    nav a[aria-current="page"] {
-      background:var(--primary);
-    }
-    nav .lang-toggle {
-      border:1px solid rgba(255,255,255,0.3);
-      background:rgba(255,255,255,0.05);
-    }
-    main {
-      max-width:1100px;
-      margin:34px auto;
-      padding:0 18px;
-    }
-    .intro {
-      text-align:center;
-      margin-bottom:24px;
-    }
-    .intro h2 {
-      margin:6px 0 8px;
-      font-size:1.5rem;
-    }
-    .intro p {
-      max-width:840px;
-      margin:0 auto;
-      color:var(--muted);
-    }
-    .section-title {
-      text-align:center;
-      margin-top:6px;
-    }
-    .sectigo-cards {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:18px;
-      margin:20px 0;
-    }
-    .card {
-      background:var(--card);
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(2,6,23,0.06);
-      padding:18px;
-      display:flex;
-      flex-direction:column;
-      min-height:250px;
-    }
-    .card iframe {
-      display:block;
-      width:100%;
-      max-width:100%;
-      aspect-ratio:16 / 10;
-      height:auto;
-      border:0;
-      border-radius:8px;
-    }
-    .card h3 {
-      margin:8px 0 6px;
-      font-size:1.05rem;
-      text-align:center;
-    }
-    .card p {
-      color:var(--muted);
-      text-align:center;
-      margin:0;
-    }
-    .card .controls {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      margin-top:auto;
-      padding-top:16px;
-    }
-    .btn {
-      display:inline-block;
-      background:var(--primary);
-      color:#fff;
-      padding:10px 14px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:700;
-    }
-    .services-summary {
-      background:var(--card);
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 6px 18px rgba(2,6,23,0.04);
-      text-align:center;
-      margin-top:18px;
-    }
+    header { background:#000; color:#fff; text-align:center; padding:22px 12px; }
+    header img { width:88px; height:auto; display:block; margin:0 auto 8px; }
+    header h1 { margin:4px 0 0; font-size:1.15rem; }
+    nav { background:#222; display:flex; justify-content:center; align-items:center; gap:12px; padding:10px 12px; flex-wrap:wrap; }
+    nav a { color:#fff; padding:8px 12px; border-radius:8px; font-weight:600; }
+    nav a:hover, nav a[aria-current="page"] { background:var(--primary); text-decoration:none; }
+    nav .lang-toggle { border:1px solid rgba(255,255,255,.3); background:rgba(255,255,255,.05); }
+    main { max-width:1100px; margin:34px auto; padding:0 18px; }
+    .intro { text-align:center; margin-bottom:24px; }
+    .intro h2 { margin:6px 0 8px; font-size:1.5rem; }
+    .intro p { max-width:840px; margin:0 auto; color:var(--muted); }
+    .section-title { text-align:center; margin-top:6px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin:20px 0; }
+    .card { background:var(--card); border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,.06); padding:18px; display:flex; flex-direction:column; min-height:250px; }
+    .card iframe { display:block; width:100%; aspect-ratio:16 / 10; height:auto; border:0; border-radius:8px; }
+    .card h3 { margin:8px 0 6px; font-size:1.05rem; text-align:center; }
+    .card p { color:var(--muted); text-align:center; margin:0; }
+    .card .controls { display:flex; justify-content:center; align-items:center; margin-top:auto; padding-top:16px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; background:var(--primary); color:#fff; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700; min-height:44px; }
+    .services-summary { background:var(--card); padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,.04); text-align:center; margin-top:18px; }
     .services-summary p { margin:0; color:var(--muted); }
-    footer {
-      background:#000;
-      color:#fff;
-      text-align:center;
-      padding:22px 14px;
-      margin-top:36px;
-    }
+    footer { background:#000; color:#fff; text-align:center; padding:22px 14px; margin-top:36px; }
     .footer-company { line-height:1.6; font-size:.85rem; }
     .footer-company strong { display:block; font-size:1rem; margin-bottom:5px; }
-    .footer-note {
-      max-width:700px;
-      margin:10px auto 0;
-      color:#d1d5db;
-      font-size:.85rem;
-    }
-    .footer-links { margin-top:12px; }
-    .footer-links a { color:#fff; text-decoration:none; margin:0 5px; }
+    .footer-note { max-width:700px; margin:10px auto 0; color:#d1d5db; font-size:.85rem; }
+    .footer-links { margin-top:12px; display:flex; justify-content:center; gap:8px; flex-wrap:wrap; }
+    .footer-links a { color:#fff; margin:0 5px; }
     .copyright { margin:14px 0 8px; color:#d1d5db; font-size:.85rem; }
-    @media (max-width:640px) {
-      nav { gap:6px; }
-      nav a { padding:8px 10px; font-size:.92rem; }
-      header img { width:64px; }
-      main { margin:26px auto; padding:0 14px; }
-      .intro h2 { font-size:1.25rem; }
-    }
+    @media (max-width:640px) { nav { gap:6px; } nav a { padding:8px 10px; font-size:.92rem; } header img { width:64px; } main { margin:26px auto; padding:0 14px; } .intro h2 { font-size:1.25rem; } .cards { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -180,64 +61,47 @@
   <nav role="navigation" aria-label="メインナビゲーション">
     <a href="/ja/index.html" aria-current="page">ホーム</a>
     <a href="/about.html">会社概要</a>
-    <a href="/services.html">サービス</a>
+    <!-- Keep visitors who chose Japanese on the Japanese services page. -->
+    <a href="/ja/services.html" lang="ja" hreflang="ja">サービス</a>
     <a href="/resources.html">リソース</a>
     <a href="https://thqcyberdivision.blogspot.com/" target="_blank" rel="noopener noreferrer">ブログ</a>
     <a href="/contact.html">お問い合わせ</a>
-    <a href="/index.html" class="lang-toggle" aria-label="English version">English</a>
+    <a href="/index.html" class="lang-toggle" lang="en" hreflang="en" aria-label="English version">English</a>
   </nav>
 
   <main id="main">
     <section class="intro" aria-labelledby="intro-heading">
       <h2 id="intro-heading">現代の組織に向けたサイバーセキュリティソリューション</h2>
-      <p>
-        THQ Cyber Divisionは、Sophosのサイバーセキュリティソリューションを提供し、企業や組織がエンドポイント保護の強化、脅威検知、セキュリティ可視性の向上、進化するサイバーリスクへの対応を支援します。
-      </p>
+      <p>THQ Cyber Divisionは、Sophosのサイバーセキュリティソリューションを提供し、企業や組織がエンドポイント保護の強化、脅威検知、セキュリティ可視性の向上、進化するサイバーリスクへの対応を支援します。</p>
     </section>
 
     <h2 class="section-title">注目のSophosソリューション</h2>
 
-    <section class="sectigo-cards" aria-label="主要なSophosセキュリティソリューション">
+    <section class="cards" aria-label="主要なSophosセキュリティソリューション">
       <article class="card">
-        <iframe width="320" height="200" src="https://www.youtube.com/embed/ig_g5JS7MmI" title="Sophos Managed Detection and Response (MDR) Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/ig_g5JS7MmI" title="Sophos Managed Detection and Response (MDR) 概要" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h3>Managed Detection and Response (MDR)</h3>
-        <p>
-          SophosのMDRは、脅威の検知、調査、対応を支援するフルマネージド型のサイバーセキュリティサービスです。
-        </p>
-        <div class="controls">
-          <a class="btn" href="https://www.sophos.com/en-us/products/managed-detection-and-response?partner_referral_id=001aJ00000UTJijQAH&amp;partner_name=THQ+Cyber+Division+Unincorporated" target="_blank" rel="noopener noreferrer" aria-label="Sophos Managed Detection and Response の詳細を見る">詳細を見る</a>
-        </div>
+        <p>SophosのMDRは、脅威の検知、調査、対応を支援するフルマネージド型のサイバーセキュリティサービスです。</p>
+        <div class="controls"><a class="btn" href="https://www.sophos.com/en-us/products/managed-detection-and-response?partner_referral_id=001aJ00000UTJijQAH&amp;partner_name=THQ+Cyber+Division+Unincorporated" target="_blank" rel="noopener noreferrer">詳細を見る</a></div>
       </article>
-
       <article class="card">
-        <iframe width="320" height="200" src="https://www.youtube.com/embed/-TBXMKYeN5M" title="Sophos Advisory Services Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/-TBXMKYeN5M" title="Sophos Advisory Services 概要" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h3>アドバイザリーサービス</h3>
-        <p>
-          Sophosのアドバイザリーサービスは、組織のサイバー防御を評価し、弱点を特定し、実務的な評価と検証を通じてセキュリティの回復力を向上させます。
-        </p>
-        <div class="controls">
-          <a class="btn" href="https://www.sophos.com/en-us/products/advisory-services?partner_referral_id=001aJ00000UTJijQAH&amp;partner_name=THQ+Cyber+Division+Unincorporated" target="_blank" rel="noopener noreferrer" aria-label="Sophos Advisory Services の詳細を見る">詳細を見る</a>
-        </div>
+        <p>Sophosのアドバイザリーサービスは、組織のサイバー防御を評価し、弱点を特定して、実践的な評価とテストを通じてセキュリティの回復力を高めます。</p>
+        <div class="controls"><a class="btn" href="https://www.sophos.com/en-us/products/advisory-services?partner_referral_id=001aJ00000UTJijQAH&amp;partner_name=THQ+Cyber+Division+Unincorporated" target="_blank" rel="noopener noreferrer">詳細を見る</a></div>
       </article>
-
       <article class="card">
-        <iframe width="320" height="200" src="https://www.youtube.com/embed/cYYlwlrjJnM" title="Sophos Endpoint and EDR Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/cYYlwlrjJnM" title="Sophos Endpoint and EDR 概要" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <h3>Endpoint Detection and Response (EDR)</h3>
-        <p>
-          Sophos EDRは、セキュリティチームやIT管理者向けに、エンドポイントの検知、調査、対応機能を提供します。
-        </p>
-        <div class="controls">
-          <a class="btn" href="https://www.sophos.com/en-us/products/endpoint-antivirus/edr?partner_referral_id=001aJ00000UTJijQAH&amp;partner_name=THQ+Cyber+Division+Unincorporated" target="_blank" rel="noopener noreferrer" aria-label="Sophos Endpoint Detection and Response の詳細を見る">詳細を見る</a>
-        </div>
+        <p>Sophos EDRは、セキュリティチームやIT管理者向けに、エンドポイントの検知、調査、対応機能を提供します。</p>
+        <div class="controls"><a class="btn" href="https://www.sophos.com/en-us/products/endpoint-antivirus/edr?partner_referral_id=001aJ00000UTJijQAH&amp;partner_name=THQ+Cyber+Division+Unincorporated" target="_blank" rel="noopener noreferrer">詳細を見る</a></div>
       </article>
     </section>
 
     <section class="services-summary" aria-labelledby="services-heading">
-      <h2 id="services-heading" style="margin:0 0 8px">セキュリティサービス・ポートフォリオ</h2>
-      <p>
-        当社のサイバーセキュリティ戦略には、Sophosエンドポイント保護、Managed Detection and Response、アドバイザリーサービス、サイバー脅威インテリジェンスおよび運用環境向けのセキュリティ関連サービスが含まれます。
-      </p>
-      <a class="btn" href="/services.html" style="margin-top:14px">サービス一覧を見る</a>
+      <h2 id="services-heading" style="margin:0 0 8px">サイバーセキュリティサービス</h2>
+      <p>当社のサービスには、Sophosエンドポイント保護、Managed Detection and Response、アドバイザリーサービス、サイバー脅威インテリジェンスおよび運用環境向けのセキュリティ関連サービスが含まれます。</p>
+      <a class="btn" href="/ja/services.html" style="margin-top:14px">サービス一覧を見る</a>
     </section>
   </main>
 
@@ -249,19 +113,12 @@
       <div>Portland, Oregon, [97217], USA</div>
       <div>Tel: 503-568-1586</div>
     </div>
-
-    <div class="footer-note">
-      THQ Cyber Divisionは、サイバーセキュリティソリューションおよび関連テクノロジーサービスを提供しています。
-    </div>
-
+    <div class="footer-note">THQ Cyber Divisionは、サイバーセキュリティソリューションおよび関連テクノロジーサービスを提供しています。</div>
     <div class="footer-links" aria-label="フッターナビゲーション">
-      <a href="/terms.html">利用規約</a>
-      <span aria-hidden="true">|</span>
-      <a href="/privacy.html">プライバシー</a>
-      <span aria-hidden="true">|</span>
+      <a href="/terms.html">利用規約</a><span aria-hidden="true">|</span>
+      <a href="/privacy.html">プライバシー</a><span aria-hidden="true">|</span>
       <a href="mailto:thqcs@protonmail.com">お問い合わせ</a>
     </div>
-
     <p class="copyright">&copy; 2024&ndash;2026 THQ Cyber Division Unincorporated</p>
   </footer>
 </body>
